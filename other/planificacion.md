@@ -12,7 +12,23 @@ Introduccion del tema
 
 ## 2. ESTRUCTURA DEL PROYECTO
 Separar el proyecto por partes (carpetas o lo que sea)
-
+```
+IMPRESSCONTROL
+|---📂 Extraccion de datos
+|   |--documento
+|
+|---📂 Gestion de los datos
+|
+|---📂 Visualizacion de los datos
+|
+│-- 📂 backup
+│-- 📂 other
+│-- 📂 res
+|
+|--readme.md
+|--requirments.txt
+|--docker_compose.yaml
+```
 ## 3. TECNOLOGÍAS
 Listado de tecnologias con descripcion y para que se usan
 
