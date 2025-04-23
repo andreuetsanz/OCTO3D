@@ -16,5 +16,6 @@ desktop.ini
 
 # Directorios especificos
 other/keys
-octoprint_data
+docker_containers/
+docker_containers/
 

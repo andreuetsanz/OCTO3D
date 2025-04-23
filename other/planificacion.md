@@ -89,8 +89,15 @@ Andreu:...
 ### Semana 2 (21/4 - 27/4)
 Gerard:...
 
-Andreu:...
+Andreu: Conseguir el dato
+He plantejat mal lo de com obtindre el dato, perque jo el que vuic es obtindre el dato cada x segons no suscriurem a un topic directament desde octoprint.
+he acosneguit recibir desde mqtt amb el plugin de mqtt pero eixe no es el objectiu 
+vaig a vore si puc obtindrelo desde http request.
+He conseguit pbtindre els datos per http request soles obtinc alguns en falten prou mes tard o conseguire i ja he definit un flux de el programa en la carpeta other
 
+#### TODO
+- Definir totes les dades que es volen obtindre i el format correcte
+ 
 ### Semana 3 (28/4 - 4/5)
 Gerard:...
 

@@ -86,40 +86,70 @@
         "sessionExpiry": ""
     },
     {
-        "id": "d0c2c7483b50b00d",
-        "type": "mqtt in",
+        "id": "inject_5s",
+        "type": "inject",
         "z": "26fb2e74c07ee194",
-        "name": "Temp Hotend",
-        "topic": "octoprint/temperature",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "broker_mqtt",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 610,
-        "y": 380,
+        "name": "GET",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 330,
+        "y": 220,
         "wires": [
             [
-                "819c38b739c70ca0"
+                "http_request_octoprint"
             ]
         ]
     },
     {
-        "id": "819c38b739c70ca0",
+        "id": "http_request_octoprint",
+        "type": "http request",
+        "z": "26fb2e74c07ee194",
+        "name": "Obtener Estado OctoPrint",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/printer",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "debug_temp"
+            ]
+        ]
+    },
+    {
+        "id": "debug_temp",
         "type": "debug",
         "z": "26fb2e74c07ee194",
-        "name": "Ver Temp",
+        "name": "Ver Respuesta",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 380,
+        "x": 860,
+        "y": 220,
         "wires": []
     }
 ]

@@ -1,0 +1,2 @@
+[mqtt-octoprint.json](mqtt-octoprint.json): Flujo simple per a obtindre el dato desde node-red amb mqtt (es subscriu a tots els topics)
+[](httprequest-octoprint.json): Este fichero es el flujo para obtener los datos por http request simple
