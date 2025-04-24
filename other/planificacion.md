@@ -94,6 +94,12 @@ He plantejat mal lo de com obtindre el dato, perque jo el que vuic es obtindre e
 he acosneguit recibir desde mqtt amb el plugin de mqtt pero eixe no es el objectiu 
 vaig a vore si puc obtindrelo desde http request.
 He conseguit pbtindre els datos per http request soles obtinc alguns en falten prou mes tard o conseguire i ja he definit un flux de el programa en la carpeta other
+Datos que quiero obtener:
+Datos que puedo obtener
+
+Se ha definit el json shema per a enviar les dades (este shema sera segurament algo temporal perque magradaria parlar en Jose per a que me comentara com ho veu ell i tambe vore el github que ens va pasar pero no se hon esta.
+)
+
 
 #### TODO
 - Definir totes les dades que es volen obtindre i el format correcte
