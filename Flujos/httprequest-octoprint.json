@@ -1,0 +1,129 @@
+[
+    {
+        "id": "26fb2e74c07ee194",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e1f35a42fdfd1fad",
+        "type": "inject",
+        "z": "26fb2e74c07ee194",
+        "name": "GET",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "03455c4860513f16",
+                "78f244e2b4ecd4ee"
+            ]
+        ]
+    },
+    {
+        "id": "03455c4860513f16",
+        "type": "http request",
+        "z": "26fb2e74c07ee194",
+        "name": "Estado OctoPrint",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/printer",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "9985cea98f30ce9f"
+            ]
+        ]
+    },
+    {
+        "id": "78f244e2b4ecd4ee",
+        "type": "http request",
+        "z": "26fb2e74c07ee194",
+        "name": "Job Info",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/job",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "9985cea98f30ce9f"
+            ]
+        ]
+    },
+    {
+        "id": "9985cea98f30ce9f",
+        "type": "function",
+        "z": "26fb2e74c07ee194",
+        "name": "Construir JSON Schema",
+        "func": "const printer = msg.payload || {};  // Respuesta completa de la API\nconst job = printer.job || {};  // Datos del trabajo\nconst progress = printer.progress || {};  // Datos del progreso\nconst temperature = printer.temperature || {};  // Datos de temperatura\n\n// Inicialización de las variables\nlet temperatures = {};\nlet print_time = {};\nlet printer_info = {};\nlet file = null;\nlet current_layer_height = null;\n\n// Intentar obtener las temperaturas\nif (temperature.tool0) {\n    temperatures.nozzle = {\n        actual: temperature.tool0.actual,\n        target: temperature.tool0.target\n    };\n}\n\nif (temperature.bed) {\n    temperatures.bed = {\n        actual: temperature.bed.actual,\n        target: temperature.bed.target\n    };\n}\n\n// Si hay datos de la impresora (marca y modelo)\nif (printer.brand && printer.model) {\n    printer_info = {\n        brand: printer.brand,\n        model: printer.model\n    };\n}\n\n// Intentamos obtener el progreso de la impresión\nif (progress.printTime !== undefined) {\n    print_time.elapsed = progress.printTime;\n}\n\nif (progress.printTimeLeft !== undefined) {\n    print_time.estimated = progress.printTime + progress.printTimeLeft;\n}\n\n// Intentamos obtener datos del trabajo\nif (job.state) {\n    // Solo agregar \"print_successful\" si la impresora está imprimiendo\n    if (job.state === \"Printing\") {\n        msg.payload.print_successful = true;\n    } else {\n        msg.payload.print_successful = false;\n    }\n}\n\nif (job.file) {\n    file = job.file.name;\n}\n\nif (job.layerHeight) {\n    current_layer_height = job.layerHeight;\n}\n\n// Construimos el JSON solo con los valores disponibles\nmsg.payload = {};\n\n// Solo agregamos `temperatures` si está disponible\nif (Object.keys(temperatures).length > 0) {\n    msg.payload.temperatures = temperatures;\n}\n\n// Solo agregamos `print_time` si está disponible\nif (Object.keys(print_time).length > 0) {\n    msg.payload.print_time = print_time;\n}\n\n// Solo agregamos `printer_info` si está disponible\nif (Object.keys(printer_info).length > 0) {\n    msg.payload.printer = printer_info;\n}\n\n// Solo agregamos `file` si está disponible\nif (file) {\n    msg.payload.file = file;\n}\n\n// Solo agregamos `current_layer_height` si está disponible\nif (current_layer_height) {\n    msg.payload.current_layer_height = current_layer_height;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "8b31ec747dba49ce"
+            ]
+        ]
+    },
+    {
+        "id": "8b31ec747dba49ce",
+        "type": "debug",
+        "z": "26fb2e74c07ee194",
+        "name": "Resultado Final",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 220,
+        "wires": []
+    }
+]

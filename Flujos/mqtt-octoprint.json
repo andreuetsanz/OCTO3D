@@ -1,0 +1,70 @@
+[
+    {
+        "id": "26fb2e74c07ee194",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "865052823b28153e",
+        "type": "mqtt in",
+        "z": "26fb2e74c07ee194",
+        "name": "Todo MQTT",
+        "topic": "octoPrint/#",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "broker_mqtt",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "79e26b230c4faa88"
+            ]
+        ]
+    },
+    {
+        "id": "79e26b230c4faa88",
+        "type": "debug",
+        "z": "26fb2e74c07ee194",
+        "name": "MQTT Entrante",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "true",
+        "x": 780,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "broker_mqtt",
+        "type": "mqtt-broker",
+        "name": "Broker MQTT (Docker)",
+        "broker": "mqtt",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

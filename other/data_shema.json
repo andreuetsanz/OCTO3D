@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "temperatures": {
+      "type": "object",
+      "properties": {
+        "nozzle": {
+          "type": "object",
+          "properties": {
+            "actual": { "type": "number" },
+            "target": { "type": "number" }
+          },
+          "required": ["actual", "target"]
+        },
+        "bed": {
+          "type": "object",
+          "properties": {
+            "actual": { "type": "number" },
+            "target": { "type": "number" }
+          },
+          "required": ["actual", "target"]
+        }
+      },
+      "required": ["nozzle", "bed"]
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "room_temperature": { "type": "number" }
+      },
+      "required": ["room_temperature"]
+    },
+    "fan_speed": { "type": "number" },
+    "movement_speed": { "type": "number" },
+    "energy_consumption": { "type": "number" },
+    "print_time": {
+      "type": "object",
+      "properties": {
+        "elapsed": { "type": "number" },
+        "estimated": { "type": "number" }
+      },
+      "required": ["elapsed", "estimated"]
+    },
+    "printer": {
+      "type": "object",
+      "properties": {
+        "brand": { "type": "string" },
+        "model": { "type": "string" }
+      },
+      "required": ["brand", "model"]
+    },
+    "filament": {
+      "type": "object",
+      "properties": {
+        "color": { "type": "string" },
+        "type": { "type": "string" },
+        "brand": { "type": "string" }
+      },
+      "required": ["color", "type", "brand"]
+    },
+    "slicer": { "type": "string" },
+    "print_cost": { "type": "number" },
+    "print_successful": { "type": "boolean" },
+    "image": {
+      "type": "string",
+      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+    },
+    "file": { "type": "string" },
+    "current_layer_height": { "type": "number" }
+  },
+  "required": [
+    "temperatures",
+    "print_time",
+    "printer",
+    "slicer",
+    "print_cost",
+    "print_successful",
+    "file"
+  ]
+}
