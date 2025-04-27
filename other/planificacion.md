@@ -87,7 +87,11 @@ Gerard:...
 Andreu:...
 
 ### Semana 2 (21/4 - 27/4)
-Gerard:...
+Gerard: 
+- Instalacio de les primeres tecnologies (node red, mongo etc).
+- Conectar Octo Print con Node Red vía Http Request.
+- Conectar Node red con MongoDB para guardar el dato (cada 5 min).
+- A falta de poder conectar la impresora de momento se esta haciendo una simulacion virtual.
 
 Andreu: Conseguir el dato
 He plantejat mal lo de com obtindre el dato, perque jo el que vuic es obtindre el dato cada x segons no suscriurem a un topic directament desde octoprint.
