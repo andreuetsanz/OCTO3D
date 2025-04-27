@@ -91,7 +91,7 @@ Gerard:
 - Instalacio de les primeres tecnologies (node red, mongo etc).
 - Conectar Octo Print con Node Red vía Http Request.
 - Conectar Node red con MongoDB para guardar el dato (cada 5 min).
-- A falta de poder conectar la impresora de momento se esta haciendo una simulacion virtual.
+- A falta de poder conectar la impresora de momento se esta fent una simulacio virtual.
 
 Andreu: Conseguir el dato
 He plantejat mal lo de com obtindre el dato, perque jo el que vuic es obtindre el dato cada x segons no suscriurem a un topic directament desde octoprint.
@@ -107,7 +107,7 @@ Se ha definit el json shema per a enviar les dades (este shema sera segurament a
 
 #### TODO
 - Definir totes les dades que es volen obtindre i el format correcte
- 
+
 ### Semana 3 (28/4 - 4/5)
 Gerard:...
 
