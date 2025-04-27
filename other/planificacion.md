@@ -77,14 +77,14 @@ Gerard: Planificacion y estructura
 Andreu: Planificacion y estructura
 
 ### Semana 0 (7/4 - 13/4)
-Gerard:...
+Gerard: Planificacion y estructura
 
-Andreu:...
+Andreu: Planificacion y estructura
 
 ### Semana 1 (14/4 - 20/4)
-Gerard:...
+Gerard: Planificacion y estructura
 
-Andreu:...
+Andreu: Planificacion y estructura
 
 ### Semana 2 (21/4 - 27/4)
 Gerard: 
