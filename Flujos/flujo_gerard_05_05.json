@@ -1,0 +1,388 @@
+[
+    {
+        "id": "4b8bb36bc3306d69",
+        "type": "tab",
+        "label": "Flujo OctoPrint con Mongo y Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3dca42dbf98596ac",
+        "type": "inject",
+        "z": "4b8bb36bc3306d69",
+        "name": "Obtener Printer y Job",
+        "props": [],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "112534e35b68b0a3",
+                "65f4503eb5bc0d14"
+            ]
+        ]
+    },
+    {
+        "id": "112534e35b68b0a3",
+        "type": "http request",
+        "z": "4b8bb36bc3306d69",
+        "name": "Estado OctoPrint",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/printer",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w"
+            }
+        ],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "350317a4f10ee5b1"
+            ]
+        ]
+    },
+    {
+        "id": "65f4503eb5bc0d14",
+        "type": "http request",
+        "z": "4b8bb36bc3306d69",
+        "name": "Job Info",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/job",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w"
+            }
+        ],
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "350317a4f10ee5b1"
+            ]
+        ]
+    },
+    {
+        "id": "350317a4f10ee5b1",
+        "type": "join",
+        "z": "4b8bb36bc3306d69",
+        "name": "Unir respuestas",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "1",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "1abe5d0917951413"
+            ]
+        ]
+    },
+    {
+        "id": "1abe5d0917951413",
+        "type": "function",
+        "z": "4b8bb36bc3306d69",
+        "name": "Formatear según esquema",
+        "func": "// Asegurarse de que tenemos ambos mensajes\nconst printerData = Array.isArray(msg.payload) && msg.payload[0] ? msg.payload[0] : {};\nconst jobData = Array.isArray(msg.payload) && msg.payload[1] ? msg.payload[1] : {};\n\n// Configuración fija (modificar según tu setup)\nconst config = {\n    printerBrand: \"Creality\",\n    printerModel: \"Ender 3 V2\",\n    filamentColor: \"Negro\",\n    filamentType: \"PLA\",\n    filamentBrand: \"Creality\",\n    slicer: \"Cura\",\n    costPerHour: 0.10,\n    costPerGram: 0.02\n};\n\n// Manejar datos faltantes con valores por defecto\nconst printerState = printerData.state || {};\nconst printerFlags = printerState.flags || {};\nconst printerTemp = printerData.temperature || {};\nconst jobProgress = jobData.progress || {};\nconst jobFile = jobData.job?.file || {};\n\n// Calcular costos estimados (con manejo de datos faltantes)\nconst printTime = jobProgress.printTime || 0;\nconst fileSize = jobFile.size || 0;\nconst printCost = (printTime / 3600 * config.costPerHour) + \n                 (fileSize / 1000 * config.costPerGram);\n\n// Crear el objeto según el esquema\nconst formattedData = {\n    temperatures: {\n        nozzle: {\n            actual: printerTemp.tool0?.actual || 0,\n            target: printerTemp.tool0?.target || 0\n        },\n        bed: {\n            actual: printerTemp.bed?.actual || 0,\n            target: printerTemp.bed?.target || 0\n        }\n    },\n    environment: {\n        room_temperature: 25 // Valor fijo o integrar sensor\n    },\n    fan_speed: printerFlags.fanOn ? 100 : 0,\n    movement_speed: 100, // Valor estimado\n    energy_consumption: (printTime / 3600) * 0.2, // kWh estimado\n    print_time: {\n        elapsed: printTime || 0,\n        estimated: jobProgress.printTimeLeft || 0\n    },\n    printer: {\n        brand: config.printerBrand,\n        model: config.printerModel\n    },\n    filament: {\n        color: config.filamentColor,\n        type: config.filamentType,\n        brand: config.filamentBrand\n    },\n    slicer: config.slicer,\n    print_cost: printCost,\n    print_successful: printerFlags.operational || false,\n    image: \"\", // Base64 de imagen si está disponible\n    file: jobFile.name || \"incompleto\",\n    current_layer_height: 0 // No disponible en los datos mostrados\n};\n\nmsg.payload = formattedData;\nmsg.topic = \"octoprint_formatted_data\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 220,
+        "wires": [
+            [
+                "1f25c740351dc8fd",
+                "83e9cf4b67397d74",
+                "13c2af9f313a878c"
+            ]
+        ]
+    },
+    {
+        "id": "1f25c740351dc8fd",
+        "type": "mongodb out",
+        "z": "4b8bb36bc3306d69",
+        "mongodb": "636ec7b7a3a6c191",
+        "name": "Guardar en MongoDB",
+        "collection": "octoprint_data",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1260,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "83e9cf4b67397d74",
+        "type": "debug",
+        "z": "4b8bb36bc3306d69",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "13c2af9f313a878c",
+        "type": "function",
+        "z": "4b8bb36bc3306d69",
+        "name": "Preparar datos para dashboard",
+        "func": "const data = msg.payload;\n\n// Preparar mensajes para el dashboard\nconst messages = [];\n\n// Estado de la impresora\nmessages.push({\n    topic: \"state\",\n    payload: data.print_successful ? \"Operacional\" : \"Error\",\n    dashboard: \"state\"\n});\n\n// Temperaturas\nmessages.push({\n    topic: \"nozzle_temp\",\n    payload: {\n        actual: data.temperatures.nozzle.actual,\n        target: data.temperatures.nozzle.target\n    },\n    dashboard: \"nozzle_temp\"\n});\n\nmessages.push({\n    topic: \"bed_temp\",\n    payload: {\n        actual: data.temperatures.bed.actual,\n        target: data.temperatures.bed.target\n    },\n    dashboard: \"bed_temp\"\n});\n\n// Progreso de la impresión\nconst progress = data.print_time.estimated > 0 ? \n    (data.print_time.elapsed / (data.print_time.elapsed + data.print_time.estimated)) * 100 : 0;\n    \nmessages.push({\n    topic: \"progress\",\n    payload: progress,\n    dashboard: \"progress\"\n});\n\nmessages.push({\n    topic: \"print_time\",\n    payload: data.print_time.elapsed,\n    dashboard: \"print_time\"\n});\n\nmessages.push({\n    topic: \"print_time_left\",\n    payload: data.print_time.estimated,\n    dashboard: \"print_time_left\"\n});\n\n// Información del archivo\nmessages.push({\n    topic: \"file_name\",\n    payload: data.file || \"Ningún archivo\",\n    dashboard: \"file_name\"\n});\n\n// Costo de impresión\nmessages.push({\n    topic: \"print_cost\",\n    payload: data.print_cost.toFixed(2),\n    dashboard: \"print_cost\"\n});\n\nreturn messages;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 320,
+        "wires": [
+            [
+                "ef3fe5e2e09f7541",
+                "8be63f32dd293762",
+                "dc44320e5220c278",
+                "d592e661449707e2",
+                "a71c21eb655dd811",
+                "518c70a122f2d6a9",
+                "c15b38eb43718736",
+                "96855592215abcc4"
+            ]
+        ]
+    },
+    {
+        "id": "ef3fe5e2e09f7541",
+        "type": "ui_text",
+        "z": "4b8bb36bc3306d69",
+        "group": "9ca89cb689b04d44",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "name": "Estado",
+        "label": "Estado:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1580,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8be63f32dd293762",
+        "type": "ui_gauge",
+        "z": "4b8bb36bc3306d69",
+        "name": "Extrusor",
+        "group": "9ca89cb689b04d44",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "label": "Temperatura Extrusor",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": 300,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "150",
+        "seg2": "220",
+        "className": "",
+        "x": 1580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "dc44320e5220c278",
+        "type": "ui_gauge",
+        "z": "4b8bb36bc3306d69",
+        "name": "Cama",
+        "group": "9ca89cb689b04d44",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "label": "Temperatura Cama",
+        "format": "{{value}}°C",
+        "min": 0,
+        "max": 120,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "80",
+        "className": "",
+        "x": 1570,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d592e661449707e2",
+        "type": "ui_gauge",
+        "z": "4b8bb36bc3306d69",
+        "name": "Progreso",
+        "group": "9ca89cb689b04d44",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "label": "Progreso de impresión",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#0080FF",
+            "#0080FF",
+            "#0080FF"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1580,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a71c21eb655dd811",
+        "type": "ui_text",
+        "z": "4b8bb36bc3306d69",
+        "group": "9ca89cb689b04d44",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "Tiempo impresión",
+        "label": "Tiempo impresión:",
+        "format": "{{(msg.payload/60).toFixed(1)}} minutos",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1610,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "518c70a122f2d6a9",
+        "type": "ui_text",
+        "z": "4b8bb36bc3306d69",
+        "group": "9ca89cb689b04d44",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "name": "Tiempo restante",
+        "label": "Tiempo restante:",
+        "format": "{{(msg.payload/60).toFixed(1)}} minutos",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1600,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c15b38eb43718736",
+        "type": "ui_text",
+        "z": "4b8bb36bc3306d69",
+        "group": "9ca89cb689b04d44",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "name": "Archivo",
+        "label": "Archivo:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1580,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "96855592215abcc4",
+        "type": "ui_text",
+        "z": "4b8bb36bc3306d69",
+        "group": "9ca89cb689b04d44",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "name": "Costo impresión",
+        "label": "Costo estimado:",
+        "format": "{{msg.payload}} unidades",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1600,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "636ec7b7a3a6c191",
+        "type": "mongodb",
+        "hostname": "mongodb",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": 27017,
+        "db": "octoprint",
+        "name": "MONGODB"
+    },
+    {
+        "id": "9ca89cb689b04d44",
+        "type": "ui_group",
+        "name": "OctoPrint Dashboard",
+        "tab": "7060ed21aaab1e10",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7060ed21aaab1e10",
+        "type": "ui_tab",
+        "name": "Impresora 3D",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
