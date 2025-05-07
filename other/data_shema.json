@@ -2,80 +2,221 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador único de la entidad siguiendo el formato NGSI (ej: urn:ngsi-ld:3DPrinter:001)"
+    },
+    "type": {
+      "type": "string",
+      "const": "3DPrinter",
+      "description": "Tipo de entidad, en este caso, una impresora 3D"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Marca temporal general del estado de la entidad"
+    },
     "temperatures": {
       "type": "object",
+      "description": "Temperaturas actuales de componentes críticos",
       "properties": {
         "nozzle": {
           "type": "object",
+          "description": "Temperatura actual de la boquilla",
           "properties": {
-            "actual": { "type": "number" },
-            "target": { "type": "number" }
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Temperatura en grados" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
           },
-          "required": ["actual", "target"]
+          "required": ["type", "value"]
         },
         "bed": {
           "type": "object",
+          "description": "Temperatura actual de la cama de impresión",
           "properties": {
-            "actual": { "type": "number" },
-            "target": { "type": "number" }
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Temperatura en grados" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
           },
-          "required": ["actual", "target"]
+          "required": ["type", "value"]
         }
-      },
-      "required": ["nozzle", "bed"]
+      }
     },
     "environment": {
       "type": "object",
+      "description": "Condiciones ambientales del entorno",
       "properties": {
-        "room_temperature": { "type": "number" }
-      },
-      "required": ["room_temperature"]
+        "roomTemperature": {
+          "type": "object",
+          "description": "Temperatura del ambiente donde se encuentra la impresora",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Temperatura ambiente" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL)" }
+          },
+          "required": ["type", "value"]
+        }
+      }
     },
-    "fan_speed": { "type": "number" },
-    "movement_speed": { "type": "number" },
-    "energy_consumption": { "type": "number" },
-    "print_time": {
+    "fanSpeed": {
       "type": "object",
+      "description": "Velocidad del ventilador de enfriamiento",
       "properties": {
-        "elapsed": { "type": "number" },
-        "estimated": { "type": "number" }
+        "type": { "const": "Property" },
+        "value": { "type": "number", "description": "Velocidad en porcentaje o RPM" },
+        "unitCode": { "type": "string", "description": "Código de unidad (ej: P1 para porcentaje)" }
       },
-      "required": ["elapsed", "estimated"]
+      "required": ["type", "value"]
+    },
+    "movementSpeed": {
+      "type": "object",
+      "description": "Velocidad de movimiento de los ejes",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "number", "description": "Velocidad en mm/s" },
+        "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT para mm)" }
+      },
+      "required": ["type", "value"]
+    },
+    "energyConsumption": {
+      "type": "object",
+      "description": "Consumo energético actual de la impresora",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "number", "description": "Energía consumida" },
+        "unitCode": { "type": "string", "description": "Código de unidad (ej: KWH para kilovatios hora)" }
+      },
+      "required": ["type", "value"]
+    },
+    "printTime": {
+      "type": "object",
+      "description": "Información del tiempo de impresión",
+      "properties": {
+        "elapsed": {
+          "type": "object",
+          "description": "Tiempo transcurrido desde el inicio",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Tiempo en segundos o minutos" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: SEC)" }
+          },
+          "required": ["type", "value"]
+        },
+        "estimated": {
+          "type": "object",
+          "description": "Tiempo total estimado para finalizar la impresión",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Duración estimada" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: SEC)" }
+          },
+          "required": ["type", "value"]
+        }
+      }
     },
     "printer": {
       "type": "object",
+      "description": "Marca y modelo de la impresora",
       "properties": {
-        "brand": { "type": "string" },
-        "model": { "type": "string" }
+        "type": { "const": "Property" },
+        "value": {
+          "type": "object",
+          "properties": {
+            "brand": { "type": "string", "description": "Marca del fabricante" },
+            "model": { "type": "string", "description": "Modelo de la impresora" }
+          },
+          "required": ["brand", "model"]
+        }
       },
-      "required": ["brand", "model"]
+      "required": ["type", "value"]
     },
     "filament": {
       "type": "object",
+      "description": "Datos del filamento utilizado",
       "properties": {
-        "color": { "type": "string" },
-        "type": { "type": "string" },
-        "brand": { "type": "string" }
+        "type": { "const": "Property" },
+        "value": {
+          "type": "object",
+          "properties": {
+            "color": { "type": "string", "description": "Color del filamento" },
+            "type": { "type": "string", "description": "Tipo de material (ej: PLA, ABS)" },
+            "brand": { "type": "string", "description": "Marca del filamento" }
+          },
+          "required": ["color", "type", "brand"]
+        }
       },
-      "required": ["color", "type", "brand"]
+      "required": ["type", "value"]
     },
-    "slicer": { "type": "string" },
-    "print_cost": { "type": "number" },
-    "print_successful": { "type": "boolean" },
+    "slicer": {
+      "type": "object",
+      "description": "Software de corte (slicer) utilizado",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "string", "description": "Nombre del slicer (ej: Cura, PrusaSlicer)" }
+      },
+      "required": ["type", "value"]
+    },
+    "materialUsed": {
+      "type": "object",
+      "description": "Cantidad de material usado durante la impresión",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "number", "description": "Cantidad en gramos" },
+        "unitCode": { "type": "string", "const": "GRM", "description": "Código de unidad: gramos" }
+      },
+      "required": ["type", "value"]
+    },
+    "printSuccessful": {
+      "type": "object",
+      "description": "Indica si la impresión fue exitosa",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "boolean", "description": "true si fue exitosa, false en caso contrario" }
+      },
+      "required": ["type", "value"]
+    },
     "image": {
-      "type": "string",
-      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+      "type": "object",
+      "description": "Imagen codificada en base64 del objeto impreso",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": {
+          "type": "string",
+          "description": "Cadena en base64 de la imagen",
+          "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+        }
+      },
+      "required": ["type", "value"]
     },
-    "file": { "type": "string" },
-    "current_layer_height": { "type": "number" }
+    "file": {
+      "type": "object",
+      "description": "Ruta o nombre del archivo de impresión (ej: G-code)",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "string", "description": "Nombre del archivo" }
+      },
+      "required": ["type", "value"]
+    },
+    "currentLayerHeight": {
+      "type": "object",
+      "description": "Altura de capa actual en el proceso de impresión",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "number", "description": "Altura de capa en mm" },
+        "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT)" }
+      },
+      "required": ["type", "value"]
+    }
   },
   "required": [
+    "id",
+    "type",
+    "timestamp",
     "temperatures",
-    "print_time",
+    "printTime",
     "printer",
     "slicer",
-    "print_cost",
-    "print_successful",
+    "printSuccessful",
     "file"
   ]
 }

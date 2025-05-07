@@ -103,17 +103,3 @@ Datos que puedo obtener
 
 Se ha definit el json shema per a enviar les dades (este shema sera segurament algo temporal perque magradaria parlar en Jose per a que me comentara com ho veu ell i tambe vore el github que ens va pasar pero no se hon esta.
 )
-
-
-#### TODO
-- Definir totes les dades que es volen obtindre i el format correcte
-
-### Semana 3 (28/4 - 4/5)
-Gerard:...
-
-Andreu:...
-
-### Semana 4 (5/5 - 12/5)
-Gerard:...
-
-Andreu:...
