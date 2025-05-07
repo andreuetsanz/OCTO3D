@@ -9,3 +9,4 @@
 - Modificar en el jsonshema en vez de  print cost como gramos usados de material, modificar tambien en nodered
 - Obtener el resto de datos
 - Comprobar que funciona en una impresora real
+- Obtener la temperatura actual de la habitacion con alexa
