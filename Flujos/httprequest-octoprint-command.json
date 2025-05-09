@@ -1,0 +1,113 @@
+[
+    {
+        "id": "54ae99ef68bfb728",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "Send M114",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/printer/command",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 690,
+        "y": 1540,
+        "wires": [
+            [
+                "6ad34a443ed10931"
+            ]
+        ]
+    },
+    {
+        "id": "3f74a5cd0e747cba",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Trigger M114",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 490,
+        "y": 1500,
+        "wires": [
+            [
+                "54ae99ef68bfb728"
+            ]
+        ]
+    },
+    {
+        "id": "6ad34a443ed10931",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "b104d7f134f750c8",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "Send M114",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/printer/command",
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 610,
+        "y": 1720,
+        "wires": [
+            [
+                "6ad34a443ed10931"
+            ]
+        ]
+    },
+    {
+        "id": "bef14b8fe04c26e4",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Trigger M114",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 410,
+        "y": 1680,
+        "wires": [
+            [
+                "b104d7f134f750c8"
+            ]
+        ]
+    }
+]

@@ -42,51 +42,32 @@
         }
       }
     },
-    "environment": {
+    "layer": {
       "type": "object",
-      "description": "Condiciones ambientales del entorno",
+      "description": "Datos sobre la capa actual en el proceso de impresión",
       "properties": {
-        "roomTemperature": {
+        "currentLayer": {
           "type": "object",
-          "description": "Temperatura del ambiente donde se encuentra la impresora",
+          "description": "Número de la capa actual en el proceso de impresión",
           "properties": {
             "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Temperatura ambiente" },
-            "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL)" }
+            "value": { "type": "number", "description": "Número de la capa actual" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: LAY para capa)" }
+          },
+          "required": ["type", "value"]
+        },
+        "currentLayerHeight": {
+          "type": "object",
+          "description": "Altura de capa actual en el proceso de impresión",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Altura de capa en mm" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT)" }
           },
           "required": ["type", "value"]
         }
-      }
-    },
-    "fanSpeed": {
-      "type": "object",
-      "description": "Velocidad del ventilador de enfriamiento",
-      "properties": {
-        "type": { "const": "Property" },
-        "value": { "type": "number", "description": "Velocidad en porcentaje o RPM" },
-        "unitCode": { "type": "string", "description": "Código de unidad (ej: P1 para porcentaje)" }
       },
-      "required": ["type", "value"]
-    },
-    "movementSpeed": {
-      "type": "object",
-      "description": "Velocidad de movimiento de los ejes",
-      "properties": {
-        "type": { "const": "Property" },
-        "value": { "type": "number", "description": "Velocidad en mm/s" },
-        "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT para mm)" }
-      },
-      "required": ["type", "value"]
-    },
-    "energyConsumption": {
-      "type": "object",
-      "description": "Consumo energético actual de la impresora",
-      "properties": {
-        "type": { "const": "Property" },
-        "value": { "type": "number", "description": "Energía consumida" },
-        "unitCode": { "type": "string", "description": "Código de unidad (ej: KWH para kilovatios hora)" }
-      },
-      "required": ["type", "value"]
+      "required": ["currentLayer", "currentLayerHeight"]
     },
     "printTime": {
       "type": "object",
@@ -196,16 +177,6 @@
         "value": { "type": "string", "description": "Nombre del archivo" }
       },
       "required": ["type", "value"]
-    },
-    "currentLayerHeight": {
-      "type": "object",
-      "description": "Altura de capa actual en el proceso de impresión",
-      "properties": {
-        "type": { "const": "Property" },
-        "value": { "type": "number", "description": "Altura de capa en mm" },
-        "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT)" }
-      },
-      "required": ["type", "value"]
     }
   },
   "required": [
@@ -217,6 +188,7 @@
     "printer",
     "slicer",
     "printSuccessful",
-    "file"
+    "file",
+    "layer"
   ]
 }

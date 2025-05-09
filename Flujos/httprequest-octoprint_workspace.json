@@ -1,0 +1,12 @@
+[
+    {
+        "id": "cfc8b7ed6bed41b8",
+        "type": "comment",
+        "z": "a250f203621a2e27",
+        "name": "",
+        "info": "# Me falta\nenvironment/roomtemperature\nfoto\nposition\n\nprinter\nfilament\n\nfanspeed ??\nslicer - ok\ncurrentLayerHeight??\naltura de capa - ok",
+        "x": 780,
+        "y": 1540,
+        "wires": []
+    }
+]
