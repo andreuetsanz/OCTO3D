@@ -1,0 +1,123 @@
+[
+    {
+        "id": "tab1",
+        "type": "tab",
+        "label": "KafkaJS Demo",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "inject1",
+        "type": "inject",
+        "z": "tab1",
+        "name": "Enviar mensaje",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"msg\": \"Hola desde Node-RED\" }",
+        "payloadType": "json",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "e454e78fa133171a"
+            ]
+        ]
+    },
+    {
+        "id": "debug1",
+        "type": "debug",
+        "z": "tab1",
+        "name": "Mensaje recibido",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "89fd8e1738b1afc3",
+        "type": "kafkajs-consumer",
+        "z": "tab1",
+        "name": "K-Consumer",
+        "client": "a4e8f1d7dd5a36fc",
+        "groupid": "node-red-group",
+        "topic": "__consumer_offsets",
+        "advancedoptions": true,
+        "autocommitinterval": 5000,
+        "autocommitthreshold": 100,
+        "sessiontimeout": 30000,
+        "rebalancetimeout": 60000,
+        "heartbeatinterval": 3000,
+        "metadatamaxage": 300000,
+        "maxbytesperpartition": 1048576,
+        "minbytes": 1,
+        "maxbytes": 10485760,
+        "maxwaittimeinms": 5000,
+        "frombeginning": false,
+        "clearoffsets": true,
+        "allowautotopiccreation": false,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "debug1"
+            ]
+        ]
+    },
+    {
+        "id": "e454e78fa133171a",
+        "type": "kafkajs-producer",
+        "z": "tab1",
+        "name": "K-Producer",
+        "client": "a4e8f1d7dd5a36fc",
+        "topic": "__consumer_offsets",
+        "advancedoptions": true,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": true,
+        "x": 410,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a4e8f1d7dd5a36fc",
+        "type": "kafkajs-client",
+        "name": "KAFKA",
+        "brokers": "kafka:9092",
+        "clientid": "node-red-producer",
+        "connectiontimeout": 3000,
+        "requesttimeout": 25000,
+        "advancedretry": false,
+        "maxretrytime": 30000,
+        "initialretrytime": 300,
+        "factor": 0.2,
+        "multiplier": 2,
+        "retries": 5,
+        "auth": "none",
+        "tlsselfsign": false,
+        "tlscacert": "",
+        "tlsclientcert": "",
+        "tlsprivatekey": "",
+        "tlspassphrase": "",
+        "saslssl": true,
+        "saslmechanism": "plain",
+        "loglevel": "debug"
+    }
+]
