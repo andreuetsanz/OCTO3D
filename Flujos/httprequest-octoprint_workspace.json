@@ -1,12 +1,529 @@
 [
     {
+        "id": "a250f203621a2e27",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "73d967a989085926",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "GET",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 110,
+        "y": 1200,
+        "wires": [
+            [
+                "5f8b38f6af1eab81",
+                "2bac1b8a1d926501",
+                "21eb593786632271",
+                "7b2d1bdab3cfa092",
+                "fd7fa84a1c96f872"
+            ]
+        ]
+    },
+    {
+        "id": "5f8b38f6af1eab81",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "Estado OctoPrint",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/printer",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 466,
+        "y": 1161.0000610351562,
+        "wires": [
+            [
+                "d7e1f4e14c8dee85"
+            ]
+        ]
+    },
+    {
+        "id": "2bac1b8a1d926501",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "Job Info",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/job",
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 436,
+        "y": 1221.0000610351562,
+        "wires": [
+            [
+                "e83880611d767e3c"
+            ]
+        ]
+    },
+    {
+        "id": "d7e1f4e14c8dee85",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=printer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "printer",
+                "tot": "str"
+            }
+        ],
+        "x": 696,
+        "y": 1161.0000610351562,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "e83880611d767e3c",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=job",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "job",
+                "tot": "str"
+            }
+        ],
+        "x": 686,
+        "y": 1221.0000610351562,
+        "wires": [
+            [
+                "1374d2e7ac16216b",
+                "ab2059dae20e85cb"
+            ]
+        ]
+    },
+    {
+        "id": "1374d2e7ac16216b",
+        "type": "join",
+        "z": "a250f203621a2e27",
+        "name": "Unir",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "6",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1006,
+        "y": 1281.0000610351562,
+        "wires": [
+            [
+                "a5786ea5359ac965"
+            ]
+        ]
+    },
+    {
+        "id": "5a5fd90bcc7d7f95",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "Resultado Final",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1436,
+        "y": 1281.0000610351562,
+        "wires": []
+    },
+    {
+        "id": "21eb593786632271",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "ID",
+        "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generarLetrasAleatorias() {\n    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';\n    let resultado = '';\n    for (let i = 0; i < maxletas; i++) {\n        resultado += letras.charAt(Math.floor(Math.random() * letras.length));\n    }\n    return resultado;\n}\n\n// Crear el ID\nlet randomLetras = generarLetrasAleatorias();\nmsg.payload = 'opr_' + timestamp + randomLetras;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 426,
+        "y": 1101.0000610351562,
+        "wires": [
+            [
+                "bf9990783efc6969"
+            ]
+        ]
+    },
+    {
+        "id": "bf9990783efc6969",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "id",
+                "tot": "str"
+            }
+        ],
+        "x": 686,
+        "y": 1101.0000610351562,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "7b2d1bdab3cfa092",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "Files",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/api/files",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 426,
+        "y": 1281.0000610351562,
+        "wires": [
+            [
+                "6e29f9b5da35a554",
+                "c360b8d5e4e1b6de"
+            ]
+        ]
+    },
+    {
+        "id": "6e29f9b5da35a554",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=files",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "files",
+                "tot": "str"
+            }
+        ],
+        "x": 700,
+        "y": 1280,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "a5786ea5359ac965",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Formato JSON Schema",
+        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst files = data.files?.files || []; // asegúrate que files es un array\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\nlet materialLength = matchedFile?.gcodeAnalysis?.filament?.tool0?.length ?? null;\n\nmsg.payload = {\n    id: id,\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            type: \"Property\",\n            value: printer.temperature?.tool0?.actual ?? null,\n            unitCode: \"CEL\"\n        },\n        bed: {\n            type: \"Property\",\n            value: printer.temperature?.bed?.actual ?? null,\n            unitCode: \"CEL\"\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: null,\n        unitCode: \"P1\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"MMT\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? \"Desconocido\"\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament,\n            brand: gcode.filament_brand,\n            used: gcode.filament_used,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: job.state === \"Printing\"\n    },\n\n    image: {\n        type: \"Property\",\n        value: null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n            unitCode: \"MMT\"\n        }\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1206,
+        "y": 1281.0000610351562,
+        "wires": [
+            [
+                "5a5fd90bcc7d7f95"
+            ]
+        ]
+    },
+    {
         "id": "cfc8b7ed6bed41b8",
         "type": "comment",
         "z": "a250f203621a2e27",
         "name": "",
-        "info": "# Me falta\nenvironment/roomtemperature\nfoto\nposition\n\nprinter\nfilament\n\nfanspeed ??\nslicer - ok\ncurrentLayerHeight??\naltura de capa - ok",
+        "info": "# Me falta\nenvironment/roomtemperature\nfoto\n\n\nfilament.brand ??\nfilament.used ??\nprinter\nfanspeed ??\nslicer - ok\ncurrentLayerHeight??\naltura de capa - ok",
         "x": 780,
         "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "fd7fa84a1c96f872",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "DisplayLayerProgress",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://octoprint:5000/plugin/DisplayLayerProgress/values",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "X-Api-Key",
+                "valueType": "other",
+                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
+            }
+        ],
+        "x": 476,
+        "y": 1341.0000610351562,
+        "wires": [
+            [
+                "870f20a72122f2ed"
+            ]
+        ]
+    },
+    {
+        "id": "870f20a72122f2ed",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=DisplayLayerProgress",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "displayLayerProgress",
+                "tot": "str"
+            }
+        ],
+        "x": 746,
+        "y": 1341.0000610351562,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "parse_gcode",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Parse G-code Info",
+        "func": "let gcode = msg.payload;\n\nlet slicer = 'Desconocido';\nlet printer = '';\nlet filament = '';\n\n// Lista de laminadores conocidos con variaciones de nombres\nconst slicers = {\n    'Ultimaker Cura': ['cura', 'ultimaker cura', 'cura_steamengine', 'cura-steamengine'],\n    'PrusaSlicer': ['prusaslicer', 'prusa slicer', 'prusaslicer'],\n    'Bambu Studio': ['bambu studio', 'bambu_studio', 'bambu-studio'],\n    'Creality Print': ['creality print', 'creality_print'],\n    'Slic3r': ['slic3r', 'slic3r pe', 'slic3r_pe'],\n    'IdeaMaker': ['ideamaker', 'idea_maker'],\n    'Simplify3D': ['simplify3d', 'simplify 3d'],\n    'MatterControl': ['mattercontrol', 'matter control'],\n    'ReplicatorG': ['replicatorg', 'replicator g'],\n    'FlashPrint': ['flashprint', 'flash print'],\n    'ZeroSlicer': ['zeroslicer', 'zero slicer'],\n    'Kiri Moto': ['kirimotors', 'kiri motors']\n};\n\n// Función para verificar si alguna palabra del laminador aparece en el G-code\nfunction detectSlicer(gcode, slicerNames) {\n    for (let slicerName of slicerNames) {\n        let regex = new RegExp(slicerName, 'i');\n        if (regex.test(gcode)) {\n            return true;\n        }\n    }\n    return false;\n}\n\n// Verificar si aparece algún laminador\nfor (let [name, variations] of Object.entries(slicers)) {\n    if (detectSlicer(gcode, variations)) {\n        slicer = name;\n        break;  // Detenemos la búsqueda cuando encontramos el primer coincidencia\n    }\n}\n\n// Detectar impresora\nif (slicer == \"Creality Print\"){\n    //IA Encontrar en el gcode la linea que poner print_compatible_printers o printer_model\n}\n// modifica el codigo para que funcione en todos los slicers aparentes\n\n\nlet printerMatch = gcode.match(/; ?(Machine|Printer|Printer Model):? ?(.*)/i);\nif (printerMatch) {\n    printer = printerMatch[2].trim();\n} else if (/; ?(MACHINE_NAME|printer_model) *= *(.*)/i.test(gcode)) {\n    printer = gcode.match(/; ?(MACHINE_NAME|printer_model) *= *(.*)/i)[2].trim();\n}\n\n// Detectar filamento\nlet filamentMatch = gcode.match(/; ?(Filament|Material|Filament Type):? ?(.*)/i);\nif (filamentMatch) {\n    filament = filamentMatch[2].trim();\n} else if (/; ?filament_type *= *(.*)/i.test(gcode)) {\n    filament = gcode.match(/; ?filament_type *= *(.*)/i)[1].trim();\n}\n\n// Resultado\nmsg.payload = {\n    slicer: slicer,\n    printer: printer,\n    filament: filament\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 466,
+        "y": 1401.0000610351562,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab2059dae20e85cb",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Construir URL G-code",
+        "func": "const nombreArchivo = msg.payload.job.file.path;\nmsg.filename = nombreArchivo;\nmsg.url = `http://octoprint/downloads/files/local/${nombreArchivo}`;\nmsg.headers = {\n    \"X-Api-Key\": \"sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 1220,
+        "wires": [
+            [
+                "c379cf2c7d6c0400"
+            ]
+        ]
+    },
+    {
+        "id": "c379cf2c7d6c0400",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "Descargar G-code",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1310,
+        "y": 1220,
+        "wires": [
+            [
+                "081bd79011f56acf",
+                "d9dd41d50895101c"
+            ]
+        ]
+    },
+    {
+        "id": "081bd79011f56acf",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "9e519ddd55bbf910"
+        ],
+        "x": 1475,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "9e519ddd55bbf910",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "name": "link in 1",
+        "links": [
+            "081bd79011f56acf"
+        ],
+        "x": 311,
+        "y": 1401.0000610351562,
+        "wires": [
+            [
+                "parse_gcode",
+                "43e6115c4964b77a"
+            ]
+        ]
+    },
+    {
+        "id": "35e953c2c5697c99",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=gcode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "gcode",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 696,
+        "y": 1401.0000610351562,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "d9dd41d50895101c",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "43e6115c4964b77a",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Parse G-code Info",
+        "func": "let gcode = msg.payload;\n\nlet slicer = 'Desconocido';\nlet printer = '';\nlet filament = '';        // Tipo: PLA, PETG, etc.\nlet filamentBrand = '';   // Marca: eSun, Prusament, etc.\nlet filamentUsed = '';    // Usado: 5.23m, 15g, etc.\n\n// Lista de laminadores conocidos con variaciones de nombres\nconst slicers = {\n    'Ultimaker Cura': ['cura', 'ultimaker cura', 'cura_steamengine', 'cura-steamengine'],\n    'PrusaSlicer': ['prusaslicer', 'prusa slicer', 'prusaslicer'],\n    'Bambu Studio': ['bambu studio', 'bambu_studio', 'bambu-studio'],\n    'Creality Print': ['creality print', 'creality_print'],\n    'Slic3r': ['slic3r', 'slic3r pe', 'slic3r_pe'],\n    'IdeaMaker': ['ideamaker', 'idea_maker'],\n    'Simplify3D': ['simplify3d', 'simplify 3d'],\n    'MatterControl': ['mattercontrol', 'matter control'],\n    'ReplicatorG': ['replicatorg', 'replicator g'],\n    'FlashPrint': ['flashprint', 'flash print'],\n    'ZeroSlicer': ['zeroslicer', 'zero slicer'],\n    'Kiri Moto': ['kirimotors', 'kiri motors']\n};\n\n// Función para verificar si alguna palabra del laminador aparece en el G-code\nfunction detectSlicer(gcode, slicerNames) {\n    for (let slicerName of slicerNames) {\n        let regex = new RegExp(slicerName, 'i');\n        if (regex.test(gcode)) {\n            return true;\n        }\n    }\n    return false;\n}\n\n// Verificar slicer\nfor (let [name, variations] of Object.entries(slicers)) {\n    if (detectSlicer(gcode, variations)) {\n        slicer = name;\n        break;\n    }\n}\n\n// Detectar impresora con múltiples patrones comunes\nlet printerRegexes = [\n    /; ?(MACHINE_NAME|printer_model) *= *(.+)/i,\n    /; ?print_compatible_printers *= *(.+)/i,\n    /; ?printer_name *= *(.+)/i,\n    /; ?model *= *(.+)/i\n];\n\nfor (let regex of printerRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        printer = match?.[2]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar tipo de filamento (PLA, PETG, etc.)\nlet filamentTypeRegexes = [\n    /; ?filament_type *= *(.+)/i,\n    /; ?filament_material *= *(.+)/i\n];\n\nfor (let regex of filamentTypeRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filament = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar marca del filamento\nlet filamentBrandRegexes = [\n    /; ?filament_brand *= *(.+)/i,\n    /; ?filament_settings_id *= *(.+)/i\n];\n\n\nfor (let regex of filamentBrandRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentBrand = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar cantidad de filamento usado\nlet filamentUsedRegexes = [\n    /; ?filament used(?: *\\[.*\\])? *= *(.+)/i,\n    /; ?filament_used *= *(.+)/i,\n    /; ?filament_consumed *= *(.+)/i\n];\n\n\nfor (let regex of filamentUsedRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentUsed = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Resultado\nmsg.payload = {\n    slicer: slicer,\n    printer: printer,\n    filament: filament,\n    filament_brand: filamentBrand,\n    filament_used: filamentUsed\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1480,
+        "wires": [
+            [
+                "35e953c2c5697c99"
+            ]
+        ]
+    },
+    {
+        "id": "c360b8d5e4e1b6de",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 1360,
         "wires": []
     }
 ]
