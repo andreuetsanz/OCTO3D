@@ -1,5 +1,4 @@
-version: "3.8"
-
+name: octo-data
 services:
   octoprint:
     image: octoprint/octoprint
@@ -87,12 +86,13 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongodb_data:/data/db
+      - ./docker_containers/mongodb_data:/data/db
     networks:
       - octo-red
 
 networks:
   octo-red:
+    name: octo-red
     driver: bridge
 
 volumes:
