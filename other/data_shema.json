@@ -25,49 +25,66 @@
           "description": "Temperatura actual de la boquilla",
           "properties": {
             "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Temperatura en grados" },
+            "actual": {
+              "type": "number",
+              "description": "Temperatura actual de la boquilla",
+              "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
+            },
+            "target": {
+              "type": "number",
+              "description": "Temperatura objetivo de la boquilla",
+              "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
+            },
             "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
           },
-          "required": ["type", "value"]
+          "required": ["type", "actual", "target"]
         },
         "bed": {
           "type": "object",
           "description": "Temperatura actual de la cama de impresión",
           "properties": {
             "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Temperatura en grados" },
+            "actual": {
+              "type": "number",
+              "description": "Temperatura actual de la cama",
+              "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
+            },
+            "target": {
+              "type": "number",
+              "description": "Temperatura objetivo de la cama",
+              "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
+            },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
+          },
+          "required": ["type", "actual", "target"]
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "description": "Información ambiental",
+      "properties": {
+        "roomTemperature": {
+          "type": "object",
+          "description": "Temperatura ambiente de la habitación",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Temperatura de la habitación en grados" },
             "unitCode": { "type": "string", "description": "Código de unidad (ej: CEL para °C)" }
           },
           "required": ["type", "value"]
         }
       }
     },
-    "layer": {
+    "fanSpeed": {
       "type": "object",
-      "description": "Datos sobre la capa actual en el proceso de impresión",
+      "description": "Velocidad del ventilador",
       "properties": {
-        "currentLayer": {
-          "type": "object",
-          "description": "Número de la capa actual en el proceso de impresión",
-          "properties": {
-            "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Número de la capa actual" },
-            "unitCode": { "type": "string", "description": "Código de unidad (ej: LAY para capa)" }
-          },
-          "required": ["type", "value"]
-        },
-        "currentLayerHeight": {
-          "type": "object",
-          "description": "Altura de capa actual en el proceso de impresión",
-          "properties": {
-            "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Altura de capa en mm" },
-            "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT)" }
-          },
-          "required": ["type", "value"]
-        }
+        "type": { "const": "Property" },
+        "value": { "type": "string", "description": "Velocidad del ventilador en porcentaje o valor similar" },
+        "unitCode": { "type": "string", "description": "Código de unidad (ej: P1 para porcentaje)" }
       },
-      "required": ["currentLayer", "currentLayerHeight"]
+      "required": ["type", "value"]
     },
     "printTime": {
       "type": "object",
@@ -78,17 +95,17 @@
           "description": "Tiempo transcurrido desde el inicio",
           "properties": {
             "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Tiempo en segundos o minutos" },
+            "value": { "type": "number", "description": "Tiempo transcurrido en segundos" },
             "unitCode": { "type": "string", "description": "Código de unidad (ej: SEC)" }
           },
           "required": ["type", "value"]
         },
         "estimated": {
           "type": "object",
-          "description": "Tiempo total estimado para finalizar la impresión",
+          "description": "Tiempo estimado para finalizar la impresión",
           "properties": {
             "type": { "const": "Property" },
-            "value": { "type": "number", "description": "Duración estimada" },
+            "value": { "type": "number", "description": "Duración estimada en segundos" },
             "unitCode": { "type": "string", "description": "Código de unidad (ej: SEC)" }
           },
           "required": ["type", "value"]
@@ -100,14 +117,7 @@
       "description": "Marca y modelo de la impresora",
       "properties": {
         "type": { "const": "Property" },
-        "value": {
-          "type": "object",
-          "properties": {
-            "brand": { "type": "string", "description": "Marca del fabricante" },
-            "model": { "type": "string", "description": "Modelo de la impresora" }
-          },
-          "required": ["brand", "model"]
-        }
+        "value": { "type": "string", "description": "Marca y modelo de la impresora" }
       },
       "required": ["type", "value"]
     },
@@ -119,31 +129,21 @@
         "value": {
           "type": "object",
           "properties": {
-            "color": { "type": "string", "description": "Color del filamento" },
-            "type": { "type": "string", "description": "Tipo de material (ej: PLA, ABS)" },
-            "brand": { "type": "string", "description": "Marca del filamento" }
+            "type": { "type": "string", "description": "Tipo de material (ej: PLA)" },
+            "brand": { "type": "string", "description": "Marca del filamento" },
+            "used": { "type": "number", "description": "Cantidad de filamento usado en gramos" }
           },
-          "required": ["color", "type", "brand"]
+          "required": ["type", "brand", "used"]
         }
       },
       "required": ["type", "value"]
     },
     "slicer": {
       "type": "object",
-      "description": "Software de corte (slicer) utilizado",
+      "description": "Software de corte utilizado",
       "properties": {
         "type": { "const": "Property" },
-        "value": { "type": "string", "description": "Nombre del slicer (ej: Cura, PrusaSlicer)" }
-      },
-      "required": ["type", "value"]
-    },
-    "materialUsed": {
-      "type": "object",
-      "description": "Cantidad de material usado durante la impresión",
-      "properties": {
-        "type": { "const": "Property" },
-        "value": { "type": "number", "description": "Cantidad en gramos" },
-        "unitCode": { "type": "string", "const": "GRM", "description": "Código de unidad: gramos" }
+        "value": { "type": "string", "description": "Nombre del slicer" }
       },
       "required": ["type", "value"]
     },
@@ -152,7 +152,7 @@
       "description": "Indica si la impresión fue exitosa",
       "properties": {
         "type": { "const": "Property" },
-        "value": { "type": "boolean", "description": "true si fue exitosa, false en caso contrario" }
+        "value": { "type": "boolean", "description": "Indica si la impresión fue exitosa (true o false)" }
       },
       "required": ["type", "value"]
     },
@@ -174,21 +174,69 @@
       "description": "Ruta o nombre del archivo de impresión (ej: G-code)",
       "properties": {
         "type": { "const": "Property" },
-        "value": { "type": "string", "description": "Nombre del archivo" }
+        "value": { "type": "string", "description": "Nombre del archivo de impresión" }
       },
       "required": ["type", "value"]
+    },
+    "status": {
+      "type": "object",
+      "description": "Estado actual de la impresión",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": { "type": "string", "description": "Estado de la impresora (Ej: 'Printing', 'Idle', 'Paused', etc.)" }
+      },
+      "required": ["type", "value"]
+    },
+    "progress": {
+      "type": "object",
+      "description": "Progreso actual de la impresión",
+      "properties": {
+        "type": { "const": "Property" },
+        "value": {
+          "type": "number",
+          "description": "Porcentaje de progreso de la impresión",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "unitCode": { 
+          "type": "string",
+          "description": "Código de unidad (ej: PCT para porcentaje)"
+        }
+      },
+      "required": ["type", "value"]
+    },
+    "layer": {
+      "type": "object",
+      "description": "Datos sobre las capas de impresión",
+      "properties": {
+        "currentLayer": {
+          "type": "object",
+          "description": "Número de la capa actual en el proceso de impresión",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Número de la capa actual" }
+          },
+          "required": ["type", "value"]
+        },
+        "totalLayers": {
+          "type": "object",
+          "description": "Número total de capas en el proceso de impresión",
+          "properties": {
+            "type": { "const": "Property" },
+            "value": { "type": "number", "description": "Número total de capas" },
+            "unitCode": { "type": "string", "description": "Código de unidad (ej: MMT para milímetros)" }
+          },
+          "required": ["type", "value"]
+        }
+      },
+      "required": ["currentLayer", "totalLayers"]
     }
   },
   "required": [
     "id",
     "type",
     "timestamp",
-    "temperatures",
-    "printTime",
-    "printer",
-    "slicer",
-    "printSuccessful",
     "file",
-    "layer"
+    "image"
   ]
 }
