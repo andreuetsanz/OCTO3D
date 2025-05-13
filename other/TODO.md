@@ -3,6 +3,15 @@
 - Probar a como lo que se publica recibirlo i guardarlo a mongo o crear la base de kibana
 - Mirar de hacer un docker file para por ejemplo en nodered instalar los nodos necesarios automaticamente
 - Mirar el error de Verificar tiempo en el flujo de nodered (enviarle correo a jose o algo)
+- Conectar nodered a kafka
+- Mirar lo de kafka i lgstas (Ns si gerard ja ho ha mirat)
+- Coenctar logstas con kibana i con mongodb 
+- Crear un dashboard simple para nodered
+- Obtener un volumen de datos validos
+- Mirar los datos que podemos mostrar (Que griaficas podemos hacer, que datos son importantes de estudiar)
+- Mostrar los graficos en powerbi i kibana
+
+* Mirar como crear una base de datos de kibana en aws (Mirar si es necesario tener saldo, ya que jo no tengo i ns si gerard tiene)
 
 ## Andreu
 
