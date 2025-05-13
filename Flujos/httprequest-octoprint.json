@@ -8,6 +8,32 @@
         "env": []
     },
     {
+        "id": "83626b2dfc3e644b",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "IS PRINTING?",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "955639a98c89c80d",
+            "483547c7e0eb2987",
+            "7a46e6f4e863ceba",
+            "f6ed0bcc1fba5502",
+            "43c458ca0daa40d9",
+            "330137d76cb6c532",
+            "1739ea564f5552f9",
+            "c170832b3561b108",
+            "a4251e203c2f752a"
+        ],
+        "x": 34,
+        "y": 139,
+        "w": 862,
+        "h": 242
+    },
+    {
         "id": "73d967a989085926",
         "type": "inject",
         "z": "a250f203621a2e27",
@@ -18,68 +44,17 @@
         "once": false,
         "onceDelay": "1",
         "topic": "",
-        "x": 230,
-        "y": 1200,
+        "x": 130,
+        "y": 520,
         "wires": [
             [
-                "5f8b38f6af1eab81",
-                "2bac1b8a1d926501"
-            ]
-        ]
-    },
-    {
-        "id": "5f8b38f6af1eab81",
-        "type": "http request",
-        "z": "a250f203621a2e27",
-        "name": "Estado OctoPrint",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://octoprint:5000/api/printer",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [
-            {
-                "keyType": "other",
-                "keyValue": "X-Api-Key",
-                "valueType": "other",
-                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
-            }
-        ],
-        "x": 440,
-        "y": 1160,
-        "wires": [
-            [
-                "d7e1f4e14c8dee85"
-            ]
-        ]
-    },
-    {
-        "id": "2bac1b8a1d926501",
-        "type": "http request",
-        "z": "a250f203621a2e27",
-        "name": "Job Info",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://octoprint:5000/api/job",
-        "headers": [
-            {
-                "keyType": "other",
-                "keyValue": "X-Api-Key",
-                "valueType": "other",
-                "valueValue": "sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo"
-            }
-        ],
-        "x": 430,
-        "y": 1240,
-        "wires": [
-            [
-                "e83880611d767e3c"
+                "21eb593786632271",
+                "829361586f1edc31",
+                "81cee3ccf5a94b33",
+                "9f37b01d7ba2419b",
+                "987c64c416411e1d",
+                "e50bd66b990fc759",
+                "467b4b5f19668945"
             ]
         ]
     },
@@ -97,8 +72,8 @@
                 "tot": "str"
             }
         ],
-        "x": 660,
-        "y": 1160,
+        "x": 780,
+        "y": 500,
         "wires": [
             [
                 "1374d2e7ac16216b"
@@ -119,11 +94,12 @@
                 "tot": "str"
             }
         ],
-        "x": 650,
-        "y": 1240,
+        "x": 770,
+        "y": 560,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "ab2059dae20e85cb"
             ]
         ]
     },
@@ -131,7 +107,7 @@
         "id": "1374d2e7ac16216b",
         "type": "join",
         "z": "a250f203621a2e27",
-        "name": "Unir printer + job",
+        "name": "Unir",
         "mode": "custom",
         "build": "object",
         "property": "payload",
@@ -142,37 +118,18 @@
         "useparts": true,
         "accumulate": false,
         "timeout": "",
-        "count": "2",
+        "count": "9",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 890,
-        "y": 1200,
+        "x": 1070,
+        "y": 620,
         "wires": [
             [
-                "744c62d6eb999982"
-            ]
-        ]
-    },
-    {
-        "id": "744c62d6eb999982",
-        "type": "function",
-        "z": "a250f203621a2e27",
-        "name": "Formato JSON Schema",
-        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\n\nmsg.payload = {\n    id: \"printer-01\",\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            value: printer.temperature?.tool0?.actual ?? null,\n            metadata: { unit: \"°C\" }\n        },\n        bed: {\n            value: printer.temperature?.bed?.actual ?? null,\n            metadata: { unit: \"°C\" }\n        }\n    },\n\n    environment: {\n        room_temperature: {\n            value: null,\n            metadata: { unit: \"°C\" }\n        }\n    },\n\n    fan_speed: {\n        value: null,\n        metadata: { unit: \"%\" }\n    },\n\n    movement_speed: {\n        value: null,\n        metadata: { unit: \"mm/s\" }\n    },\n\n    energy_consumption: {\n        value: null,\n        metadata: { unit: \"Wh\" }\n    },\n\n    print_time: {\n        elapsed: {\n            value: job.progress?.printTime ?? null,\n            metadata: { unit: \"s\" }\n        },\n        estimated: {\n            value: (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0),\n            metadata: { unit: \"s\" }\n        }\n    },\n\n    printer: {\n        brand: printer.brand ?? \"Desconocido\",\n        model: printer.model ?? \"Desconocido\"\n    },\n\n    filament: {\n        color: null,\n        type: null,\n        brand: null\n    },\n\n    slicer: null,\n    print_cost: null,\n    print_successful: job.state === \"Printing\",\n    image: null,\n    file: job.job?.file?.path ?? null,\n    current_layer_height: job.job?.layer_height ?? null\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1130,
-        "y": 1200,
-        "wires": [
-            [
-                "5a5fd90bcc7d7f95"
+                "a5786ea5359ac965",
+                "fe42399690f43c7d"
             ]
         ]
     },
@@ -187,8 +144,1207 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1380,
+        "x": 1760,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "21eb593786632271",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "ID",
+        "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generarLetrasAleatorias() {\n    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';\n    let resultado = '';\n    for (let i = 0; i < maxletas; i++) {\n        resultado += letras.charAt(Math.floor(Math.random() * letras.length));\n    }\n    return resultado;\n}\n\n// Crear el ID\nlet randomLetras = generarLetrasAleatorias();\nmsg.payload = 'opr_' + timestamp + randomLetras;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "bf9990783efc6969"
+            ]
+        ]
+    },
+    {
+        "id": "bf9990783efc6969",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "id",
+                "tot": "str"
+            }
+        ],
+        "x": 770,
+        "y": 440,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "6e29f9b5da35a554",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=files",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "files",
+                "tot": "str"
+            }
+        ],
+        "x": 784,
+        "y": 618.9999389648438,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "a5786ea5359ac965",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Formato JSON Schema",
+        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful || {};\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 620,
+        "wires": [
+            [
+                "e7d223793e590e2e"
+            ]
+        ]
+    },
+    {
+        "id": "870f20a72122f2ed",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=DisplayLayerProgress",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "displayLayerProgress",
+                "tot": "str"
+            }
+        ],
+        "x": 830,
+        "y": 680,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "ab2059dae20e85cb",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Descargar G-code",
+        "func": "const nombreArchivo = msg.payload.job.file.path;\nmsg.filename = nombreArchivo;\nmsg.url = `${flow.get('OCTOPRINT_URL')}/downloads/files/local/${nombreArchivo}`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            [
+                "c379cf2c7d6c0400"
+            ]
+        ]
+    },
+    {
+        "id": "c379cf2c7d6c0400",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "http",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1290,
+        "y": 560,
+        "wires": [
+            [
+                "081bd79011f56acf",
+                "d9dd41d50895101c"
+            ]
+        ]
+    },
+    {
+        "id": "081bd79011f56acf",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "9e519ddd55bbf910"
+        ],
+        "x": 1495,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9e519ddd55bbf910",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "name": "link in 1",
+        "links": [
+            "081bd79011f56acf"
+        ],
+        "x": 335,
+        "y": 740,
+        "wires": [
+            [
+                "43e6115c4964b77a"
+            ]
+        ]
+    },
+    {
+        "id": "35e953c2c5697c99",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=gcode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "gcode",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 740,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "d9dd41d50895101c",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "43e6115c4964b77a",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Parse G-code Info",
+        "func": "let gcode = msg.payload;\n\nlet slicer = 'Desconocido';\nlet printer = '';\nlet filament = '';        // Tipo: PLA, PETG, etc.\nlet filamentBrand = '';   // Marca: eSun, Prusament, etc.\nlet filamentUsed = '';    // Usado: 5.23m, 15g, etc.\n\n// Lista de laminadores conocidos con variaciones de nombres\nconst slicers = {\n    'Ultimaker Cura': ['cura', 'ultimaker cura', 'cura_steamengine', 'cura-steamengine'],\n    'PrusaSlicer': ['prusaslicer', 'prusa slicer', 'prusaslicer'],\n    'Bambu Studio': ['bambu studio', 'bambu_studio', 'bambu-studio'],\n    'Creality Print': ['creality print', 'creality_print'],\n    'Slic3r': ['slic3r', 'slic3r pe', 'slic3r_pe'],\n    'IdeaMaker': ['ideamaker', 'idea_maker'],\n    'Simplify3D': ['simplify3d', 'simplify 3d'],\n    'MatterControl': ['mattercontrol', 'matter control'],\n    'ReplicatorG': ['replicatorg', 'replicator g'],\n    'FlashPrint': ['flashprint', 'flash print'],\n    'ZeroSlicer': ['zeroslicer', 'zero slicer'],\n    'Kiri Moto': ['kirimotors', 'kiri motors']\n};\n\n// Función para verificar si alguna palabra del laminador aparece en el G-code\nfunction detectSlicer(gcode, slicerNames) {\n    for (let slicerName of slicerNames) {\n        let regex = new RegExp(slicerName, 'i');\n        if (regex.test(gcode)) {\n            return true;\n        }\n    }\n    return false;\n}\n\n// Verificar slicer\nfor (let [name, variations] of Object.entries(slicers)) {\n    if (detectSlicer(gcode, variations)) {\n        slicer = name;\n        break;\n    }\n}\n\n// Detectar impresora con múltiples patrones comunes\nlet printerRegexes = [\n    /; ?(MACHINE_NAME|printer_model) *= *(.+)/i,\n    /; ?print_compatible_printers *= *(.+)/i,\n    /; ?printer_name *= *(.+)/i,\n    /; ?model *= *(.+)/i\n];\n\nfor (let regex of printerRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        printer = match?.[2]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar tipo de filamento (PLA, PETG, etc.)\nlet filamentTypeRegexes = [\n    /; ?filament_type *= *(.+)/i,\n    /; ?filament_material *= *(.+)/i\n];\n\nfor (let regex of filamentTypeRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filament = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar marca del filamento\nlet filamentBrandRegexes = [\n    /; ?filament_brand *= *(.+)/i,\n    /; ?filament_settings_id *= *(.+)/i\n];\n\n\nfor (let regex of filamentBrandRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentBrand = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar cantidad de filamento usado\nlet filamentUsedRegexes = [\n    /; ?filament used(?: *\\[.*\\])? *= *(.+)/i,\n    /; ?filament_used *= *(.+)/i,\n    /; ?filament_consumed *= *(.+)/i\n];\n\n\nfor (let regex of filamentUsedRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentUsed = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Resultado\nmsg.payload = {\n    slicer: slicer,\n    printer: printer,\n    filament: filament,\n    filament_brand: filamentBrand,\n    filament_used: filamentUsed\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "35e953c2c5697c99"
+            ]
+        ]
+    },
+    {
+        "id": "eb1aea727e7dc32a",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=img",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "img",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 800,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "6052c7cf3d66aba4",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=printSuccessful",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "printSuccessful",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 860,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "e7d223793e590e2e",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "name": "",
+        "property": "payload.status.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Printing",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "Printing",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1510,
+        "y": 620,
+        "wires": [
+            [
+                "5a5fd90bcc7d7f95"
+            ],
+            [
+                "b50c28f40aeafff2"
+            ]
+        ]
+    },
+    {
+        "id": "b50c28f40aeafff2",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "function 1",
+        "func": "msg.payload = \"The printer is not printing\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 660,
+        "wires": [
+            [
+                "b11c54920c924a88"
+            ]
+        ]
+    },
+    {
+        "id": "b11c54920c924a88",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "No Printing",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1930,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ff53fc7050335810",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "A base64",
+        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1140,
+        "wires": [
+            [
+                "b3865035ccdf9685"
+            ]
+        ]
+    },
+    {
+        "id": "6d2a55aa4804dee6",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "name": "link in 5",
+        "links": [],
+        "x": 75,
+        "y": 1140,
+        "wires": [
+            [
+                "25726bde6564cc6b"
+            ]
+        ]
+    },
+    {
+        "id": "b3865035ccdf9685",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "name": "link out 6",
+        "mode": "return",
+        "links": [],
+        "x": 1015,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "25726bde6564cc6b",
+        "type": "exec",
+        "z": "a250f203621a2e27",
+        "command": "find /data/images -type f | shuf -n 1",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Buscar imagen aleatoria",
+        "x": 230,
+        "y": 1140,
+        "wires": [
+            [
+                "970975f1d6b4dc57"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "970975f1d6b4dc57",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Set filename",
+        "func": "msg.filename = msg.payload.trim();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 1140,
+        "wires": [
+            [
+                "f46d8c3b70453d2e"
+            ]
+        ]
+    },
+    {
+        "id": "f46d8c3b70453d2e",
+        "type": "file in",
+        "z": "a250f203621a2e27",
+        "name": "Leer imagen",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "",
+        "x": 690,
+        "y": 1140,
+        "wires": [
+            [
+                "ff53fc7050335810"
+            ]
+        ]
+    },
+    {
+        "id": "829361586f1edc31",
+        "type": "link call",
+        "z": "a250f203621a2e27",
+        "name": "Obtener imaguen",
+        "links": [
+            "6d2a55aa4804dee6"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 410,
+        "y": 800,
+        "wires": [
+            [
+                "eb1aea727e7dc32a",
+                "1f252f4462ec7f0f"
+            ]
+        ]
+    },
+    {
+        "id": "afc3c7a692880c3a",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "name": "Set topic=roomTemperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "roomTemperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 920,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "1f252f4462ec7f0f",
+        "type": "link call",
+        "z": "a250f203621a2e27",
+        "name": "IA",
+        "links": [
+            "988a8a5ab8a9fc6f"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 610,
+        "y": 860,
+        "wires": [
+            [
+                "6052c7cf3d66aba4"
+            ]
+        ]
+    },
+    {
+        "id": "81cee3ccf5a94b33",
+        "type": "link call",
+        "z": "a250f203621a2e27",
+        "name": "roomTemperature",
+        "links": [
+            "7a40b87b585d1a2c"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 410,
+        "y": 920,
+        "wires": [
+            [
+                "afc3c7a692880c3a"
+            ]
+        ]
+    },
+    {
+        "id": "988a8a5ab8a9fc6f",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "name": "link in 2",
+        "links": [],
+        "x": 75,
+        "y": 1200,
+        "wires": [
+            [
+                "340f7b3f12a9ab75"
+            ]
+        ]
+    },
+    {
+        "id": "5999a69c26f0e1b9",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "name": "link out 2",
+        "mode": "return",
+        "links": [],
+        "x": 265,
         "y": 1200,
         "wires": []
+    },
+    {
+        "id": "7a40b87b585d1a2c",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "name": "link in 3",
+        "links": [],
+        "x": 75,
+        "y": 1260,
+        "wires": [
+            [
+                "1026462f96489122"
+            ]
+        ]
+    },
+    {
+        "id": "55ad7bb22f530f4d",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "name": "link out 3",
+        "mode": "return",
+        "links": [],
+        "x": 355,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "340f7b3f12a9ab75",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "IA",
+        "func": "msg.payload = Math.random() < 0.95;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 1200,
+        "wires": [
+            [
+                "5999a69c26f0e1b9"
+            ]
+        ]
+    },
+    {
+        "id": "1026462f96489122",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "roomTemperature",
+        "func": "msg.payload = +(Math.random() + 30).toFixed(1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1260,
+        "wires": [
+            [
+                "55ad7bb22f530f4d"
+            ]
+        ]
+    },
+    {
+        "id": "edfc56086d8ab47b",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Servidor Visrtual",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "aab6f6417ae024ed"
+            ]
+        ]
+    },
+    {
+        "id": "aab6f6417ae024ed",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://octoprint:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f37b01d7ba2419b",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Estado OctoPrint",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/printer`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "02d5e81e20345401"
+            ]
+        ]
+    },
+    {
+        "id": "987c64c416411e1d",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Job Info",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/job`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "871b36611425097b"
+            ]
+        ]
+    },
+    {
+        "id": "e50bd66b990fc759",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Files",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/files`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 620,
+        "wires": [
+            [
+                "c32acf1bf5a75b1b"
+            ]
+        ]
+    },
+    {
+        "id": "467b4b5f19668945",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "DisplayLayerProgress",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/plugin/DisplayLayerProgress/values`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "4c2aedf4f8ef20a9"
+            ]
+        ]
+    },
+    {
+        "id": "02d5e81e20345401",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": " http",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "d7e1f4e14c8dee85"
+            ]
+        ]
+    },
+    {
+        "id": "871b36611425097b",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "http ",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "e83880611d767e3c"
+            ]
+        ]
+    },
+    {
+        "id": "c32acf1bf5a75b1b",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": " http",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 620,
+        "wires": [
+            [
+                "6e29f9b5da35a554"
+            ]
+        ]
+    },
+    {
+        "id": "4c2aedf4f8ef20a9",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "name": "http ",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 680,
+        "wires": [
+            [
+                "870f20a72122f2ed"
+            ]
+        ]
+    },
+    {
+        "id": "b6cdd4b9566c7683",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://192.168.0.119:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"6ZMXBaKRB1Wx-w9DWuyQmprhlApYHDG3QrMaeY3XhWY\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ae4e31a197d45fc",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Servidor Real",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 80,
+        "wires": [
+            [
+                "b6cdd4b9566c7683"
+            ]
+        ]
+    },
+    {
+        "id": "fe42399690f43c7d",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "687568201063a4c8",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "name": "link in 4",
+        "links": [
+            "c170832b3561b108"
+        ],
+        "x": 125,
+        "y": 860,
+        "wires": [
+            [
+                "21eb593786632271",
+                "9f37b01d7ba2419b",
+                "987c64c416411e1d",
+                "e50bd66b990fc759",
+                "467b4b5f19668945",
+                "829361586f1edc31",
+                "81cee3ccf5a94b33"
+            ]
+        ]
+    },
+    {
+        "id": "955639a98c89c80d",
+        "type": "mqtt in",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "PRINTING MQTT",
+        "topic": "octoPrint/event/PrinterStateChanged",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "4b50b82dd1e6f2fa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "483547c7e0eb2987"
+            ]
+        ]
+    },
+    {
+        "id": "483547c7e0eb2987",
+        "type": "json",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Convertir a JSON",
+        "action": "obj",
+        "pretty": false,
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "7a46e6f4e863ceba"
+            ]
+        ]
+    },
+    {
+        "id": "7a46e6f4e863ceba",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "¿Es PRINTING?",
+        "property": "payload.state_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PRINTING",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "f6ed0bcc1fba5502"
+            ],
+            [
+                "43c458ca0daa40d9"
+            ]
+        ]
+    },
+    {
+        "id": "f6ed0bcc1fba5502",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Reiniciar temporizador",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timerActive",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43c458ca0daa40d9",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Activar temporizador",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timerActive",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "timerStart",
+                "pt": "flow",
+                "to": "$now()",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "330137d76cb6c532",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Cada 5 segundos",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "1739ea564f5552f9"
+            ]
+        ]
+    },
+    {
+        "id": "1739ea564f5552f9",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "¿Timer activo?",
+        "property": "timerActive",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "c170832b3561b108"
+            ],
+            [
+                "a4251e203c2f752a"
+            ]
+        ]
+    },
+    {
+        "id": "c170832b3561b108",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "687568201063a4c8"
+        ],
+        "x": 745,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a4251e203c2f752a",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Verificar tiempo",
+        "func": "// Obtener tiempo de inicio y tiempo actual\nvar startTime = flow.get('timerStart');\nvar currentTime = new Date();\n\n// Calcular diferencia en milisegundos\nvar diff = currentTime - startTime;\nvar thirtyMinutes = 30 * 60 * 1000;\n\n// Si han pasado menos de 30 minutos, continuar\nif (diff < thirtyMinutes) {\n    return msg;\n} else {\n    // Desactivar timer si han pasado más de 30 minutos\n    flow.set('timerActive', false);\n    return null; // No continuar el flujo\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "c170832b3561b108"
+            ]
+        ]
+    },
+    {
+        "id": "4b50b82dd1e6f2fa",
+        "type": "mqtt-broker",
+        "name": "Octo-MQTT",
+        "broker": "mqtt",
+        "port": "1883",
+        "clientid": "nodered",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "5",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     }
 ]
