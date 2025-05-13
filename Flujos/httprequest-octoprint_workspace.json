@@ -26,12 +26,55 @@
             "330137d76cb6c532",
             "1739ea564f5552f9",
             "c170832b3561b108",
-            "a4251e203c2f752a"
+            "a4251e203c2f752a",
+            "1ebfc2aae3c1f080"
         ],
         "x": 34,
-        "y": 139,
-        "w": 862,
-        "h": 242
+        "y": 119,
+        "w": 872,
+        "h": 262
+    },
+    {
+        "id": "83e1d10dbe5ed7e7",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "ANDREU",
+        "style": {
+            "stroke": "#ffdf7f",
+            "fill": "#ffdf7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "610a9e722466bca6",
+            "0e872fa4b6d14395"
+        ],
+        "x": 1114,
+        "y": 159,
+        "w": 472,
+        "h": 82
+    },
+    {
+        "id": "571b95b08a93bbc8",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "GERARD",
+        "style": {
+            "stroke": "#b797cf",
+            "fill": "#b797cf",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "edfc56086d8ab47b",
+            "aab6f6417ae024ed"
+        ],
+        "x": 1114,
+        "y": 39,
+        "w": 472,
+        "h": 82
     },
     {
         "id": "73d967a989085926",
@@ -76,7 +119,8 @@
         "y": 500,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "dbfece1ba354963c"
             ]
         ]
     },
@@ -99,7 +143,9 @@
         "wires": [
             [
                 "1374d2e7ac16216b",
-                "ab2059dae20e85cb"
+                "ab2059dae20e85cb",
+                "dd8c88a1c8048ee7",
+                "f85ec7a0d3d0f1e0"
             ]
         ]
     },
@@ -125,7 +171,7 @@
         "reduceInitType": "num",
         "reduceFixup": "",
         "x": 1070,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "a5786ea5359ac965",
@@ -144,8 +190,10 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1760,
-        "y": 580,
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 700,
         "wires": []
     },
     {
@@ -186,7 +234,8 @@
         "y": 440,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "3a236998894aaa3b"
             ]
         ]
     },
@@ -208,7 +257,8 @@
         "y": 618.9999389648438,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "5883f27b315014c0"
             ]
         ]
     },
@@ -224,11 +274,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1270,
+        "x": 1350,
         "y": 620,
         "wires": [
             [
-                "e7d223793e590e2e"
+                "5a5fd90bcc7d7f95",
+                "315f6c9a2778567b"
             ]
         ]
     },
@@ -250,7 +301,8 @@
         "y": 680,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "898b263255acfc18"
             ]
         ]
     },
@@ -266,8 +318,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 560,
+        "x": 1310,
+        "y": 440,
         "wires": [
             [
                 "c379cf2c7d6c0400"
@@ -290,8 +342,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1290,
-        "y": 560,
+        "x": 1510,
+        "y": 440,
         "wires": [
             [
                 "081bd79011f56acf",
@@ -308,8 +360,8 @@
         "links": [
             "9e519ddd55bbf910"
         ],
-        "x": 1495,
-        "y": 560,
+        "x": 1675,
+        "y": 460,
         "wires": []
     },
     {
@@ -351,7 +403,8 @@
         "y": 740,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "81c0953b8e086f04"
             ]
         ]
     },
@@ -367,8 +420,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
-        "y": 520,
+        "x": 1740,
+        "y": 380,
         "wires": []
     },
     {
@@ -437,83 +490,14 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
+        "x": 790,
         "y": 860,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "e9524440e8768bb5"
             ]
         ]
-    },
-    {
-        "id": "e7d223793e590e2e",
-        "type": "switch",
-        "z": "a250f203621a2e27",
-        "name": "",
-        "property": "payload.status.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Printing",
-                "vt": "str"
-            },
-            {
-                "t": "neq",
-                "v": "Printing",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1510,
-        "y": 620,
-        "wires": [
-            [
-                "5a5fd90bcc7d7f95"
-            ],
-            [
-                "b50c28f40aeafff2"
-            ]
-        ]
-    },
-    {
-        "id": "b50c28f40aeafff2",
-        "type": "function",
-        "z": "a250f203621a2e27",
-        "name": "function 1",
-        "func": "msg.payload = \"The printer is not printing\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1740,
-        "y": 660,
-        "wires": [
-            [
-                "b11c54920c924a88"
-            ]
-        ]
-    },
-    {
-        "id": "b11c54920c924a88",
-        "type": "debug",
-        "z": "a250f203621a2e27",
-        "name": "No Printing",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1930,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "ff53fc7050335810",
@@ -589,8 +573,12 @@
         "name": "Set filename",
         "func": "msg.filename = msg.payload.trim();\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
-        "x": 490,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
         "y": 1140,
         "wires": [
             [
@@ -603,11 +591,13 @@
         "type": "file in",
         "z": "a250f203621a2e27",
         "name": "Leer imagen",
-        "filename": "",
+        "filename": "filename",
+        "filenameType": "msg",
         "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "",
+        "allProps": false,
         "x": 690,
         "y": 1140,
         "wires": [
@@ -658,7 +648,8 @@
         "y": 920,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "1374d2e7ac16216b",
+                "72914a36beeb469a"
             ]
         ]
     },
@@ -792,7 +783,8 @@
         "id": "edfc56086d8ab47b",
         "type": "inject",
         "z": "a250f203621a2e27",
-        "name": "Servidor Visrtual",
+        "g": "571b95b08a93bbc8",
+        "name": "Servidor (Gerard)",
         "props": [
             {
                 "p": "payload"
@@ -804,12 +796,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": "0",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
+        "x": 1240,
         "y": 80,
         "wires": [
             [
@@ -821,15 +813,16 @@
         "id": "aab6f6417ae024ed",
         "type": "function",
         "z": "a250f203621a2e27",
+        "g": "571b95b08a93bbc8",
         "name": "Variables de flujo",
-        "func": "flow.set(\"OCTOPRINT_URL\", \"http://octoprint:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo\")\nreturn msg;",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://host.docker.internal:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
+        "x": 1470,
         "y": 80,
         "wires": [
             []
@@ -1016,14 +1009,14 @@
         "type": "function",
         "z": "a250f203621a2e27",
         "name": "Variables de flujo",
-        "func": "flow.set(\"OCTOPRINT_URL\", \"http://192.168.0.119:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"6ZMXBaKRB1Wx-w9DWuyQmprhlApYHDG3QrMaeY3XhWY\")\nreturn msg;",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://192.168.0.119:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
+        "x": 990,
         "y": 80,
         "wires": [
             []
@@ -1050,7 +1043,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 550,
+        "x": 790,
         "y": 80,
         "wires": [
             [
@@ -1070,8 +1063,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1210,
-        "y": 760,
+        "x": 1240,
+        "y": 680,
         "wires": []
     },
     {
@@ -1130,7 +1123,8 @@
         "y": 220,
         "wires": [
             [
-                "7a46e6f4e863ceba"
+                "7a46e6f4e863ceba",
+                "1ebfc2aae3c1f080"
             ]
         ]
     },
@@ -1219,7 +1213,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
+        "x": 780,
         "y": 260,
         "wires": [
             []
@@ -1295,7 +1289,7 @@
         "links": [
             "687568201063a4c8"
         ],
-        "x": 745,
+        "x": 725,
         "y": 300,
         "wires": []
     },
@@ -1317,6 +1311,231 @@
         "wires": [
             [
                 "c170832b3561b108"
+            ]
+        ]
+    },
+    {
+        "id": "1ebfc2aae3c1f080",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3a236998894aaa3b",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "dbfece1ba354963c",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "dd8c88a1c8048ee7",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5883f27b315014c0",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "898b263255acfc18",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "81c0953b8e086f04",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "e9524440e8768bb5",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "72914a36beeb469a",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "f85ec7a0d3d0f1e0",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "315f6c9a2778567b",
+        "type": "mongodb out",
+        "z": "a250f203621a2e27",
+        "mongodb": "e91da883a051a37b",
+        "name": "",
+        "collection": "octo_data",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 1810,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "610a9e722466bca6",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "83e1d10dbe5ed7e7",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://host.docker.internal:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e872fa4b6d14395",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "83e1d10dbe5ed7e7",
+        "name": "Servidor (Andreu)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1240,
+        "y": 200,
+        "wires": [
+            [
+                "610a9e722466bca6"
             ]
         ]
     },
@@ -1346,5 +1565,15 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "e91da883a051a37b",
+        "type": "mongodb",
+        "hostname": "mongodb",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": 27017,
+        "db": "octoprint",
+        "name": "MONGO"
     }
 ]
