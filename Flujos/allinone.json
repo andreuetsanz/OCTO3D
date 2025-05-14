@@ -1,0 +1,2137 @@
+[
+    {
+        "id": "a250f203621a2e27",
+        "type": "tab",
+        "label": "Get_Data_From_Octoprint",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "83626b2dfc3e644b",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "IS PRINTING?",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "955639a98c89c80d",
+            "483547c7e0eb2987",
+            "7a46e6f4e863ceba",
+            "f6ed0bcc1fba5502",
+            "43c458ca0daa40d9",
+            "330137d76cb6c532",
+            "1739ea564f5552f9",
+            "c170832b3561b108",
+            "a4251e203c2f752a",
+            "52c12ee918d12fac",
+            "12df92e58e5c7c23",
+            "f712bc53f237a0c5",
+            "8504578ae101531e",
+            "af6147d0d0c8995b"
+        ],
+        "x": 34,
+        "y": 99,
+        "w": 862,
+        "h": 322
+    },
+    {
+        "id": "274833f5177e2ed0",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "GET OCTOPRINT DATA",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "970975f1d6b4dc57",
+            "ff53fc7050335810",
+            "6d2a55aa4804dee6",
+            "b3865035ccdf9685",
+            "25726bde6564cc6b",
+            "f46d8c3b70453d2e",
+            "988a8a5ab8a9fc6f",
+            "5999a69c26f0e1b9",
+            "7a40b87b585d1a2c",
+            "55ad7bb22f530f4d",
+            "340f7b3f12a9ab75",
+            "1026462f96489122",
+            "73d967a989085926",
+            "d7e1f4e14c8dee85",
+            "e83880611d767e3c",
+            "1374d2e7ac16216b",
+            "5a5fd90bcc7d7f95",
+            "21eb593786632271",
+            "bf9990783efc6969",
+            "6e29f9b5da35a554",
+            "a5786ea5359ac965",
+            "870f20a72122f2ed",
+            "ab2059dae20e85cb",
+            "c379cf2c7d6c0400",
+            "081bd79011f56acf",
+            "9e519ddd55bbf910",
+            "35e953c2c5697c99",
+            "43e6115c4964b77a",
+            "eb1aea727e7dc32a",
+            "6052c7cf3d66aba4",
+            "e7d223793e590e2e",
+            "b11c54920c924a88",
+            "829361586f1edc31",
+            "afc3c7a692880c3a",
+            "1f252f4462ec7f0f",
+            "81cee3ccf5a94b33",
+            "9f37b01d7ba2419b",
+            "987c64c416411e1d",
+            "e50bd66b990fc759",
+            "467b4b5f19668945",
+            "02d5e81e20345401",
+            "871b36611425097b",
+            "c32acf1bf5a75b1b",
+            "4c2aedf4f8ef20a9",
+            "687568201063a4c8",
+            "ad50dab14ad3b9b5"
+        ],
+        "x": 34,
+        "y": 439,
+        "w": 1852,
+        "h": 782
+    },
+    {
+        "id": "ad5ae281c789b9c5",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "Kafka",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "a58b040e92e0b0f2",
+            "9d2dde464731daac",
+            "ca03c0656f8f02d3",
+            "8647a39f2d32fd25"
+        ],
+        "x": 34,
+        "y": 1239,
+        "w": 552,
+        "h": 142
+    },
+    {
+        "id": "f199863a1df72f71",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "Dashboard",
+        "style": {
+            "stroke": "#ffff00",
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "ac84701c5ace585d",
+            "3fd3dd7c578bbb47",
+            "465cbebf8d3b4d7d",
+            "4e0863537fab1432",
+            "192d6be3d9705c71",
+            "75c5debadffd84c8",
+            "042fa9915f80c4b0",
+            "115495b46456859b",
+            "925c78b4eb9f7d99",
+            "3eb52026d1efad42",
+            "3a2977bacadcf9ee",
+            "239c2fa1499e9da0"
+        ],
+        "x": 34,
+        "y": 1399,
+        "w": 612,
+        "h": 482
+    },
+    {
+        "id": "8003b065a127a611",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "ANDREU",
+        "style": {
+            "stroke": "#ffdf7f",
+            "fill": "#ffdf7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "3509d0f441e661be",
+            "4146e35d96748848"
+        ],
+        "x": 934,
+        "y": 219,
+        "w": 472,
+        "h": 82
+    },
+    {
+        "id": "15cd34d6248edbcd",
+        "type": "group",
+        "z": "a250f203621a2e27",
+        "name": "GERARD",
+        "style": {
+            "stroke": "#b797cf",
+            "fill": "#b797cf",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "cce34f6a0aae5c87",
+            "33b17684e8cd3cec"
+        ],
+        "x": 934,
+        "y": 99,
+        "w": 472,
+        "h": 82
+    },
+    {
+        "id": "73d967a989085926",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "GET",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "21eb593786632271",
+                "829361586f1edc31",
+                "81cee3ccf5a94b33",
+                "9f37b01d7ba2419b",
+                "987c64c416411e1d",
+                "e50bd66b990fc759",
+                "467b4b5f19668945"
+            ]
+        ]
+    },
+    {
+        "id": "d7e1f4e14c8dee85",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=printer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "printer",
+                "tot": "str"
+            }
+        ],
+        "x": 780,
+        "y": 540,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "e83880611d767e3c",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=job",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "job",
+                "tot": "str"
+            }
+        ],
+        "x": 770,
+        "y": 600,
+        "wires": [
+            [
+                "1374d2e7ac16216b",
+                "ab2059dae20e85cb"
+            ]
+        ]
+    },
+    {
+        "id": "1374d2e7ac16216b",
+        "type": "join",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Unir",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "9",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1070,
+        "y": 660,
+        "wires": [
+            [
+                "a5786ea5359ac965"
+            ]
+        ]
+    },
+    {
+        "id": "5a5fd90bcc7d7f95",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Resultado Final",
+        "active": false,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "21eb593786632271",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "ID",
+        "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generarLetrasAleatorias() {\n    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';\n    let resultado = '';\n    for (let i = 0; i < maxletas; i++) {\n        resultado += letras.charAt(Math.floor(Math.random() * letras.length));\n    }\n    return resultado;\n}\n\n// Crear el ID\nlet randomLetras = generarLetrasAleatorias();\nmsg.payload = 'opr_' + timestamp + randomLetras;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 480,
+        "wires": [
+            [
+                "bf9990783efc6969"
+            ]
+        ]
+    },
+    {
+        "id": "bf9990783efc6969",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "id",
+                "tot": "str"
+            }
+        ],
+        "x": 770,
+        "y": 480,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "6e29f9b5da35a554",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=files",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "files",
+                "tot": "str"
+            }
+        ],
+        "x": 784,
+        "y": 658.9999389648438,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "a5786ea5359ac965",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Formato JSON Schema",
+        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful || {};\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 660,
+        "wires": [
+            [
+                "e7d223793e590e2e"
+            ]
+        ]
+    },
+    {
+        "id": "870f20a72122f2ed",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=DisplayLayerProgress",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "displayLayerProgress",
+                "tot": "str"
+            }
+        ],
+        "x": 830,
+        "y": 720,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "ab2059dae20e85cb",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Descargar G-code",
+        "func": "const nombreArchivo = msg.payload.job.file.path;\nmsg.filename = nombreArchivo;\nmsg.url = `${flow.get('OCTOPRINT_URL')}/downloads/files/local/${nombreArchivo}`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 600,
+        "wires": [
+            [
+                "c379cf2c7d6c0400"
+            ]
+        ]
+    },
+    {
+        "id": "c379cf2c7d6c0400",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "http",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1290,
+        "y": 600,
+        "wires": [
+            [
+                "081bd79011f56acf"
+            ]
+        ]
+    },
+    {
+        "id": "081bd79011f56acf",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "9e519ddd55bbf910"
+        ],
+        "x": 1495,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "9e519ddd55bbf910",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link in 1",
+        "links": [
+            "081bd79011f56acf"
+        ],
+        "x": 335,
+        "y": 780,
+        "wires": [
+            [
+                "43e6115c4964b77a"
+            ]
+        ]
+    },
+    {
+        "id": "35e953c2c5697c99",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=gcode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "gcode",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 780,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "43e6115c4964b77a",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Parse G-code Info",
+        "func": "let gcode = msg.payload;\n\nlet slicer = 'Desconocido';\nlet printer = '';\nlet filament = '';        // Tipo: PLA, PETG, etc.\nlet filamentBrand = '';   // Marca: eSun, Prusament, etc.\nlet filamentUsed = '';    // Usado: 5.23m, 15g, etc.\n\n// Lista de laminadores conocidos con variaciones de nombres\nconst slicers = {\n    'Ultimaker Cura': ['cura', 'ultimaker cura', 'cura_steamengine', 'cura-steamengine'],\n    'PrusaSlicer': ['prusaslicer', 'prusa slicer', 'prusaslicer'],\n    'Bambu Studio': ['bambu studio', 'bambu_studio', 'bambu-studio'],\n    'Creality Print': ['creality print', 'creality_print'],\n    'Slic3r': ['slic3r', 'slic3r pe', 'slic3r_pe'],\n    'IdeaMaker': ['ideamaker', 'idea_maker'],\n    'Simplify3D': ['simplify3d', 'simplify 3d'],\n    'MatterControl': ['mattercontrol', 'matter control'],\n    'ReplicatorG': ['replicatorg', 'replicator g'],\n    'FlashPrint': ['flashprint', 'flash print'],\n    'ZeroSlicer': ['zeroslicer', 'zero slicer'],\n    'Kiri Moto': ['kirimotors', 'kiri motors']\n};\n\n// Función para verificar si alguna palabra del laminador aparece en el G-code\nfunction detectSlicer(gcode, slicerNames) {\n    for (let slicerName of slicerNames) {\n        let regex = new RegExp(slicerName, 'i');\n        if (regex.test(gcode)) {\n            return true;\n        }\n    }\n    return false;\n}\n\n// Verificar slicer\nfor (let [name, variations] of Object.entries(slicers)) {\n    if (detectSlicer(gcode, variations)) {\n        slicer = name;\n        break;\n    }\n}\n\n// Detectar impresora con múltiples patrones comunes\nlet printerRegexes = [\n    /; ?(MACHINE_NAME|printer_model) *= *(.+)/i,\n    /; ?print_compatible_printers *= *(.+)/i,\n    /; ?printer_name *= *(.+)/i,\n    /; ?model *= *(.+)/i\n];\n\nfor (let regex of printerRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        printer = match?.[2]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar tipo de filamento (PLA, PETG, etc.)\nlet filamentTypeRegexes = [\n    /; ?filament_type *= *(.+)/i,\n    /; ?filament_material *= *(.+)/i\n];\n\nfor (let regex of filamentTypeRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filament = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar marca del filamento\nlet filamentBrandRegexes = [\n    /; ?filament_brand *= *(.+)/i,\n    /; ?filament_settings_id *= *(.+)/i\n];\n\n\nfor (let regex of filamentBrandRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentBrand = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar cantidad de filamento usado\nlet filamentUsedRegexes = [\n    /; ?filament used(?: *\\[.*\\])? *= *(.+)/i,\n    /; ?filament_used *= *(.+)/i,\n    /; ?filament_consumed *= *(.+)/i\n];\n\n\nfor (let regex of filamentUsedRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentUsed = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Resultado\nmsg.payload = {\n    slicer: slicer,\n    printer: printer,\n    filament: filament,\n    filament_brand: filamentBrand,\n    filament_used: filamentUsed\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "35e953c2c5697c99"
+            ]
+        ]
+    },
+    {
+        "id": "eb1aea727e7dc32a",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=img",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "img",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 840,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "6052c7cf3d66aba4",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=printSuccessful",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "printSuccessful",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 900,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "e7d223793e590e2e",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "",
+        "property": "payload.status.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Printing",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "Printing",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1510,
+        "y": 660,
+        "wires": [
+            [
+                "5a5fd90bcc7d7f95",
+                "ad50dab14ad3b9b5"
+            ],
+            [
+                "b11c54920c924a88"
+            ]
+        ]
+    },
+    {
+        "id": "b11c54920c924a88",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "No Printing",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "\"The printer is not printing\"",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1750,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ff53fc7050335810",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "A base64",
+        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1060,
+        "wires": [
+            [
+                "b3865035ccdf9685"
+            ]
+        ]
+    },
+    {
+        "id": "6d2a55aa4804dee6",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link in 5",
+        "links": [],
+        "x": 75,
+        "y": 1060,
+        "wires": [
+            [
+                "25726bde6564cc6b"
+            ]
+        ]
+    },
+    {
+        "id": "b3865035ccdf9685",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link out 6",
+        "mode": "return",
+        "links": [],
+        "x": 1015,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "25726bde6564cc6b",
+        "type": "exec",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "command": "find /data/images -type f | shuf -n 1",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Buscar imagen aleatoria",
+        "x": 230,
+        "y": 1060,
+        "wires": [
+            [
+                "970975f1d6b4dc57"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "970975f1d6b4dc57",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set filename",
+        "func": "msg.filename = msg.payload.trim();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 1060,
+        "wires": [
+            [
+                "f46d8c3b70453d2e"
+            ]
+        ]
+    },
+    {
+        "id": "f46d8c3b70453d2e",
+        "type": "file in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Leer imagen",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "",
+        "x": 690,
+        "y": 1060,
+        "wires": [
+            [
+                "ff53fc7050335810"
+            ]
+        ]
+    },
+    {
+        "id": "829361586f1edc31",
+        "type": "link call",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Obtener imaguen",
+        "links": [
+            "6d2a55aa4804dee6"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 410,
+        "y": 840,
+        "wires": [
+            [
+                "eb1aea727e7dc32a",
+                "1f252f4462ec7f0f"
+            ]
+        ]
+    },
+    {
+        "id": "afc3c7a692880c3a",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set topic=roomTemperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "roomTemperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 960,
+        "wires": [
+            [
+                "1374d2e7ac16216b"
+            ]
+        ]
+    },
+    {
+        "id": "1f252f4462ec7f0f",
+        "type": "link call",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "IA",
+        "links": [
+            "988a8a5ab8a9fc6f"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 610,
+        "y": 900,
+        "wires": [
+            [
+                "6052c7cf3d66aba4"
+            ]
+        ]
+    },
+    {
+        "id": "81cee3ccf5a94b33",
+        "type": "link call",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "roomTemperature",
+        "links": [
+            "7a40b87b585d1a2c"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 410,
+        "y": 960,
+        "wires": [
+            [
+                "afc3c7a692880c3a"
+            ]
+        ]
+    },
+    {
+        "id": "988a8a5ab8a9fc6f",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link in 2",
+        "links": [],
+        "x": 75,
+        "y": 1120,
+        "wires": [
+            [
+                "340f7b3f12a9ab75"
+            ]
+        ]
+    },
+    {
+        "id": "5999a69c26f0e1b9",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link out 2",
+        "mode": "return",
+        "links": [],
+        "x": 265,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "7a40b87b585d1a2c",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link in 3",
+        "links": [],
+        "x": 75,
+        "y": 1180,
+        "wires": [
+            [
+                "1026462f96489122"
+            ]
+        ]
+    },
+    {
+        "id": "55ad7bb22f530f4d",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link out 3",
+        "mode": "return",
+        "links": [],
+        "x": 355,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "340f7b3f12a9ab75",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "IA",
+        "func": "msg.payload = Math.random() < 0.95;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 1120,
+        "wires": [
+            [
+                "5999a69c26f0e1b9"
+            ]
+        ]
+    },
+    {
+        "id": "1026462f96489122",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "roomTemperature",
+        "func": "msg.payload = +(Math.random() + 30).toFixed(1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1180,
+        "wires": [
+            [
+                "55ad7bb22f530f4d"
+            ]
+        ]
+    },
+    {
+        "id": "edfc56086d8ab47b",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Servidor Visrtual",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            [
+                "aab6f6417ae024ed"
+            ]
+        ]
+    },
+    {
+        "id": "aab6f6417ae024ed",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://octoprint:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f37b01d7ba2419b",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Estado OctoPrint",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/printer`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 540,
+        "wires": [
+            [
+                "02d5e81e20345401"
+            ]
+        ]
+    },
+    {
+        "id": "987c64c416411e1d",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Job Info",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/job`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 600,
+        "wires": [
+            [
+                "871b36611425097b"
+            ]
+        ]
+    },
+    {
+        "id": "e50bd66b990fc759",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Files",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/files`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 660,
+        "wires": [
+            [
+                "c32acf1bf5a75b1b"
+            ]
+        ]
+    },
+    {
+        "id": "467b4b5f19668945",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "DisplayLayerProgress",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/plugin/DisplayLayerProgress/values`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "4c2aedf4f8ef20a9"
+            ]
+        ]
+    },
+    {
+        "id": "02d5e81e20345401",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": " http",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 540,
+        "wires": [
+            [
+                "d7e1f4e14c8dee85"
+            ]
+        ]
+    },
+    {
+        "id": "871b36611425097b",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "http ",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "e83880611d767e3c"
+            ]
+        ]
+    },
+    {
+        "id": "c32acf1bf5a75b1b",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": " http",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 660,
+        "wires": [
+            [
+                "6e29f9b5da35a554"
+            ]
+        ]
+    },
+    {
+        "id": "4c2aedf4f8ef20a9",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "http ",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 720,
+        "wires": [
+            [
+                "870f20a72122f2ed"
+            ]
+        ]
+    },
+    {
+        "id": "b6cdd4b9566c7683",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://192.168.0.119:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"6ZMXBaKRB1Wx-w9DWuyQmprhlApYHDG3QrMaeY3XhWY\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ae4e31a197d45fc",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Servidor Real",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [
+                "b6cdd4b9566c7683"
+            ]
+        ]
+    },
+    {
+        "id": "687568201063a4c8",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link in 4",
+        "links": [
+            "c170832b3561b108"
+        ],
+        "x": 125,
+        "y": 900,
+        "wires": [
+            [
+                "21eb593786632271",
+                "9f37b01d7ba2419b",
+                "987c64c416411e1d",
+                "e50bd66b990fc759",
+                "467b4b5f19668945",
+                "829361586f1edc31",
+                "81cee3ccf5a94b33"
+            ]
+        ]
+    },
+    {
+        "id": "955639a98c89c80d",
+        "type": "mqtt in",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "PRINTING MQTT",
+        "topic": "octoPrint/event/PrinterStateChanged",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "4b50b82dd1e6f2fa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "483547c7e0eb2987"
+            ]
+        ]
+    },
+    {
+        "id": "483547c7e0eb2987",
+        "type": "json",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Convertir a JSON",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "7a46e6f4e863ceba",
+                "52c12ee918d12fac"
+            ]
+        ]
+    },
+    {
+        "id": "7a46e6f4e863ceba",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "¿Es PRINTING?",
+        "property": "payload.state_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PRINTING",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "f6ed0bcc1fba5502"
+            ],
+            [
+                "43c458ca0daa40d9"
+            ]
+        ]
+    },
+    {
+        "id": "f6ed0bcc1fba5502",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Reiniciar temporizador",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timerActive",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43c458ca0daa40d9",
+        "type": "change",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Activar temporizador",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timerActive",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "timerStart",
+                "pt": "flow",
+                "to": "$now()",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "330137d76cb6c532",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Cada 5 segundos",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "1739ea564f5552f9"
+            ]
+        ]
+    },
+    {
+        "id": "1739ea564f5552f9",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "¿Timer activo?",
+        "property": "timerActive",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "c170832b3561b108"
+            ],
+            [
+                "a4251e203c2f752a"
+            ]
+        ]
+    },
+    {
+        "id": "c170832b3561b108",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "687568201063a4c8"
+        ],
+        "x": 745,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a4251e203c2f752a",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Verificar tiempo",
+        "func": "// Obtener tiempo de inicio y tiempo actual\nvar startTime = flow.get('timerStart');\nvar currentTime = new Date();\n\n// Calcular diferencia en milisegundos\nvar diff = currentTime - startTime;\nvar thirtyMinutes = 30 * 60 * 1000;\n\n// Si han pasado menos de 30 minutos, continuar\nif (diff < thirtyMinutes) {\n    return msg;\n} else {\n    // Desactivar timer si han pasado más de 30 minutos\n    flow.set('timerActive', false);\n    return null; // No continuar el flujo\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 380,
+        "wires": [
+            [
+                "c170832b3561b108"
+            ]
+        ]
+    },
+    {
+        "id": "ad50dab14ad3b9b5",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "out-printer_data",
+        "mode": "link",
+        "links": [
+            "3a2977bacadcf9ee",
+            "9d2dde464731daac"
+        ],
+        "x": 1705,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "52c12ee918d12fac",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "state_id",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.state_id",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "12df92e58e5c7c23",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Estado OctoPrint",
+        "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/job`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "8504578ae101531e"
+            ]
+        ]
+    },
+    {
+        "id": "f712bc53f237a0c5",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "estado una vez",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "12df92e58e5c7c23"
+            ]
+        ]
+    },
+    {
+        "id": "8504578ae101531e",
+        "type": "http request",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": " http",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 140,
+        "wires": [
+            [
+                "af6147d0d0c8995b"
+            ]
+        ]
+    },
+    {
+        "id": "af6147d0d0c8995b",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Parse state",
+        "func": "msg.payload.state_id = msg.payload.state\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "7a46e6f4e863ceba",
+                "52c12ee918d12fac"
+            ]
+        ]
+    },
+    {
+        "id": "ac84701c5ace585d",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "2a_estado_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Estado",
+        "label": "Estado",
+        "format": "{{msg.payload.status.value}}",
+        "x": 480,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "3fd3dd7c578bbb47",
+        "type": "ui_gauge",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "name": "Progreso",
+        "group": "2a_estado_group",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Progreso",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "465cbebf8d3b4d7d",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "3a_tiempos_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Tiempo transcurrido",
+        "label": "Tiempo transcurrido",
+        "format": "{{msg.payload.printTime.elapsed.value}} seg",
+        "x": 520,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "4e0863537fab1432",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "3a_tiempos_group",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Tiempo estimado",
+        "label": "Tiempo estimado total",
+        "format": "{{msg.payload.printTime.estimated.value}} seg",
+        "x": 510,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "192d6be3d9705c71",
+        "type": "ui_gauge",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "name": "Boquilla Actual",
+        "group": "4a_temperaturas_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Boquilla Actual",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 300,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 500,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "75c5debadffd84c8",
+        "type": "ui_gauge",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "name": "Cama Actual",
+        "group": "4a_temperaturas_group",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Cama Actual",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 120,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 490,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "042fa9915f80c4b0",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "5a_capa_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Capa actual",
+        "label": "Capa actual / total",
+        "format": "{{msg.payload.layer.currentLayer.value}} / {{msg.payload.layer.totalLayers.value}}",
+        "x": 490,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "115495b46456859b",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "6a_filamento_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Filamento tipo",
+        "label": "Tipo",
+        "format": "{{msg.payload.filament.value.type}}",
+        "x": 500,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "925c78b4eb9f7d99",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "6a_filamento_group",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Filamento marca",
+        "label": "Marca",
+        "format": "{{msg.payload.filament.value.brand}}",
+        "layout": "",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 510,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "3eb52026d1efad42",
+        "type": "ui_text",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "6a_filamento_group",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Filamento usado",
+        "label": "Usado",
+        "format": "{{msg.payload.filament.value.used}}",
+        "x": 500,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "3a2977bacadcf9ee",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "name": "link in 6",
+        "links": [
+            "ad50dab14ad3b9b5"
+        ],
+        "x": 75,
+        "y": 1620,
+        "wires": [
+            [
+                "4e0863537fab1432",
+                "192d6be3d9705c71",
+                "925c78b4eb9f7d99",
+                "3eb52026d1efad42",
+                "75c5debadffd84c8",
+                "115495b46456859b",
+                "042fa9915f80c4b0",
+                "ac84701c5ace585d",
+                "465cbebf8d3b4d7d",
+                "3fd3dd7c578bbb47",
+                "239c2fa1499e9da0"
+            ]
+        ]
+    },
+    {
+        "id": "239c2fa1499e9da0",
+        "type": "ui_template",
+        "z": "a250f203621a2e27",
+        "g": "f199863a1df72f71",
+        "group": "7a_imagen_group",
+        "name": "Imagen impresión",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-if=\"msg.payload.image.value\">\n  <img ng-src=\"data:image/jpeg;base64,{{msg.payload.image.value}}\" style=\"width:100%;\" />\n</div>",
+        "x": 510,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d2dde464731daac",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "ad5ae281c789b9c5",
+        "name": "lin-printer_data-kafka",
+        "links": [
+            "ad50dab14ad3b9b5"
+        ],
+        "x": 75,
+        "y": 1340,
+        "wires": [
+            [
+                "ca03c0656f8f02d3"
+            ]
+        ]
+    },
+    {
+        "id": "ca03c0656f8f02d3",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "ad5ae281c789b9c5",
+        "name": "kafka Data",
+        "func": "msg.payload = JSON.stringify(msg.payload);\nmsg.topic = \"prueba\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1320,
+        "wires": [
+            [
+                "a58b040e92e0b0f2",
+                "8647a39f2d32fd25"
+            ]
+        ]
+    },
+    {
+        "id": "a58b040e92e0b0f2",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "ad5ae281c789b9c5",
+        "name": "Kafka Producer Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "8647a39f2d32fd25",
+        "type": "kafkajs-producer",
+        "z": "a250f203621a2e27",
+        "g": "ad5ae281c789b9c5",
+        "name": "",
+        "client": "89e380a1c824ddad",
+        "topic": "",
+        "advancedoptions": false,
+        "acknowledge": "all",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 420,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "3509d0f441e661be",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "8003b065a127a611",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://host.docker.internal:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4146e35d96748848",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "8003b065a127a611",
+        "name": "Servidor (Andreu)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 260,
+        "wires": [
+            [
+                "3509d0f441e661be"
+            ]
+        ]
+    },
+    {
+        "id": "cce34f6a0aae5c87",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "g": "15cd34d6248edbcd",
+        "name": "Servidor (Gerard)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "33b17684e8cd3cec"
+            ]
+        ]
+    },
+    {
+        "id": "33b17684e8cd3cec",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "15cd34d6248edbcd",
+        "name": "Variables de flujo",
+        "func": "flow.set(\"OCTOPRINT_URL\", \"http://host.docker.internal:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b50b82dd1e6f2fa",
+        "type": "mqtt-broker",
+        "name": "Octo-MQTT",
+        "broker": "mqtt",
+        "port": "1883",
+        "clientid": "nodered",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "5",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2a_estado_group",
+        "type": "ui_group",
+        "name": "Estado",
+        "tab": "1d_dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3a_tiempos_group",
+        "type": "ui_group",
+        "name": "Tiempo de Impresión",
+        "tab": "1d_dashboard_tab",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "4a_temperaturas_group",
+        "type": "ui_group",
+        "name": "Temperaturas",
+        "tab": "1d_dashboard_tab",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "5a_capa_group",
+        "type": "ui_group",
+        "name": "Capa",
+        "tab": "1d_dashboard_tab",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "6a_filamento_group",
+        "type": "ui_group",
+        "name": "Filamento",
+        "tab": "1d_dashboard_tab",
+        "order": 5,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "7a_imagen_group",
+        "type": "ui_group",
+        "name": "Imagen",
+        "tab": "1d_dashboard_tab",
+        "order": 6,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "89e380a1c824ddad",
+        "type": "kafkajs-client",
+        "name": "octo-kafka",
+        "brokers": "kafka:9092",
+        "clientid": "nodered-producer",
+        "connectiontimeout": 3000,
+        "requesttimeout": 25000,
+        "advancedretry": false,
+        "maxretrytime": 30000,
+        "initialretrytime": 300,
+        "factor": 0.2,
+        "multiplier": 2,
+        "retries": 5,
+        "auth": "none",
+        "tlsselfsign": false,
+        "tlscacert": "",
+        "tlsclientcert": "",
+        "tlsprivatekey": "",
+        "tlspassphrase": "",
+        "saslssl": true,
+        "saslmechanism": "plain",
+        "loglevel": "error"
+    },
+    {
+        "id": "1d_dashboard_tab",
+        "type": "ui_tab",
+        "name": "Impresora 3D",
+        "icon": "print",
+        "order": 1
+    }
+]
