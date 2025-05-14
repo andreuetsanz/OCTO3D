@@ -1,60 +1,41 @@
 [
     {
-        "id": "tab1",
+        "id": "7e3f538b0a501e41",
         "type": "tab",
-        "label": "KafkaJS Demo",
+        "label": "Flujo 3",
         "disabled": false,
-        "info": ""
+        "info": "",
+        "env": []
     },
     {
-        "id": "inject1",
-        "type": "inject",
-        "z": "tab1",
-        "name": "Enviar mensaje",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{ \"msg\": \"Hola desde Node-RED\" }",
-        "payloadType": "json",
-        "x": 150,
-        "y": 100,
-        "wires": [
-            [
-                "e454e78fa133171a"
-            ]
-        ]
-    },
-    {
-        "id": "debug1",
-        "type": "debug",
-        "z": "tab1",
-        "name": "Mensaje recibido",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 420,
-        "y": 200,
+        "id": "0a7a86533427c846",
+        "type": "kafkajs-producer",
+        "z": "7e3f538b0a501e41",
+        "name": "",
+        "client": "89e380a1c824ddad",
+        "topic": "prueba",
+        "advancedoptions": true,
+        "acknowledge": "none",
+        "partition": "",
+        "headeritems": {},
+        "key": "",
+        "responsetimeout": 30000,
+        "transactiontimeout": 60000,
+        "metadatamaxage": 300000,
+        "allowautotopiccreation": false,
+        "x": 840,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "89fd8e1738b1afc3",
+        "id": "907275f80616f5ce",
         "type": "kafkajs-consumer",
-        "z": "tab1",
-        "name": "K-Consumer",
-        "client": "a4e8f1d7dd5a36fc",
-        "groupid": "node-red-group",
-        "topic": "__consumer_offsets",
-        "advancedoptions": true,
+        "z": "7e3f538b0a501e41",
+        "name": "",
+        "client": "89e380a1c824ddad",
+        "groupid": "",
+        "topic": "prueba",
+        "advancedoptions": false,
         "autocommitinterval": 5000,
         "autocommitthreshold": 100,
         "sessiontimeout": 30000,
@@ -66,42 +47,88 @@
         "maxbytes": 10485760,
         "maxwaittimeinms": 5000,
         "frombeginning": false,
-        "clearoffsets": true,
+        "clearoffsets": false,
         "allowautotopiccreation": false,
-        "x": 170,
-        "y": 200,
+        "x": 600,
+        "y": 360,
         "wires": [
             [
-                "debug1"
+                "ee85ea067fbcd61e"
             ]
         ]
     },
     {
-        "id": "e454e78fa133171a",
-        "type": "kafkajs-producer",
-        "z": "tab1",
-        "name": "K-Producer",
-        "client": "a4e8f1d7dd5a36fc",
-        "topic": "__consumer_offsets",
-        "advancedoptions": true,
-        "acknowledge": "all",
-        "partition": "",
-        "headeritems": {},
-        "key": "",
-        "responsetimeout": 30000,
-        "transactiontimeout": 60000,
-        "metadatamaxage": 300000,
-        "allowautotopiccreation": true,
-        "x": 410,
-        "y": 100,
+        "id": "070d3019bd46238b",
+        "type": "inject",
+        "z": "7e3f538b0a501e41",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "5d87b663fe67c9e2"
+            ]
+        ]
+    },
+    {
+        "id": "ee85ea067fbcd61e",
+        "type": "debug",
+        "z": "7e3f538b0a501e41",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 360,
         "wires": []
     },
     {
-        "id": "a4e8f1d7dd5a36fc",
+        "id": "5d87b663fe67c9e2",
+        "type": "function",
+        "z": "7e3f538b0a501e41",
+        "name": "function 2",
+        "func": "let json_content = { texto: \"Hola Mundo!\" }\nmsg.payload = JSON.stringify(json_content);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "0a7a86533427c846"
+            ]
+        ]
+    },
+    {
+        "id": "89e380a1c824ddad",
         "type": "kafkajs-client",
-        "name": "KAFKA",
+        "name": "octo-kafka",
         "brokers": "kafka:9092",
-        "clientid": "node-red-producer",
+        "clientid": "nodered-producer",
         "connectiontimeout": 3000,
         "requesttimeout": 25000,
         "advancedretry": false,
@@ -118,6 +145,6 @@
         "tlspassphrase": "",
         "saslssl": true,
         "saslmechanism": "plain",
-        "loglevel": "debug"
+        "loglevel": "error"
     }
 ]
