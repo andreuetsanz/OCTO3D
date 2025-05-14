@@ -78,6 +78,21 @@ services:
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
     networks:
       - octo-red
+  
+  logstash:
+    # image: docker.elastic.co/logstash/logstash:7.17.9
+    build:
+      context: ./docker_containers/logstash
+    container_name: logstash
+    volumes:
+      - ./docker_containers/logstash:/config-dir
+    command: logstash -f /config-dir/logstash.conf
+    ports:
+      - "9600:9600"     # API interna de Logstash
+    depends_on:
+      - elasticsearch
+    networks:
+      - octo-red
 
   mongodb:
     image: mongo:latest
@@ -90,6 +105,36 @@ services:
     networks:
       - octo-red
 
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+    networks:
+      - octo-red
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.9
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - XPACK_SECURITY_ENABLED=false
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - octo-red
+
 networks:
   octo-red:
     name: octo-red
@@ -98,3 +143,4 @@ networks:
 volumes:
   octoprint_data:
   mongodb_data:
+  logstash:

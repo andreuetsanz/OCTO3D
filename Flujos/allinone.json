@@ -3,7 +3,7 @@
         "id": "a250f203621a2e27",
         "type": "tab",
         "label": "Get_Data_From_Octoprint",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -31,11 +31,12 @@
             "12df92e58e5c7c23",
             "f712bc53f237a0c5",
             "8504578ae101531e",
-            "af6147d0d0c8995b"
+            "af6147d0d0c8995b",
+            "4dc384951e341008"
         ],
         "x": 34,
         "y": 99,
-        "w": 862,
+        "w": 932,
         "h": 322
     },
     {
@@ -79,8 +80,6 @@
             "43e6115c4964b77a",
             "eb1aea727e7dc32a",
             "6052c7cf3d66aba4",
-            "e7d223793e590e2e",
-            "b11c54920c924a88",
             "829361586f1edc31",
             "afc3c7a692880c3a",
             "1f252f4462ec7f0f",
@@ -98,7 +97,7 @@
         ],
         "x": 34,
         "y": 439,
-        "w": 1852,
+        "w": 1652,
         "h": 782
     },
     {
@@ -167,7 +166,7 @@
             "3509d0f441e661be",
             "4146e35d96748848"
         ],
-        "x": 934,
+        "x": 1014,
         "y": 219,
         "w": 472,
         "h": 82
@@ -188,7 +187,7 @@
             "cce34f6a0aae5c87",
             "33b17684e8cd3cec"
         ],
-        "x": 934,
+        "x": 1014,
         "y": 99,
         "w": 472,
         "h": 82
@@ -302,16 +301,16 @@
         "z": "a250f203621a2e27",
         "g": "274833f5177e2ed0",
         "name": "Resultado Final",
-        "active": false,
-        "tosidebar": false,
+        "active": true,
+        "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1760,
-        "y": 620,
+        "x": 1560,
+        "y": 720,
         "wires": []
     },
     {
@@ -398,7 +397,8 @@
         "y": 660,
         "wires": [
             [
-                "e7d223793e590e2e"
+                "ad50dab14ad3b9b5",
+                "5a5fd90bcc7d7f95"
             ]
         ]
     },
@@ -606,59 +606,6 @@
                 "1374d2e7ac16216b"
             ]
         ]
-    },
-    {
-        "id": "e7d223793e590e2e",
-        "type": "switch",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "",
-        "property": "payload.status.value",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Printing",
-                "vt": "str"
-            },
-            {
-                "t": "neq",
-                "v": "Printing",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1510,
-        "y": 660,
-        "wires": [
-            [
-                "5a5fd90bcc7d7f95",
-                "ad50dab14ad3b9b5"
-            ],
-            [
-                "b11c54920c924a88"
-            ]
-        ]
-    },
-    {
-        "id": "b11c54920c924a88",
-        "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "No Printing",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "\"The printer is not printing\"",
-        "targetType": "jsonata",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1750,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "ff53fc7050335810",
@@ -1487,8 +1434,8 @@
             "3a2977bacadcf9ee",
             "9d2dde464731daac"
         ],
-        "x": 1705,
-        "y": 560,
+        "x": 1495,
+        "y": 660,
         "wires": []
     },
     {
@@ -1505,7 +1452,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 540,
         "y": 200,
         "wires": []
     },
@@ -1588,12 +1535,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 200,
+        "x": 670,
+        "y": 140,
         "wires": [
             [
-                "7a46e6f4e863ceba",
-                "52c12ee918d12fac"
+                "4dc384951e341008"
             ]
         ]
     },
@@ -1867,7 +1813,7 @@
         "z": "a250f203621a2e27",
         "g": "ad5ae281c789b9c5",
         "name": "kafka Data",
-        "func": "msg.payload = JSON.stringify(msg.payload);\nmsg.topic = \"prueba\"\nreturn msg;\n",
+        "func": "msg.payload = JSON.stringify(msg.payload);\nmsg.topic = \"octo-data\"\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1909,8 +1855,8 @@
         "name": "",
         "client": "89e380a1c824ddad",
         "topic": "",
-        "advancedoptions": false,
-        "acknowledge": "all",
+        "advancedoptions": true,
+        "acknowledge": "none",
         "partition": "",
         "headeritems": {},
         "key": "",
@@ -1935,7 +1881,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
+        "x": 1370,
         "y": 260,
         "wires": [
             []
@@ -1963,7 +1909,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1060,
+        "x": 1140,
         "y": 260,
         "wires": [
             [
@@ -1993,7 +1939,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1060,
+        "x": 1140,
         "y": 140,
         "wires": [
             [
@@ -2014,11 +1960,98 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
+        "x": 1370,
         "y": 140,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "eeaa6f58c2d13dc1",
+        "type": "comment",
+        "z": "a250f203621a2e27",
+        "name": "TODO",
+        "info": "logstas va vien pero en el consumer de kafkade nodered no va\n\"Error stopping node: Close timed out\"\n",
+        "x": 1070,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4dc384951e341008",
+        "type": "switch",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "¿Es PRINTING?",
+        "property": "payload.state_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PRINTING",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 860,
+        "y": 140,
+        "wires": [
+            [
+                "f6ed0bcc1fba5502"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "907275f80616f5ce",
+        "type": "kafkajs-consumer",
+        "z": "a250f203621a2e27",
+        "name": "",
+        "client": "89e380a1c824ddad",
+        "groupid": "logstash",
+        "topic": "octo-data",
+        "advancedoptions": false,
+        "autocommitinterval": 5000,
+        "autocommitthreshold": 100,
+        "sessiontimeout": 30000,
+        "rebalancetimeout": 60000,
+        "heartbeatinterval": 3000,
+        "metadatamaxage": 300000,
+        "maxbytesperpartition": 1048576,
+        "minbytes": 1,
+        "maxbytes": 10485760,
+        "maxwaittimeinms": 5000,
+        "frombeginning": false,
+        "clearoffsets": false,
+        "allowautotopiccreation": false,
+        "x": 700,
+        "y": 1340,
+        "wires": [
+            [
+                "ee85ea067fbcd61e"
+            ]
+        ]
+    },
+    {
+        "id": "ee85ea067fbcd61e",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "\"RECIBIDO\"",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1340,
+        "wires": []
     },
     {
         "id": "4b50b82dd1e6f2fa",
