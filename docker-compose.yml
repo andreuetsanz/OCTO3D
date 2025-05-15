@@ -20,7 +20,6 @@ services:
     restart: unless-stopped
     environment:
       SERVER_NAME: localhost
-      ELASTICSEARCH_URL: http://elasticsearch:9200/
     volumes:
       - "./docker_containers/node-red:/data"
     ports:
@@ -112,6 +111,7 @@ services:
     build:
       context: .
     container_name: logstash
+    restart: unless-stopped
     volumes:
       - ./docker_containers/logstash:/config-dir
     command: logstash -f /config-dir/logstash.conf
@@ -136,6 +136,7 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
     container_name: elasticsearch
+    restart: unless-stopped
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
@@ -153,6 +154,7 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:7.17.9
     container_name: kibana
+    restart: unless-stopped
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
       - XPACK_SECURITY_ENABLED=false

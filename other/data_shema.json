@@ -6,6 +6,10 @@
       "type": "string",
       "description": "Identificador único de la entidad siguiendo el formato NGSI (ej: urn:ngsi-ld:3DPrinter:001)"
     },
+    "user_id": {
+      "type": "string",
+      "description": "Identificador único de el usuario"
+    },
     "type": {
       "type": "string",
       "const": "3DPrinter",
