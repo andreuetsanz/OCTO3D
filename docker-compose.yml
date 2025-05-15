@@ -28,6 +28,34 @@ services:
     networks:
       - octo-red
 
+  orion:
+    image: fiware/orion:2.2.0
+    container_name: orion
+    hostname: orion
+    networks:
+      - octo-red
+    ports:
+      - "1030:1026"
+    entrypoint:
+      [
+        "sh",
+        "-c",
+        "rm /tmp/contextBroker.pid; /usr/bin/contextBroker -fg -multiservice -dbhost mongo_orion -logLevel DEBUG" # se usa el nombre del servicio no el nombre del contenedor
+      ]
+    restart: always
+    depends_on:
+      - "mongo_orion"
+
+  mongo_orion:
+    restart: always
+    image: mongo:4.4
+    command: --nojournal
+    container_name: mongo_orion
+    networks:
+      - octo-red
+    ports:
+      - "27030:27017"
+
   mqtt:
     image: eclipse-mosquitto:1.6.13
     container_name: mqtt
@@ -82,7 +110,7 @@ services:
   logstash:
     # image: docker.elastic.co/logstash/logstash:7.17.9
     build:
-      context: ./docker_containers/logstash
+      context: .
     container_name: logstash
     volumes:
       - ./docker_containers/logstash:/config-dir

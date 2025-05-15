@@ -6,12 +6,8 @@
 - Añadir el dato de id de impresion
 - Añadir el dato de id de usuario
 
-- Probar a conectar los datos que obtengo de nodered a logstas i luego a kafka o ver como funciona al menos probar a conectar lo que sea
-- Probar a como lo que se publica recibirlo i guardarlo a mongo o crear la base de kibana
 - Mirar de hacer un docker file para por ejemplo en nodered instalar los nodos necesarios automaticamente i para octoprint
-- Conectar nodered a kafka
 - Mirar lo de kafka i lgstas (Ns si gerard ja ho ha mirat)
-- Coenctar logstas con kibana i con mongodb 
 - Obtener un volumen de datos validos
 - Mirar los datos que podemos mostrar (Que griaficas podemos hacer, que datos son importantes de estudiar)
 - Mostrar los graficos en powerbi i kibana
@@ -21,6 +17,11 @@
 ## Andreu
 
 # Done
+- El timer del inicio no va muy bien
+- Coenctar logstas con kibana i con mongodb 
+- Conectar nodered a kafka
+- Probar a como lo que se publica recibirlo i guardarlo a mongo o crear la base de kibana
+- Probar a conectar los datos que obtengo de nodered a logstas i luego a kafka o ver como funciona al menos probar a conectar lo que sea
 - Añadir que detecte los eventos de estado, imprimiendo o no imprimiendo para que que empieze a cojer datos
 - Añadir el progreso en porcentaje como int i añadirlo al shema
 - Añadir las temperaturas target al flujo y al json
