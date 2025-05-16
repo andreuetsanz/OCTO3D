@@ -28,16 +28,14 @@
             "c170832b3561b108",
             "a4251e203c2f752a",
             "52c12ee918d12fac",
-            "12df92e58e5c7c23",
-            "f712bc53f237a0c5",
-            "8504578ae101531e",
-            "af6147d0d0c8995b",
-            "4dc384951e341008"
+            "b2c366b8976bb975",
+            "d7e084f6a91769cd",
+            "c589dcd5e04deaf6"
         ],
         "x": 34,
-        "y": 339,
-        "w": 932,
-        "h": 322
+        "y": 399,
+        "w": 892,
+        "h": 262
     },
     {
         "id": "274833f5177e2ed0",
@@ -50,12 +48,6 @@
             "label": true
         },
         "nodes": [
-            "970975f1d6b4dc57",
-            "ff53fc7050335810",
-            "6d2a55aa4804dee6",
-            "b3865035ccdf9685",
-            "25726bde6564cc6b",
-            "f46d8c3b70453d2e",
             "988a8a5ab8a9fc6f",
             "5999a69c26f0e1b9",
             "7a40b87b585d1a2c",
@@ -93,11 +85,17 @@
             "c32acf1bf5a75b1b",
             "4c2aedf4f8ef20a9",
             "687568201063a4c8",
-            "ad50dab14ad3b9b5"
+            "ad50dab14ad3b9b5",
+            "970975f1d6b4dc57",
+            "25726bde6564cc6b",
+            "f46d8c3b70453d2e",
+            "6d2a55aa4804dee6",
+            "ff53fc7050335810",
+            "b3865035ccdf9685"
         ],
-        "x": 34,
+        "x": 33,
         "y": 679,
-        "w": 1652,
+        "w": 1653,
         "h": 782
     },
     {
@@ -117,9 +115,9 @@
             "8647a39f2d32fd25"
         ],
         "x": 34,
-        "y": 1479,
+        "y": 1499,
         "w": 552,
-        "h": 142
+        "h": 122
     },
     {
         "id": "f199863a1df72f71",
@@ -166,8 +164,8 @@
             "3509d0f441e661be",
             "4146e35d96748848"
         ],
-        "x": 1014,
-        "y": 459,
+        "x": 994,
+        "y": 519,
         "w": 472,
         "h": 82
     },
@@ -187,8 +185,8 @@
             "cce34f6a0aae5c87",
             "33b17684e8cd3cec"
         ],
-        "x": 1014,
-        "y": 339,
+        "x": 994,
+        "y": 419,
         "w": 472,
         "h": 82
     },
@@ -212,7 +210,7 @@
             "acd17a22c65c62d2"
         ],
         "x": 34,
-        "y": 219,
+        "y": 279,
         "w": 1292,
         "h": 102
     },
@@ -325,7 +323,7 @@
         "z": "a250f203621a2e27",
         "g": "274833f5177e2ed0",
         "name": "Resultado Final",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -343,7 +341,7 @@
         "z": "a250f203621a2e27",
         "g": "274833f5177e2ed0",
         "name": "ID",
-        "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generarLetrasAleatorias() {\n    const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';\n    let resultado = '';\n    for (let i = 0; i < maxletas; i++) {\n        resultado += letras.charAt(Math.floor(Math.random() * letras.length));\n    }\n    return resultado;\n}\n\n// Crear el ID\nlet randomLetras = generarLetrasAleatorias();\nmsg.payload = 'opr_' + timestamp + randomLetras;\n\nreturn msg;\n",
+        "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generateUUIDv4() {\n    return 'xxxx-xxxx-xxxx-xxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n\n// Crear el ID\nconst id = global.get(\"generate_id\")(\"opr\");\nmsg.payload = id\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -410,7 +408,7 @@
         "z": "a250f203621a2e27",
         "g": "274833f5177e2ed0",
         "name": "Formato JSON Schema",
-        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful || {};\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    user_id: global.get('user_id'),\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
+        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful || {};\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    user_id: global.get('user_id'),\n    print_id: flow.get('print_id'),\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -632,113 +630,6 @@
         ]
     },
     {
-        "id": "ff53fc7050335810",
-        "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "A base64",
-        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 1300,
-        "wires": [
-            [
-                "b3865035ccdf9685"
-            ]
-        ]
-    },
-    {
-        "id": "6d2a55aa4804dee6",
-        "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "link in 5",
-        "links": [],
-        "x": 75,
-        "y": 1300,
-        "wires": [
-            [
-                "25726bde6564cc6b"
-            ]
-        ]
-    },
-    {
-        "id": "b3865035ccdf9685",
-        "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "link out 6",
-        "mode": "return",
-        "links": [],
-        "x": 1015,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "25726bde6564cc6b",
-        "type": "exec",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "command": "find /data/images -type f | shuf -n 1",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Buscar imagen aleatoria",
-        "x": 230,
-        "y": 1300,
-        "wires": [
-            [
-                "970975f1d6b4dc57"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "970975f1d6b4dc57",
-        "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "Set filename",
-        "func": "msg.filename = msg.payload.trim();\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 1300,
-        "wires": [
-            [
-                "f46d8c3b70453d2e"
-            ]
-        ]
-    },
-    {
-        "id": "f46d8c3b70453d2e",
-        "type": "file in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
-        "name": "Leer imagen",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "",
-        "x": 690,
-        "y": 1300,
-        "wires": [
-            [
-                "ff53fc7050335810"
-            ]
-        ]
-    },
-    {
         "id": "829361586f1edc31",
         "type": "link call",
         "z": "a250f203621a2e27",
@@ -942,7 +833,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 40,
+        "y": 180,
         "wires": [
             [
                 "aab6f6417ae024ed"
@@ -962,7 +853,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 40,
+        "y": 180,
         "wires": [
             []
         ]
@@ -1164,7 +1055,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 40,
+        "y": 180,
         "wires": [
             []
         ]
@@ -1191,7 +1082,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 550,
-        "y": 40,
+        "y": 180,
         "wires": [
             [
                 "b6cdd4b9566c7683"
@@ -1235,8 +1126,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 160,
-        "y": 500,
+        "x": 180,
+        "y": 520,
         "wires": [
             [
                 "483547c7e0eb2987"
@@ -1252,12 +1143,13 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 360,
-        "y": 500,
+        "x": 370,
+        "y": 520,
         "wires": [
             [
                 "7a46e6f4e863ceba",
-                "52c12ee918d12fac"
+                "52c12ee918d12fac",
+                "d7e084f6a91769cd"
             ]
         ]
     },
@@ -1282,8 +1174,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 570,
-        "y": 500,
+        "x": 600,
+        "y": 520,
         "wires": [
             [
                 "f6ed0bcc1fba5502"
@@ -1313,8 +1205,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 460,
+        "x": 800,
+        "y": 500,
         "wires": [
             []
         ]
@@ -1346,7 +1238,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
+        "x": 800,
         "y": 540,
         "wires": [
             []
@@ -1378,7 +1270,8 @@
         "y": 580,
         "wires": [
             [
-                "1739ea564f5552f9"
+                "1739ea564f5552f9",
+                "b2c366b8976bb975"
             ]
         ]
     },
@@ -1401,8 +1294,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 380,
-        "y": 580,
+        "x": 360,
+        "y": 600,
         "wires": [
             [
                 "c170832b3561b108"
@@ -1422,8 +1315,8 @@
         "links": [
             "687568201063a4c8"
         ],
-        "x": 745,
-        "y": 580,
+        "x": 655,
+        "y": 600,
         "wires": []
     },
     {
@@ -1439,7 +1332,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
+        "x": 540,
         "y": 620,
         "wires": [
             [
@@ -1476,96 +1369,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 440,
+        "x": 580,
+        "y": 480,
         "wires": []
-    },
-    {
-        "id": "12df92e58e5c7c23",
-        "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
-        "name": "Estado OctoPrint",
-        "func": "flow.set(\"timerActive\", undefined);\nflow.set(\"timerStart\", undefined);  \n\nmsg.url = `${flow.get('OCTOPRINT_URL')}/api/job`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 380,
-        "wires": [
-            [
-                "8504578ae101531e"
-            ]
-        ]
-    },
-    {
-        "id": "f712bc53f237a0c5",
-        "type": "inject",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
-        "name": "estado una vez",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0",
-        "topic": "",
-        "x": 160,
-        "y": 380,
-        "wires": [
-            [
-                "12df92e58e5c7c23"
-            ]
-        ]
-    },
-    {
-        "id": "8504578ae101531e",
-        "type": "http request",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
-        "name": " http",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 510,
-        "y": 380,
-        "wires": [
-            [
-                "af6147d0d0c8995b"
-            ]
-        ]
-    },
-    {
-        "id": "af6147d0d0c8995b",
-        "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
-        "name": "Parse state",
-        "func": "msg.payload.state_id = msg.payload.state\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 670,
-        "y": 380,
-        "wires": [
-            [
-                "4dc384951e341008"
-            ]
-        ]
     },
     {
         "id": "ac84701c5ace585d",
@@ -1868,7 +1674,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 440,
-        "y": 1520,
+        "y": 1540,
         "wires": []
     },
     {
@@ -1905,8 +1711,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
-        "y": 500,
+        "x": 1350,
+        "y": 560,
         "wires": [
             []
         ]
@@ -1933,8 +1739,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1140,
-        "y": 500,
+        "x": 1120,
+        "y": 560,
         "wires": [
             [
                 "3509d0f441e661be"
@@ -1963,8 +1769,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1140,
-        "y": 380,
+        "x": 1120,
+        "y": 460,
         "wires": [
             [
                 "33b17684e8cd3cec"
@@ -1984,8 +1790,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
-        "y": 380,
+        "x": 1350,
+        "y": 460,
         "wires": [
             []
         ]
@@ -1995,40 +1801,10 @@
         "type": "comment",
         "z": "a250f203621a2e27",
         "name": "TODO",
-        "info": "\nOrion\n\nlogstash \ncomo hago lo de el id de usuario",
-        "x": 1110,
-        "y": 600,
+        "info": "Orion\nlogstash \n",
+        "x": 990,
+        "y": 640,
         "wires": []
-    },
-    {
-        "id": "4dc384951e341008",
-        "type": "switch",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
-        "name": "¿Es PRINTING?",
-        "property": "payload.state_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "PRINTING",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 860,
-        "y": 380,
-        "wires": [
-            [
-                "f6ed0bcc1fba5502"
-            ],
-            []
-        ]
     },
     {
         "id": "907275f80616f5ce",
@@ -2065,7 +1841,7 @@
         "type": "debug",
         "z": "a250f203621a2e27",
         "name": "debug 5",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2090,7 +1866,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 140,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "41cc40fc7394eeb1"
@@ -2111,7 +1887,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "e9f523aa1a1b5fc4"
@@ -2132,7 +1908,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 450,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "f1c8204f47a74736"
@@ -2146,12 +1922,13 @@
         "g": "ba70718e5a111ad6",
         "name": "Write new ID",
         "filename": "id.txt",
+        "filenameType": "str",
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
         "x": 870,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "e819b6c6388f6d67"
@@ -2164,7 +1941,7 @@
         "z": "a250f203621a2e27",
         "g": "ba70718e5a111ad6",
         "name": "Check ID or generate",
-        "func": "function generateUUIDv4() {\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n\n// Si hay ID válido en el archivo\nif (msg.payload && msg.payload.trim() !== \"\") {\n    msg.id = msg.payload.trim();\n    return [msg, null]; // Salida 1: ID leído\n} else {\n    // Generar UUID y agregar timestamp\n    const baseId = generateUUIDv4();\n    const timestamp = Date.now(); // milisegundos desde época UNIX\n    const fullId = `uid_${baseId}-${timestamp}`;\n\n    msg.id = fullId;\n    msg.payload = fullId;\n    return [null, msg]; // Salida 2: nuevo ID\n}\n",
+        "func": "// Si hay ID válido en el archivo\nif (msg.payload && msg.payload.trim() !== \"\") {\n    msg.id = msg.payload.trim();\n    return [msg, null]; // Salida 1: ID leído\n} else {\n    const id = global.get(\"generate_id\")(\"uid\");\n    msg.id = id\n    msg.payload = id;\n    return [null, msg]; // Salida 2: nuevo ID\n}\n",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
@@ -2172,7 +1949,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "e819b6c6388f6d67"
@@ -2196,7 +1973,7 @@
         "finalize": "",
         "libs": [],
         "x": 1060,
-        "y": 260,
+        "y": 320,
         "wires": [
             [
                 "acd17a22c65c62d2"
@@ -2209,7 +1986,7 @@
         "z": "a250f203621a2e27",
         "g": "ba70718e5a111ad6",
         "name": "USER ID",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2218,8 +1995,212 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 260,
+        "y": 320,
         "wires": []
+    },
+    {
+        "id": "b2c366b8976bb975",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d7e084f6a91769cd",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Print_ID",
+        "func": "let estadoNuevo = msg.payload.state_string;\nlet datos = flow.get(\"print_id\") || {};\nvar startTime = new Date();\nvar id = flow.get(\"print_id\");\n\nif (estadoNuevo === \"Starting\") {\n    const id = global.get(\"generate_id\")(\"print_id\");\n    flow.set('print_id', id)\n}\n\n\nmsg.payload = { id: id };\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "c589dcd5e04deaf6"
+            ]
+        ]
+    },
+    {
+        "id": "c589dcd5e04deaf6",
+        "type": "debug",
+        "z": "a250f203621a2e27",
+        "g": "83626b2dfc3e644b",
+        "name": "Debug ID",
+        "active": false,
+        "tosidebar": true,
+        "x": 720,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "970975f1d6b4dc57",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Set filename",
+        "func": "msg.filename = msg.payload.trim();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 434,
+        "y": 1293.0000610351562,
+        "wires": [
+            [
+                "f46d8c3b70453d2e"
+            ]
+        ]
+    },
+    {
+        "id": "25726bde6564cc6b",
+        "type": "exec",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "command": "find /data/images -type f | shuf -n 1",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Buscar imagen aleatoria",
+        "x": 229,
+        "y": 1306.0000610351562,
+        "wires": [
+            [
+                "970975f1d6b4dc57"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f46d8c3b70453d2e",
+        "type": "file in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "Leer imagen",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "",
+        "x": 634,
+        "y": 1293.0000610351562,
+        "wires": [
+            [
+                "ff53fc7050335810"
+            ]
+        ]
+    },
+    {
+        "id": "6d2a55aa4804dee6",
+        "type": "link in",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link in 5",
+        "links": [],
+        "x": 74,
+        "y": 1306.0000610351562,
+        "wires": [
+            [
+                "25726bde6564cc6b"
+            ]
+        ]
+    },
+    {
+        "id": "ff53fc7050335810",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "A base64",
+        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 824,
+        "y": 1293.0000610351562,
+        "wires": [
+            [
+                "b3865035ccdf9685"
+            ]
+        ]
+    },
+    {
+        "id": "b3865035ccdf9685",
+        "type": "link out",
+        "z": "a250f203621a2e27",
+        "g": "274833f5177e2ed0",
+        "name": "link out 6",
+        "mode": "return",
+        "links": [],
+        "x": 959,
+        "y": 1293.0000610351562,
+        "wires": []
+    },
+    {
+        "id": "cac532addd0cc61b",
+        "type": "function",
+        "z": "a250f203621a2e27",
+        "name": "Code",
+        "func": "global.set(\"generateUUIDv4\", function () {\n    return 'xxxx-xxxx-xxxx-xxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n});\n\nglobal.set(\"generate_id\", function (prefix) {\n    const uuid = global.get(\"generateUUIDv4\")();\n    const timestamp = Date.now();\n    return `${prefix}_${uuid}_${timestamp}`;\n});\nflow.set('timerActive', null)\nflow.set('timerStart', null)\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b00a06f39db1ac8a",
+        "type": "inject",
+        "z": "a250f203621a2e27",
+        "name": "Global Code",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "cac532addd0cc61b"
+            ]
+        ]
     },
     {
         "id": "4b50b82dd1e6f2fa",

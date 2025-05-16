@@ -10,6 +10,10 @@
       "type": "string",
       "description": "Identificador único de el usuario"
     },
+    "print_id": {
+      "type": "string",
+      "description": "Identificador único de la impresión"
+    },
     "type": {
       "type": "string",
       "const": "3DPrinter",
