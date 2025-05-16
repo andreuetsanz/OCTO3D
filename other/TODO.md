@@ -1,22 +1,24 @@
 # TODO
 ## Node-Red
 - Generar alertas con orion de nodered
-- Mirar el error de Verificar tiempo en el flujo de nodered (enviarle correo a jose o algo)
 - Crear un dashboard simple para nodered (tener el cuenta lo de las alertas con orion)
-- Añadir el dato de id de impresion
-- Añadir el dato de id de usuario
 
 - Mirar de hacer un docker file para por ejemplo en nodered instalar los nodos necesarios automaticamente i para octoprint
-- Mirar lo de kafka i lgstas (Ns si gerard ja ho ha mirat)
 - Obtener un volumen de datos validos
+- Crear un dashboard en kibana i si es posible una pequeña tabla
+- Mirar porque añade campos adicionales logstash
 - Mirar los datos que podemos mostrar (Que griaficas podemos hacer, que datos son importantes de estudiar)
 - Mostrar los graficos en powerbi i kibana
-
+- Mirar como hacer para que antes de enviar valida con el data shema
 * Mirar como crear una base de datos de kibana en aws (Mirar si es necesario tener saldo, ya que jo no tengo i ns si gerard tiene)
 
 ## Andreu
 
 # Done
+- Mirar el error de Verificar tiempo en el flujo de nodered (enviarle correo a jose o algo)
+- Mirar lo de kafka i lgstas (Ns si gerard ja ho ha mirat)
+- Añadir el dato de id de impresion
+- Añadir el dato de id de usuario
 - El timer del inicio no va muy bien
 - Coenctar logstas con kibana i con mongodb 
 - Conectar nodered a kafka

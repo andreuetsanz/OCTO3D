@@ -1,0 +1,484 @@
+[
+    {
+        "id": "8907ab6309c4597e",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "inject_delete_entity",
+        "type": "inject",
+        "z": "8907ab6309c4597e",
+        "name": "Eliminar entidad SensorAlarma001",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "http_delete_entity"
+            ]
+        ]
+    },
+    {
+        "id": "http_delete_entity",
+        "type": "http request",
+        "z": "8907ab6309c4597e",
+        "name": "DELETE entidad SensorAlarma001",
+        "method": "DELETE",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://orion:1026/v2/entities/SensorAlarma001",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "debug_delete_entity"
+            ]
+        ]
+    },
+    {
+        "id": "debug_delete_entity",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta eliminar entidad",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 780,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "inject_create_entity",
+        "type": "inject",
+        "z": "8907ab6309c4597e",
+        "name": "Crear entidad SensorAlarma001",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "function_prepare_entity"
+            ]
+        ]
+    },
+    {
+        "id": "function_prepare_entity",
+        "type": "function",
+        "z": "8907ab6309c4597e",
+        "name": "Preparar entidad JSON",
+        "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  id: \"SensorAlarma001\",\n  type: \"Sensor\",\n  alarma: { value: \"false\", type: \"String\" }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "http_create_entity"
+            ]
+        ]
+    },
+    {
+        "id": "http_create_entity",
+        "type": "http request",
+        "z": "8907ab6309c4597e",
+        "name": "POST crear entidad",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://orion:1026/v2/entities",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 700,
+        "y": 240,
+        "wires": [
+            [
+                "debug_create_entity"
+            ]
+        ]
+    },
+    {
+        "id": "debug_create_entity",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta crear entidad",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "inject_create_subscription",
+        "type": "inject",
+        "z": "8907ab6309c4597e",
+        "name": "Crear suscripción alerta alarma==true",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 181,
+        "y": 305,
+        "wires": [
+            [
+                "function_prepare_subscription"
+            ]
+        ]
+    },
+    {
+        "id": "function_prepare_subscription",
+        "type": "function",
+        "z": "8907ab6309c4597e",
+        "name": "Preparar JSON suscripción",
+        "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  description: \"Alerta_alarma_true\",\n  subject: {\n    entities: [{ id: \"SensorAlarma001\", type: \"Sensor\" }],\n    condition: { \n        attrs: [\"alarma\"],\n        expression: { q: \"alarma==true\" } \n        }\n  },\n  notification: {\n    http: { url: \"http://localhost:1881/alerta\" },\n    attrs: [\"alarma\"]\n  },\n  throttling: 1\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 471,
+        "y": 305,
+        "wires": [
+            [
+                "http_create_subscription"
+            ]
+        ]
+    },
+    {
+        "id": "http_create_subscription",
+        "type": "http request",
+        "z": "8907ab6309c4597e",
+        "name": "POST crear suscripción",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://orion:1026/v2/subscriptions",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 731,
+        "y": 305,
+        "wires": [
+            [
+                "debug_create_subscription"
+            ]
+        ]
+    },
+    {
+        "id": "debug_create_subscription",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta crear suscripción",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 991,
+        "y": 305,
+        "wires": []
+    },
+    {
+        "id": "inject_update_alarm_true",
+        "type": "inject",
+        "z": "8907ab6309c4597e",
+        "name": "Actualizar alarma a true",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "function_prepare_alarm_true"
+            ]
+        ]
+    },
+    {
+        "id": "function_prepare_alarm_true",
+        "type": "function",
+        "z": "8907ab6309c4597e",
+        "name": "Preparar JSON alarma true",
+        "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  alarma: { value: \"true\", type: \"String\" }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "http_update_entity"
+            ]
+        ]
+    },
+    {
+        "id": "http_update_entity",
+        "type": "http request",
+        "z": "8907ab6309c4597e",
+        "name": "PATCH actualizar alarma",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://orion:1026/v2/entities/SensorAlarma001/attrs",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 700,
+        "y": 420,
+        "wires": [
+            [
+                "debug_update_alarm"
+            ]
+        ]
+    },
+    {
+        "id": "debug_update_alarm",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta actualizar alarma",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 960,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "http_in_alert",
+        "type": "http in",
+        "z": "8907ab6309c4597e",
+        "name": "Endpoint alerta /alerta",
+        "url": "/alerta",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 540,
+        "wires": [
+            [
+                "debug_alert",
+                "http_response_alert"
+            ]
+        ]
+    },
+    {
+        "id": "debug_alert",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Alerta recibida",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "\"ALLLARMAAA\"",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9da26a87fe385864",
+        "type": "function",
+        "z": "8907ab6309c4597e",
+        "name": "Preparar JSON alarma false",
+        "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  alarma: { value: \"false\", type: \"String\" }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "26d6ce538645c244"
+            ]
+        ]
+    },
+    {
+        "id": "e98d116fa975cc97",
+        "type": "inject",
+        "z": "8907ab6309c4597e",
+        "name": "Actualizar alarma a false",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "9da26a87fe385864"
+            ]
+        ]
+    },
+    {
+        "id": "26d6ce538645c244",
+        "type": "http request",
+        "z": "8907ab6309c4597e",
+        "name": "PATCH actualizar alarma",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://orion:1026/v2/entities/SensorAlarma001/attrs",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 700,
+        "y": 480,
+        "wires": [
+            [
+                "f297f0e0d690dc38"
+            ]
+        ]
+    },
+    {
+        "id": "f297f0e0d690dc38",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta actualizar alarma",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 960,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "732c86fd88660c0d",
+        "type": "inject",
+        "z": "8907ab6309c4597e",
+        "name": "Listar entidad SensorAlarma001",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "6cec123c8487b3fc"
+            ]
+        ]
+    },
+    {
+        "id": "6cec123c8487b3fc",
+        "type": "http request",
+        "z": "8907ab6309c4597e",
+        "name": "Listar entidad",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://orion:1026/v2/entities/SensorAlarma001",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 540,
+        "y": 360,
+        "wires": [
+            [
+                "8df0d2b1657d73a9"
+            ]
+        ]
+    },
+    {
+        "id": "8df0d2b1657d73a9",
+        "type": "debug",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta crear entidad",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "http_response_alert",
+        "type": "http response",
+        "z": "8907ab6309c4597e",
+        "name": "Respuesta OK",
+        "statusCode": "200",
+        "headers": {},
+        "x": 440,
+        "y": 620,
+        "wires": []
+    }
+]
