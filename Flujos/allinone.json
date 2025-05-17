@@ -1,6 +1,6 @@
 [
     {
-        "id": "a250f203621a2e27",
+        "id": "128aa5cf7f19b872",
         "type": "tab",
         "label": "Get_Data_From_Octoprint",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "83626b2dfc3e644b",
+        "id": "19be8253c61f2ebe",
         "type": "group",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "IS PRINTING?",
         "style": {
             "stroke": "#0070c0",
@@ -18,19 +18,19 @@
             "label": true
         },
         "nodes": [
-            "955639a98c89c80d",
-            "483547c7e0eb2987",
-            "7a46e6f4e863ceba",
-            "f6ed0bcc1fba5502",
-            "43c458ca0daa40d9",
-            "330137d76cb6c532",
-            "1739ea564f5552f9",
-            "c170832b3561b108",
-            "a4251e203c2f752a",
-            "52c12ee918d12fac",
-            "b2c366b8976bb975",
-            "d7e084f6a91769cd",
-            "c589dcd5e04deaf6"
+            "624896e6d80eba7f",
+            "511702800576d318",
+            "a68b7b7e7b1454ba",
+            "5924623ef4f72138",
+            "d86e2b2c3c4031c4",
+            "eaa5eff15df08ee7",
+            "f935e2634e082206",
+            "18e084e5276edc3c",
+            "80de9e65d8e17084",
+            "2bd1a27d157d5b1a",
+            "013bf85e50710ab9",
+            "78435c8aa7bafbfb",
+            "be56419d7580c506"
         ],
         "x": 34,
         "y": 399,
@@ -38,9 +38,9 @@
         "h": 262
     },
     {
-        "id": "274833f5177e2ed0",
+        "id": "6554eaf24f3301c5",
         "type": "group",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "GET OCTOPRINT DATA",
         "style": {
             "stroke": "#92d04f",
@@ -48,50 +48,51 @@
             "label": true
         },
         "nodes": [
-            "988a8a5ab8a9fc6f",
-            "5999a69c26f0e1b9",
-            "7a40b87b585d1a2c",
-            "55ad7bb22f530f4d",
-            "340f7b3f12a9ab75",
-            "1026462f96489122",
-            "73d967a989085926",
-            "d7e1f4e14c8dee85",
-            "e83880611d767e3c",
-            "1374d2e7ac16216b",
-            "5a5fd90bcc7d7f95",
-            "21eb593786632271",
-            "bf9990783efc6969",
-            "6e29f9b5da35a554",
-            "a5786ea5359ac965",
-            "870f20a72122f2ed",
-            "ab2059dae20e85cb",
-            "c379cf2c7d6c0400",
-            "081bd79011f56acf",
-            "9e519ddd55bbf910",
-            "35e953c2c5697c99",
-            "43e6115c4964b77a",
-            "eb1aea727e7dc32a",
-            "6052c7cf3d66aba4",
-            "829361586f1edc31",
-            "afc3c7a692880c3a",
-            "1f252f4462ec7f0f",
-            "81cee3ccf5a94b33",
-            "9f37b01d7ba2419b",
-            "987c64c416411e1d",
-            "e50bd66b990fc759",
-            "467b4b5f19668945",
-            "02d5e81e20345401",
-            "871b36611425097b",
-            "c32acf1bf5a75b1b",
-            "4c2aedf4f8ef20a9",
-            "687568201063a4c8",
-            "ad50dab14ad3b9b5",
-            "970975f1d6b4dc57",
-            "25726bde6564cc6b",
-            "f46d8c3b70453d2e",
-            "6d2a55aa4804dee6",
-            "ff53fc7050335810",
-            "b3865035ccdf9685"
+            "15149959834d55d4",
+            "5ed068ddf703b120",
+            "9ce3e248714ecc7c",
+            "2f1fb89ca713424a",
+            "beca61d4059fbb6c",
+            "bf3decc96e99af4a",
+            "8ea1f925d1110caf",
+            "a976bfeb5c0ec0de",
+            "f7943ebf33dd8366",
+            "79ecda98e90af27c",
+            "9f684c6e363ccd13",
+            "1f37cd4514231950",
+            "109e563c15388241",
+            "0742771261fba357",
+            "128e9488f1257725",
+            "9a5867a62475db51",
+            "6458d3505d52204e",
+            "ad5ce31ea07e9d35",
+            "1ce1d23cb1b995f8",
+            "49556c9a63bab5dd",
+            "6a157fe845a720fc",
+            "5e7cd0fc9bb4b0bc",
+            "8baaa7a44bda0738",
+            "b28ca6427025442a",
+            "73e6eeb28b5094d2",
+            "1973f07ec12899cc",
+            "257bee5770153a14",
+            "520f0530e3b3aa62",
+            "ef89cada522d26af",
+            "ee5f0423d88336bf",
+            "9a23b6a7fc2c454d",
+            "b00339a3a774a085",
+            "11b28f3d3fc7c4a3",
+            "fb55fff99835f2ac",
+            "5de610cd6b6e4270",
+            "e8be6c2d807e63d0",
+            "b7acc809da4d53bf",
+            "b951daf915408c23",
+            "d3645c9ffc7b2ae3",
+            "637858ccdecedace",
+            "55d0659e989b1cbb",
+            "3e5ca6621f765aca",
+            "fcf3c314f470b7cf",
+            "e73ed9386313dce7",
+            "93084432de6c3132"
         ],
         "x": 33,
         "y": 679,
@@ -99,9 +100,9 @@
         "h": 782
     },
     {
-        "id": "ad5ae281c789b9c5",
+        "id": "266f6d3eca23ba9f",
         "type": "group",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Kafka",
         "style": {
             "stroke": "#6f2fa0",
@@ -109,10 +110,10 @@
             "label": true
         },
         "nodes": [
-            "a58b040e92e0b0f2",
-            "9d2dde464731daac",
-            "ca03c0656f8f02d3",
-            "8647a39f2d32fd25"
+            "459d586a76964385",
+            "828ab81728f97ea1",
+            "9872f623f72c382d",
+            "e82fa3f4a931dc82"
         ],
         "x": 34,
         "y": 1499,
@@ -120,38 +121,9 @@
         "h": 122
     },
     {
-        "id": "f199863a1df72f71",
+        "id": "2a6479e3d61413d4",
         "type": "group",
-        "z": "a250f203621a2e27",
-        "name": "Dashboard",
-        "style": {
-            "stroke": "#ffff00",
-            "fill": "#ffffbf",
-            "label": true
-        },
-        "nodes": [
-            "ac84701c5ace585d",
-            "3fd3dd7c578bbb47",
-            "465cbebf8d3b4d7d",
-            "4e0863537fab1432",
-            "192d6be3d9705c71",
-            "75c5debadffd84c8",
-            "042fa9915f80c4b0",
-            "115495b46456859b",
-            "925c78b4eb9f7d99",
-            "3eb52026d1efad42",
-            "3a2977bacadcf9ee",
-            "239c2fa1499e9da0"
-        ],
-        "x": 34,
-        "y": 1639,
-        "w": 612,
-        "h": 482
-    },
-    {
-        "id": "8003b065a127a611",
-        "type": "group",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "ANDREU",
         "style": {
             "stroke": "#ffdf7f",
@@ -161,8 +133,8 @@
             "color": "#000000"
         },
         "nodes": [
-            "3509d0f441e661be",
-            "4146e35d96748848"
+            "31e8a8619228c446",
+            "906c6d6f4f91a1e2"
         ],
         "x": 994,
         "y": 519,
@@ -170,9 +142,9 @@
         "h": 82
     },
     {
-        "id": "15cd34d6248edbcd",
+        "id": "5c5a197179018839",
         "type": "group",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "GERARD",
         "style": {
             "stroke": "#b797cf",
@@ -182,8 +154,8 @@
             "color": "#000000"
         },
         "nodes": [
-            "cce34f6a0aae5c87",
-            "33b17684e8cd3cec"
+            "a47d2c3314b0ecb5",
+            "91d17a9337f29380"
         ],
         "x": 994,
         "y": 419,
@@ -191,9 +163,9 @@
         "h": 82
     },
     {
-        "id": "ba70718e5a111ad6",
+        "id": "a0d0030ba181d9c6",
         "type": "group",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "USER ID",
         "style": {
             "stroke": "#777777",
@@ -201,13 +173,13 @@
             "label": true
         },
         "nodes": [
-            "b562ba265d736702",
-            "41cc40fc7394eeb1",
-            "e9f523aa1a1b5fc4",
-            "7948817760f76f1e",
-            "f1c8204f47a74736",
-            "e819b6c6388f6d67",
-            "acd17a22c65c62d2"
+            "345d71275dbccd53",
+            "a5a56a49b4881d13",
+            "7ba7ab8886472d6d",
+            "f5a0c706b44eb215",
+            "0e6982e00cfbd542",
+            "53910cda7198a11c",
+            "9e08ad373197cb06"
         ],
         "x": 34,
         "y": 279,
@@ -215,10 +187,76 @@
         "h": 102
     },
     {
-        "id": "73d967a989085926",
+        "id": "b17494c958703951",
+        "type": "group",
+        "z": "128aa5cf7f19b872",
+        "name": "Dashboard",
+        "style": {
+            "stroke": "#ffff00",
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "61e2f0cceeb1f6a2",
+            "bcb45a0ec81cf66e",
+            "6f7de024a90c0f5a",
+            "09425fa9e51cf20c",
+            "af4e2f65b8c2c15f"
+        ],
+        "x": 34,
+        "y": 1636.5,
+        "w": 1038,
+        "h": 470.5
+    },
+    {
+        "id": "09425fa9e51cf20c",
+        "type": "group",
+        "z": "128aa5cf7f19b872",
+        "g": "b17494c958703951",
+        "name": "VISUAL",
+        "style": {
+            "fill": "#ff7f7f",
+            "label": true,
+            "stroke": "#ff3f3f",
+            "color": "#000000"
+        },
+        "nodes": [
+            "63831c0178db03a4",
+            "b83673a468f59ce0",
+            "48c0ef824c2e5648",
+            "4f11218d5ca6faa1"
+        ],
+        "x": 754,
+        "y": 1719,
+        "w": 292,
+        "h": 202
+    },
+    {
+        "id": "af4e2f65b8c2c15f",
+        "type": "group",
+        "z": "128aa5cf7f19b872",
+        "g": "b17494c958703951",
+        "name": "DATOS",
+        "style": {
+            "stroke": "#dbcbe7",
+            "fill": "#9363b7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "332e546f9f9ecccd",
+            "ee2772192c10c802"
+        ],
+        "x": 754,
+        "y": 1959,
+        "w": 252,
+        "h": 122
+    },
+    {
+        "id": "8ea1f925d1110caf",
         "type": "inject",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "GET",
         "props": [],
         "repeat": "",
@@ -230,21 +268,21 @@
         "y": 800,
         "wires": [
             [
-                "21eb593786632271",
-                "829361586f1edc31",
-                "81cee3ccf5a94b33",
-                "9f37b01d7ba2419b",
-                "987c64c416411e1d",
-                "e50bd66b990fc759",
-                "467b4b5f19668945"
+                "1f37cd4514231950",
+                "73e6eeb28b5094d2",
+                "520f0530e3b3aa62",
+                "ef89cada522d26af",
+                "ee5f0423d88336bf",
+                "9a23b6a7fc2c454d",
+                "b00339a3a774a085"
             ]
         ]
     },
     {
-        "id": "d7e1f4e14c8dee85",
+        "id": "a976bfeb5c0ec0de",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=printer",
         "rules": [
             {
@@ -259,15 +297,15 @@
         "y": 780,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "e83880611d767e3c",
+        "id": "f7943ebf33dd8366",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=job",
         "rules": [
             {
@@ -282,16 +320,16 @@
         "y": 840,
         "wires": [
             [
-                "1374d2e7ac16216b",
-                "ab2059dae20e85cb"
+                "79ecda98e90af27c",
+                "6458d3505d52204e"
             ]
         ]
     },
     {
-        "id": "1374d2e7ac16216b",
+        "id": "79ecda98e90af27c",
         "type": "join",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Unir",
         "mode": "custom",
         "build": "object",
@@ -313,17 +351,17 @@
         "y": 900,
         "wires": [
             [
-                "a5786ea5359ac965"
+                "128e9488f1257725"
             ]
         ]
     },
     {
-        "id": "5a5fd90bcc7d7f95",
+        "id": "9f684c6e363ccd13",
         "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Resultado Final",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -336,10 +374,10 @@
         "wires": []
     },
     {
-        "id": "21eb593786632271",
+        "id": "1f37cd4514231950",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "ID",
         "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generateUUIDv4() {\n    return 'xxxx-xxxx-xxxx-xxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n\n// Crear el ID\nconst id = global.get(\"generate_id\")(\"opr\");\nmsg.payload = id\n\nreturn msg;\n",
         "outputs": 1,
@@ -352,15 +390,15 @@
         "y": 720,
         "wires": [
             [
-                "bf9990783efc6969"
+                "109e563c15388241"
             ]
         ]
     },
     {
-        "id": "bf9990783efc6969",
+        "id": "109e563c15388241",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=id",
         "rules": [
             {
@@ -375,15 +413,15 @@
         "y": 720,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "6e29f9b5da35a554",
+        "id": "0742771261fba357",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=files",
         "rules": [
             {
@@ -398,17 +436,17 @@
         "y": 898.9999389648438,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "a5786ea5359ac965",
+        "id": "128e9488f1257725",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Formato JSON Schema",
-        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful || {};\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    user_id: global.get('user_id'),\n    print_id: flow.get('print_id'),\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
+        "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful;\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    user_id: global.get('user_id'),\n    print_id: flow.get('print_id'),\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -419,16 +457,16 @@
         "y": 900,
         "wires": [
             [
-                "ad50dab14ad3b9b5",
-                "5a5fd90bcc7d7f95"
+                "b951daf915408c23",
+                "9f684c6e363ccd13"
             ]
         ]
     },
     {
-        "id": "870f20a72122f2ed",
+        "id": "9a5867a62475db51",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=DisplayLayerProgress",
         "rules": [
             {
@@ -443,15 +481,15 @@
         "y": 960,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "ab2059dae20e85cb",
+        "id": "6458d3505d52204e",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Descargar G-code",
         "func": "const nombreArchivo = msg.payload.job.file.path;\nmsg.filename = nombreArchivo;\nmsg.url = `${flow.get('OCTOPRINT_URL')}/downloads/files/local/${nombreArchivo}`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -464,15 +502,15 @@
         "y": 840,
         "wires": [
             [
-                "c379cf2c7d6c0400"
+                "ad5ce31ea07e9d35"
             ]
         ]
     },
     {
-        "id": "c379cf2c7d6c0400",
+        "id": "ad5ce31ea07e9d35",
         "type": "http request",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "http",
         "method": "GET",
         "ret": "txt",
@@ -489,46 +527,46 @@
         "y": 840,
         "wires": [
             [
-                "081bd79011f56acf"
+                "1ce1d23cb1b995f8"
             ]
         ]
     },
     {
-        "id": "081bd79011f56acf",
+        "id": "1ce1d23cb1b995f8",
         "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link out 1",
         "mode": "link",
         "links": [
-            "9e519ddd55bbf910"
+            "49556c9a63bab5dd"
         ],
         "x": 1495,
         "y": 840,
         "wires": []
     },
     {
-        "id": "9e519ddd55bbf910",
+        "id": "49556c9a63bab5dd",
         "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link in 1",
         "links": [
-            "081bd79011f56acf"
+            "1ce1d23cb1b995f8"
         ],
         "x": 335,
         "y": 1020,
         "wires": [
             [
-                "43e6115c4964b77a"
+                "5e7cd0fc9bb4b0bc"
             ]
         ]
     },
     {
-        "id": "35e953c2c5697c99",
+        "id": "6a157fe845a720fc",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=gcode",
         "rules": [
             {
@@ -548,15 +586,15 @@
         "y": 1020,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "43e6115c4964b77a",
+        "id": "5e7cd0fc9bb4b0bc",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Parse G-code Info",
         "func": "let gcode = msg.payload;\n\nlet slicer = 'Desconocido';\nlet printer = '';\nlet filament = '';        // Tipo: PLA, PETG, etc.\nlet filamentBrand = '';   // Marca: eSun, Prusament, etc.\nlet filamentUsed = '';    // Usado: 5.23m, 15g, etc.\n\n// Lista de laminadores conocidos con variaciones de nombres\nconst slicers = {\n    'Ultimaker Cura': ['cura', 'ultimaker cura', 'cura_steamengine', 'cura-steamengine'],\n    'PrusaSlicer': ['prusaslicer', 'prusa slicer', 'prusaslicer'],\n    'Bambu Studio': ['bambu studio', 'bambu_studio', 'bambu-studio'],\n    'Creality Print': ['creality print', 'creality_print'],\n    'Slic3r': ['slic3r', 'slic3r pe', 'slic3r_pe'],\n    'IdeaMaker': ['ideamaker', 'idea_maker'],\n    'Simplify3D': ['simplify3d', 'simplify 3d'],\n    'MatterControl': ['mattercontrol', 'matter control'],\n    'ReplicatorG': ['replicatorg', 'replicator g'],\n    'FlashPrint': ['flashprint', 'flash print'],\n    'ZeroSlicer': ['zeroslicer', 'zero slicer'],\n    'Kiri Moto': ['kirimotors', 'kiri motors']\n};\n\n// Función para verificar si alguna palabra del laminador aparece en el G-code\nfunction detectSlicer(gcode, slicerNames) {\n    for (let slicerName of slicerNames) {\n        let regex = new RegExp(slicerName, 'i');\n        if (regex.test(gcode)) {\n            return true;\n        }\n    }\n    return false;\n}\n\n// Verificar slicer\nfor (let [name, variations] of Object.entries(slicers)) {\n    if (detectSlicer(gcode, variations)) {\n        slicer = name;\n        break;\n    }\n}\n\n// Detectar impresora con múltiples patrones comunes\nlet printerRegexes = [\n    /; ?(MACHINE_NAME|printer_model) *= *(.+)/i,\n    /; ?print_compatible_printers *= *(.+)/i,\n    /; ?printer_name *= *(.+)/i,\n    /; ?model *= *(.+)/i\n];\n\nfor (let regex of printerRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        printer = match?.[2]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar tipo de filamento (PLA, PETG, etc.)\nlet filamentTypeRegexes = [\n    /; ?filament_type *= *(.+)/i,\n    /; ?filament_material *= *(.+)/i\n];\n\nfor (let regex of filamentTypeRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filament = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar marca del filamento\nlet filamentBrandRegexes = [\n    /; ?filament_brand *= *(.+)/i,\n    /; ?filament_settings_id *= *(.+)/i\n];\n\n\nfor (let regex of filamentBrandRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentBrand = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar cantidad de filamento usado\n\n// 1. Buscar exactamente: \"; filament used [g] = ...\"\nlet usedGramsExact = gcode.match(/; ?filament used \\[g\\] *= *([^\\n]+)/i);\nif (usedGramsExact) {\n    filamentUsed = usedGramsExact[1].trim();\n} else {\n    // 2. Buscar una línea que contenga \"filament_user\" y también una \"g\"\n    let userLineMatch = gcode.match(/^.*filament_user.*g.*$/gim);\n    if (userLineMatch && userLineMatch.length > 0) {\n        // Extraer solo el valor después del signo \"=\" si lo hay\n        let valueMatch = userLineMatch[0].match(/= *([^\\n]+)/);\n        if (valueMatch) {\n            filamentUsed = valueMatch[1].trim();\n        } else {\n            filamentUsed = userLineMatch[0].trim(); // Línea completa como fallback\n        }\n    } else {\n        // 3. Buscar con los patrones comunes\n        let filamentUsedRegexes = [\n            /; ?filament used(?: *\\[.*\\])? *= *(.+)/i,\n            /; ?filament_used *= *(.+)/i,\n            /; ?filament_consumed *= *(.+)/i\n        ];\n\n        for (let regex of filamentUsedRegexes) {\n            let match = gcode.match(regex);\n            if (match) {\n                filamentUsed = match[1].trim();\n                break;\n            }\n        }\n    }\n}\n\n\n// Resultado\nmsg.payload = {\n    slicer: slicer,\n    printer: printer,\n    filament: filament,\n    filament_brand: filamentBrand,\n    filament_used: filamentUsed\n};\n\nreturn msg;\n",
         "outputs": 1,
@@ -569,15 +607,15 @@
         "y": 1020,
         "wires": [
             [
-                "35e953c2c5697c99"
+                "6a157fe845a720fc"
             ]
         ]
     },
     {
-        "id": "eb1aea727e7dc32a",
+        "id": "8baaa7a44bda0738",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=img",
         "rules": [
             {
@@ -597,15 +635,15 @@
         "y": 1080,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "6052c7cf3d66aba4",
+        "id": "b28ca6427025442a",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=printSuccessful",
         "rules": [
             {
@@ -625,18 +663,18 @@
         "y": 1140,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "829361586f1edc31",
+        "id": "73e6eeb28b5094d2",
         "type": "link call",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Obtener imaguen",
         "links": [
-            "6d2a55aa4804dee6"
+            "3e5ca6621f765aca"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -644,16 +682,16 @@
         "y": 1080,
         "wires": [
             [
-                "eb1aea727e7dc32a",
-                "1f252f4462ec7f0f"
+                "8baaa7a44bda0738",
+                "257bee5770153a14"
             ]
         ]
     },
     {
-        "id": "afc3c7a692880c3a",
+        "id": "1973f07ec12899cc",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set topic=roomTemperature",
         "rules": [
             {
@@ -673,18 +711,18 @@
         "y": 1200,
         "wires": [
             [
-                "1374d2e7ac16216b"
+                "79ecda98e90af27c"
             ]
         ]
     },
     {
-        "id": "1f252f4462ec7f0f",
+        "id": "257bee5770153a14",
         "type": "link call",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "IA",
         "links": [
-            "988a8a5ab8a9fc6f"
+            "15149959834d55d4"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -692,18 +730,18 @@
         "y": 1140,
         "wires": [
             [
-                "6052c7cf3d66aba4"
+                "b28ca6427025442a"
             ]
         ]
     },
     {
-        "id": "81cee3ccf5a94b33",
+        "id": "520f0530e3b3aa62",
         "type": "link call",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "roomTemperature",
         "links": [
-            "7a40b87b585d1a2c"
+            "9ce3e248714ecc7c"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -711,30 +749,30 @@
         "y": 1200,
         "wires": [
             [
-                "afc3c7a692880c3a"
+                "1973f07ec12899cc"
             ]
         ]
     },
     {
-        "id": "988a8a5ab8a9fc6f",
+        "id": "15149959834d55d4",
         "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link in 2",
         "links": [],
         "x": 75,
         "y": 1360,
         "wires": [
             [
-                "340f7b3f12a9ab75"
+                "beca61d4059fbb6c"
             ]
         ]
     },
     {
-        "id": "5999a69c26f0e1b9",
+        "id": "5ed068ddf703b120",
         "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link out 2",
         "mode": "return",
         "links": [],
@@ -743,25 +781,25 @@
         "wires": []
     },
     {
-        "id": "7a40b87b585d1a2c",
+        "id": "9ce3e248714ecc7c",
         "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link in 3",
         "links": [],
         "x": 75,
         "y": 1420,
         "wires": [
             [
-                "1026462f96489122"
+                "bf3decc96e99af4a"
             ]
         ]
     },
     {
-        "id": "55ad7bb22f530f4d",
+        "id": "2f1fb89ca713424a",
         "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link out 3",
         "mode": "return",
         "links": [],
@@ -770,12 +808,12 @@
         "wires": []
     },
     {
-        "id": "340f7b3f12a9ab75",
+        "id": "beca61d4059fbb6c",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "IA",
-        "func": "msg.payload = Math.random() < 0.95;\nreturn msg;",
+        "func": "let ran = Math.random();\nif (ran < 0.80){\n    msg.payload = true\n}else{\n    msg.payload = false\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -786,15 +824,16 @@
         "y": 1360,
         "wires": [
             [
-                "5999a69c26f0e1b9"
+                "5ed068ddf703b120",
+                "93084432de6c3132"
             ]
         ]
     },
     {
-        "id": "1026462f96489122",
+        "id": "bf3decc96e99af4a",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "roomTemperature",
         "func": "msg.payload = +(Math.random() + 30).toFixed(1);\nreturn msg;",
         "outputs": 1,
@@ -807,14 +846,14 @@
         "y": 1420,
         "wires": [
             [
-                "55ad7bb22f530f4d"
+                "2f1fb89ca713424a"
             ]
         ]
     },
     {
-        "id": "edfc56086d8ab47b",
+        "id": "e4b4800feafd8bdb",
         "type": "inject",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Servidor Visrtual",
         "props": [
             {
@@ -836,14 +875,14 @@
         "y": 180,
         "wires": [
             [
-                "aab6f6417ae024ed"
+                "6493cfbc7612077c"
             ]
         ]
     },
     {
-        "id": "aab6f6417ae024ed",
+        "id": "6493cfbc7612077c",
         "type": "function",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Variables de flujo",
         "func": "flow.set(\"OCTOPRINT_URL\", \"http://octoprint:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"sHyUL2EZ8Q_Cq8Lpi_B6gkaobZbOqtEb6PRbxxgedpo\")\nreturn msg;",
         "outputs": 1,
@@ -859,10 +898,10 @@
         ]
     },
     {
-        "id": "9f37b01d7ba2419b",
+        "id": "ef89cada522d26af",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Estado OctoPrint",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/printer`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -875,15 +914,15 @@
         "y": 780,
         "wires": [
             [
-                "02d5e81e20345401"
+                "11b28f3d3fc7c4a3"
             ]
         ]
     },
     {
-        "id": "987c64c416411e1d",
+        "id": "ee5f0423d88336bf",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Job Info",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/job`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -896,15 +935,15 @@
         "y": 840,
         "wires": [
             [
-                "871b36611425097b"
+                "fb55fff99835f2ac"
             ]
         ]
     },
     {
-        "id": "e50bd66b990fc759",
+        "id": "9a23b6a7fc2c454d",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Files",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/files`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -917,15 +956,15 @@
         "y": 900,
         "wires": [
             [
-                "c32acf1bf5a75b1b"
+                "5de610cd6b6e4270"
             ]
         ]
     },
     {
-        "id": "467b4b5f19668945",
+        "id": "b00339a3a774a085",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "DisplayLayerProgress",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/plugin/DisplayLayerProgress/values`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -938,15 +977,15 @@
         "y": 960,
         "wires": [
             [
-                "4c2aedf4f8ef20a9"
+                "e8be6c2d807e63d0"
             ]
         ]
     },
     {
-        "id": "02d5e81e20345401",
+        "id": "11b28f3d3fc7c4a3",
         "type": "http request",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": " http",
         "method": "GET",
         "ret": "obj",
@@ -963,15 +1002,15 @@
         "y": 780,
         "wires": [
             [
-                "d7e1f4e14c8dee85"
+                "a976bfeb5c0ec0de"
             ]
         ]
     },
     {
-        "id": "871b36611425097b",
+        "id": "fb55fff99835f2ac",
         "type": "http request",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "http ",
         "method": "GET",
         "ret": "obj",
@@ -988,15 +1027,15 @@
         "y": 840,
         "wires": [
             [
-                "e83880611d767e3c"
+                "f7943ebf33dd8366"
             ]
         ]
     },
     {
-        "id": "c32acf1bf5a75b1b",
+        "id": "5de610cd6b6e4270",
         "type": "http request",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": " http",
         "method": "GET",
         "ret": "obj",
@@ -1013,15 +1052,15 @@
         "y": 900,
         "wires": [
             [
-                "6e29f9b5da35a554"
+                "0742771261fba357"
             ]
         ]
     },
     {
-        "id": "4c2aedf4f8ef20a9",
+        "id": "e8be6c2d807e63d0",
         "type": "http request",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "http ",
         "method": "GET",
         "ret": "obj",
@@ -1038,14 +1077,14 @@
         "y": 960,
         "wires": [
             [
-                "870f20a72122f2ed"
+                "9a5867a62475db51"
             ]
         ]
     },
     {
-        "id": "b6cdd4b9566c7683",
+        "id": "addda7df283377de",
         "type": "function",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Variables de flujo",
         "func": "flow.set(\"OCTOPRINT_URL\", \"http://192.168.0.119:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"6ZMXBaKRB1Wx-w9DWuyQmprhlApYHDG3QrMaeY3XhWY\")\nreturn msg;",
         "outputs": 1,
@@ -1061,9 +1100,9 @@
         ]
     },
     {
-        "id": "0ae4e31a197d45fc",
+        "id": "97b177574bad46e9",
         "type": "inject",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Servidor Real",
         "props": [
             {
@@ -1085,38 +1124,38 @@
         "y": 180,
         "wires": [
             [
-                "b6cdd4b9566c7683"
+                "addda7df283377de"
             ]
         ]
     },
     {
-        "id": "687568201063a4c8",
+        "id": "b7acc809da4d53bf",
         "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link in 4",
         "links": [
-            "c170832b3561b108"
+            "18e084e5276edc3c"
         ],
         "x": 125,
         "y": 1140,
         "wires": [
             [
-                "21eb593786632271",
-                "9f37b01d7ba2419b",
-                "987c64c416411e1d",
-                "e50bd66b990fc759",
-                "467b4b5f19668945",
-                "829361586f1edc31",
-                "81cee3ccf5a94b33"
+                "1f37cd4514231950",
+                "ef89cada522d26af",
+                "ee5f0423d88336bf",
+                "9a23b6a7fc2c454d",
+                "b00339a3a774a085",
+                "73e6eeb28b5094d2",
+                "520f0530e3b3aa62"
             ]
         ]
     },
     {
-        "id": "955639a98c89c80d",
+        "id": "624896e6d80eba7f",
         "type": "mqtt in",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "PRINTING MQTT",
         "topic": "octoPrint/event/PrinterStateChanged",
         "qos": "0",
@@ -1130,15 +1169,15 @@
         "y": 520,
         "wires": [
             [
-                "483547c7e0eb2987"
+                "511702800576d318"
             ]
         ]
     },
     {
-        "id": "483547c7e0eb2987",
+        "id": "511702800576d318",
         "type": "json",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Convertir a JSON",
         "property": "payload",
         "action": "obj",
@@ -1147,17 +1186,17 @@
         "y": 520,
         "wires": [
             [
-                "7a46e6f4e863ceba",
-                "52c12ee918d12fac",
-                "d7e084f6a91769cd"
+                "a68b7b7e7b1454ba",
+                "2bd1a27d157d5b1a",
+                "78435c8aa7bafbfb"
             ]
         ]
     },
     {
-        "id": "7a46e6f4e863ceba",
+        "id": "a68b7b7e7b1454ba",
         "type": "switch",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "¿Es PRINTING?",
         "property": "payload.state_id",
         "propertyType": "msg",
@@ -1178,18 +1217,18 @@
         "y": 520,
         "wires": [
             [
-                "f6ed0bcc1fba5502"
+                "5924623ef4f72138"
             ],
             [
-                "43c458ca0daa40d9"
+                "d86e2b2c3c4031c4"
             ]
         ]
     },
     {
-        "id": "f6ed0bcc1fba5502",
+        "id": "5924623ef4f72138",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Reiniciar temporizador",
         "rules": [
             {
@@ -1212,10 +1251,10 @@
         ]
     },
     {
-        "id": "43c458ca0daa40d9",
+        "id": "d86e2b2c3c4031c4",
         "type": "change",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Activar temporizador",
         "rules": [
             {
@@ -1245,10 +1284,10 @@
         ]
     },
     {
-        "id": "330137d76cb6c532",
+        "id": "eaa5eff15df08ee7",
         "type": "inject",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Cada 5 segundos",
         "props": [
             {
@@ -1270,16 +1309,16 @@
         "y": 580,
         "wires": [
             [
-                "1739ea564f5552f9",
-                "b2c366b8976bb975"
+                "f935e2634e082206",
+                "013bf85e50710ab9"
             ]
         ]
     },
     {
-        "id": "1739ea564f5552f9",
+        "id": "f935e2634e082206",
         "type": "switch",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "¿Timer activo?",
         "property": "timerActive",
         "propertyType": "flow",
@@ -1298,32 +1337,32 @@
         "y": 600,
         "wires": [
             [
-                "c170832b3561b108"
+                "18e084e5276edc3c"
             ],
             [
-                "a4251e203c2f752a"
+                "80de9e65d8e17084"
             ]
         ]
     },
     {
-        "id": "c170832b3561b108",
+        "id": "18e084e5276edc3c",
         "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "link out 5",
         "mode": "link",
         "links": [
-            "687568201063a4c8"
+            "b7acc809da4d53bf"
         ],
         "x": 655,
         "y": 600,
         "wires": []
     },
     {
-        "id": "a4251e203c2f752a",
+        "id": "80de9e65d8e17084",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Verificar tiempo",
         "func": "var timerStart = flow.get('timerStart');\n\nif (!timerStart) {\n    flow.set('timerActive', false);\n    return null;\n}\n\nvar startTime = new Date(timerStart);\nif (isNaN(startTime.getTime())) {\n    flow.set('timerActive', false);\n    return null;\n}\n\nvar currentTime = new Date();\nvar diff = currentTime.getTime() - startTime.getTime(); // ← aquí la corrección\nvar thirtyMinutes = 30 * 60 * 1000;\n\nif (diff < thirtyMinutes) {\n    return msg;\n} else {\n    flow.set('timerActive', false);\n    return null;\n}\n",
         "outputs": 1,
@@ -1336,30 +1375,31 @@
         "y": 620,
         "wires": [
             [
-                "c170832b3561b108"
+                "18e084e5276edc3c"
             ]
         ]
     },
     {
-        "id": "ad50dab14ad3b9b5",
+        "id": "b951daf915408c23",
         "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "out-printer_data",
         "mode": "link",
         "links": [
-            "3a2977bacadcf9ee",
-            "9d2dde464731daac"
+            "1d4b7f49f21fee4f",
+            "828ab81728f97ea1",
+            "61e2f0cceeb1f6a2"
         ],
         "x": 1495,
         "y": 900,
         "wires": []
     },
     {
-        "id": "52c12ee918d12fac",
+        "id": "2bd1a27d157d5b1a",
         "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "state_id",
         "active": false,
         "tosidebar": true,
@@ -1374,274 +1414,27 @@
         "wires": []
     },
     {
-        "id": "ac84701c5ace585d",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "2a_estado_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Estado",
-        "label": "Estado",
-        "format": "{{msg.payload.status.value}}",
-        "x": 480,
-        "y": 1960,
-        "wires": []
-    },
-    {
-        "id": "3fd3dd7c578bbb47",
-        "type": "ui_gauge",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "name": "Progreso",
-        "group": "2a_estado_group",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "donut",
-        "title": "Progreso",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 480,
-        "y": 2040,
-        "wires": []
-    },
-    {
-        "id": "465cbebf8d3b4d7d",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "3a_tiempos_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Tiempo transcurrido",
-        "label": "Tiempo transcurrido",
-        "format": "{{msg.payload.printTime.elapsed.value}} seg",
-        "x": 520,
-        "y": 2000,
-        "wires": []
-    },
-    {
-        "id": "4e0863537fab1432",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "3a_tiempos_group",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Tiempo estimado",
-        "label": "Tiempo estimado total",
-        "format": "{{msg.payload.printTime.estimated.value}} seg",
-        "x": 510,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "192d6be3d9705c71",
-        "type": "ui_gauge",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "name": "Boquilla Actual",
-        "group": "4a_temperaturas_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Boquilla Actual",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 300,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 500,
-        "y": 1720,
-        "wires": []
-    },
-    {
-        "id": "75c5debadffd84c8",
-        "type": "ui_gauge",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "name": "Cama Actual",
-        "group": "4a_temperaturas_group",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Cama Actual",
-        "label": "°C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 120,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "className": "",
-        "x": 490,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "042fa9915f80c4b0",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "5a_capa_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Capa actual",
-        "label": "Capa actual / total",
-        "format": "{{msg.payload.layer.currentLayer.value}} / {{msg.payload.layer.totalLayers.value}}",
-        "x": 490,
-        "y": 1920,
-        "wires": []
-    },
-    {
-        "id": "115495b46456859b",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "6a_filamento_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Filamento tipo",
-        "label": "Tipo",
-        "format": "{{msg.payload.filament.value.type}}",
-        "x": 500,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "925c78b4eb9f7d99",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "6a_filamento_group",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Filamento marca",
-        "label": "Marca",
-        "format": "{{msg.payload.filament.value.brand}}",
-        "layout": "",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 510,
-        "y": 1760,
-        "wires": []
-    },
-    {
-        "id": "3eb52026d1efad42",
-        "type": "ui_text",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "6a_filamento_group",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Filamento usado",
-        "label": "Usado",
-        "format": "{{msg.payload.filament.value.used}}",
-        "x": 500,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "3a2977bacadcf9ee",
+        "id": "828ab81728f97ea1",
         "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "name": "link in 6",
-        "links": [
-            "ad50dab14ad3b9b5"
-        ],
-        "x": 75,
-        "y": 1860,
-        "wires": [
-            [
-                "4e0863537fab1432",
-                "192d6be3d9705c71",
-                "925c78b4eb9f7d99",
-                "3eb52026d1efad42",
-                "75c5debadffd84c8",
-                "115495b46456859b",
-                "042fa9915f80c4b0",
-                "ac84701c5ace585d",
-                "465cbebf8d3b4d7d",
-                "3fd3dd7c578bbb47",
-                "239c2fa1499e9da0"
-            ]
-        ]
-    },
-    {
-        "id": "239c2fa1499e9da0",
-        "type": "ui_template",
-        "z": "a250f203621a2e27",
-        "g": "f199863a1df72f71",
-        "group": "7a_imagen_group",
-        "name": "Imagen impresión",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<div ng-if=\"msg.payload.image.value\">\n  <img ng-src=\"data:image/jpeg;base64,{{msg.payload.image.value}}\" style=\"width:100%;\" />\n</div>",
-        "x": 510,
-        "y": 2080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9d2dde464731daac",
-        "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "ad5ae281c789b9c5",
+        "z": "128aa5cf7f19b872",
+        "g": "266f6d3eca23ba9f",
         "name": "lin-printer_data-kafka",
         "links": [
-            "ad50dab14ad3b9b5"
+            "b951daf915408c23"
         ],
         "x": 75,
         "y": 1580,
         "wires": [
             [
-                "ca03c0656f8f02d3"
+                "9872f623f72c382d"
             ]
         ]
     },
     {
-        "id": "ca03c0656f8f02d3",
+        "id": "9872f623f72c382d",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "ad5ae281c789b9c5",
+        "z": "128aa5cf7f19b872",
+        "g": "266f6d3eca23ba9f",
         "name": "kafka Data",
         "func": "msg.payload = JSON.stringify(msg.payload);\nmsg.topic = \"octo-data\"\nreturn msg;\n",
         "outputs": 1,
@@ -1654,16 +1447,16 @@
         "y": 1560,
         "wires": [
             [
-                "a58b040e92e0b0f2",
-                "8647a39f2d32fd25"
+                "459d586a76964385",
+                "e82fa3f4a931dc82"
             ]
         ]
     },
     {
-        "id": "a58b040e92e0b0f2",
+        "id": "459d586a76964385",
         "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "ad5ae281c789b9c5",
+        "z": "128aa5cf7f19b872",
+        "g": "266f6d3eca23ba9f",
         "name": "Kafka Producer Debug",
         "active": false,
         "tosidebar": true,
@@ -1678,10 +1471,10 @@
         "wires": []
     },
     {
-        "id": "8647a39f2d32fd25",
+        "id": "e82fa3f4a931dc82",
         "type": "kafkajs-producer",
-        "z": "a250f203621a2e27",
-        "g": "ad5ae281c789b9c5",
+        "z": "128aa5cf7f19b872",
+        "g": "266f6d3eca23ba9f",
         "name": "",
         "client": "89e380a1c824ddad",
         "topic": "",
@@ -1699,10 +1492,10 @@
         "wires": []
     },
     {
-        "id": "3509d0f441e661be",
+        "id": "31e8a8619228c446",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "8003b065a127a611",
+        "z": "128aa5cf7f19b872",
+        "g": "2a6479e3d61413d4",
         "name": "Variables de flujo",
         "func": "flow.set(\"OCTOPRINT_URL\", \"http://host.docker.internal:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
         "outputs": 1,
@@ -1718,10 +1511,10 @@
         ]
     },
     {
-        "id": "4146e35d96748848",
+        "id": "906c6d6f4f91a1e2",
         "type": "inject",
-        "z": "a250f203621a2e27",
-        "g": "8003b065a127a611",
+        "z": "128aa5cf7f19b872",
+        "g": "2a6479e3d61413d4",
         "name": "Servidor (Andreu)",
         "props": [
             {
@@ -1743,15 +1536,15 @@
         "y": 560,
         "wires": [
             [
-                "3509d0f441e661be"
+                "31e8a8619228c446"
             ]
         ]
     },
     {
-        "id": "cce34f6a0aae5c87",
+        "id": "a47d2c3314b0ecb5",
         "type": "inject",
-        "z": "a250f203621a2e27",
-        "g": "15cd34d6248edbcd",
+        "z": "128aa5cf7f19b872",
+        "g": "5c5a197179018839",
         "name": "Servidor (Gerard)",
         "props": [
             {
@@ -1773,15 +1566,15 @@
         "y": 460,
         "wires": [
             [
-                "33b17684e8cd3cec"
+                "91d17a9337f29380"
             ]
         ]
     },
     {
-        "id": "33b17684e8cd3cec",
+        "id": "91d17a9337f29380",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "15cd34d6248edbcd",
+        "z": "128aa5cf7f19b872",
+        "g": "5c5a197179018839",
         "name": "Variables de flujo",
         "func": "flow.set(\"OCTOPRINT_URL\", \"http://host.docker.internal:5000\")\nflow.set(\"OCTOPRINT_API_KEY\", \"hsG_K1UppJ-3FToFKbNOMI5HchM3Mbmo6OxqAL1WV6w\")\nreturn msg;",
         "outputs": 1,
@@ -1797,9 +1590,9 @@
         ]
     },
     {
-        "id": "eeaa6f58c2d13dc1",
+        "id": "b8f5b21a167faa77",
         "type": "comment",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "TODO",
         "info": "Orion\nlogstash \n",
         "x": 990,
@@ -1807,9 +1600,9 @@
         "wires": []
     },
     {
-        "id": "907275f80616f5ce",
+        "id": "39b5364f8f4fd575",
         "type": "kafkajs-consumer",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "",
         "client": "89e380a1c824ddad",
         "groupid": "logstash",
@@ -1832,14 +1625,14 @@
         "y": 1580,
         "wires": [
             [
-                "ee85ea067fbcd61e"
+                "6322e1d1ea1711f7"
             ]
         ]
     },
     {
-        "id": "ee85ea067fbcd61e",
+        "id": "6322e1d1ea1711f7",
         "type": "debug",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "debug 5",
         "active": false,
         "tosidebar": true,
@@ -1854,10 +1647,10 @@
         "wires": []
     },
     {
-        "id": "b562ba265d736702",
+        "id": "345d71275dbccd53",
         "type": "inject",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "User ID",
         "props": [],
         "repeat": "",
@@ -1869,15 +1662,15 @@
         "y": 320,
         "wires": [
             [
-                "41cc40fc7394eeb1"
+                "a5a56a49b4881d13"
             ]
         ]
     },
     {
-        "id": "41cc40fc7394eeb1",
+        "id": "a5a56a49b4881d13",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "Set file path",
         "func": "msg.filename = \"id.txt\"; // archivo en la raíz de Node-RED\nreturn msg;",
         "outputs": 1,
@@ -1890,15 +1683,15 @@
         "y": 320,
         "wires": [
             [
-                "e9f523aa1a1b5fc4"
+                "7ba7ab8886472d6d"
             ]
         ]
     },
     {
-        "id": "e9f523aa1a1b5fc4",
+        "id": "7ba7ab8886472d6d",
         "type": "file in",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "Read ID file",
         "filename": "filename",
         "filenameType": "msg",
@@ -1911,15 +1704,15 @@
         "y": 320,
         "wires": [
             [
-                "f1c8204f47a74736"
+                "0e6982e00cfbd542"
             ]
         ]
     },
     {
-        "id": "7948817760f76f1e",
+        "id": "f5a0c706b44eb215",
         "type": "file",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "Write new ID",
         "filename": "id.txt",
         "filenameType": "str",
@@ -1931,15 +1724,15 @@
         "y": 340,
         "wires": [
             [
-                "e819b6c6388f6d67"
+                "53910cda7198a11c"
             ]
         ]
     },
     {
-        "id": "f1c8204f47a74736",
+        "id": "0e6982e00cfbd542",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "Check ID or generate",
         "func": "// Si hay ID válido en el archivo\nif (msg.payload && msg.payload.trim() !== \"\") {\n    msg.id = msg.payload.trim();\n    return [msg, null]; // Salida 1: ID leído\n} else {\n    const id = global.get(\"generate_id\")(\"uid\");\n    msg.id = id\n    msg.payload = id;\n    return [null, msg]; // Salida 2: nuevo ID\n}\n",
         "outputs": 2,
@@ -1952,18 +1745,18 @@
         "y": 320,
         "wires": [
             [
-                "e819b6c6388f6d67"
+                "53910cda7198a11c"
             ],
             [
-                "7948817760f76f1e"
+                "f5a0c706b44eb215"
             ]
         ]
     },
     {
-        "id": "e819b6c6388f6d67",
+        "id": "53910cda7198a11c",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "Global ID",
         "func": "global.set('user_id', msg.payload)\nmsg.payload = global.get('user_id')\nreturn msg;",
         "outputs": 1,
@@ -1976,15 +1769,15 @@
         "y": 320,
         "wires": [
             [
-                "acd17a22c65c62d2"
+                "9e08ad373197cb06"
             ]
         ]
     },
     {
-        "id": "acd17a22c65c62d2",
+        "id": "9e08ad373197cb06",
         "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "ba70718e5a111ad6",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
         "name": "USER ID",
         "active": false,
         "tosidebar": true,
@@ -1999,10 +1792,10 @@
         "wires": []
     },
     {
-        "id": "b2c366b8976bb975",
+        "id": "013bf85e50710ab9",
         "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "debug 4",
         "active": false,
         "tosidebar": true,
@@ -2016,10 +1809,10 @@
         "wires": []
     },
     {
-        "id": "d7e084f6a91769cd",
+        "id": "78435c8aa7bafbfb",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Print_ID",
         "func": "let estadoNuevo = msg.payload.state_string;\nlet datos = flow.get(\"print_id\") || {};\nvar startTime = new Date();\nvar id = flow.get(\"print_id\");\n\nif (estadoNuevo === \"Starting\") {\n    const id = global.get(\"generate_id\")(\"print_id\");\n    flow.set('print_id', id)\n}\n\n\nmsg.payload = { id: id };\nreturn msg;",
         "outputs": 1,
@@ -2032,15 +1825,15 @@
         "y": 440,
         "wires": [
             [
-                "c589dcd5e04deaf6"
+                "be56419d7580c506"
             ]
         ]
     },
     {
-        "id": "c589dcd5e04deaf6",
+        "id": "be56419d7580c506",
         "type": "debug",
-        "z": "a250f203621a2e27",
-        "g": "83626b2dfc3e644b",
+        "z": "128aa5cf7f19b872",
+        "g": "19be8253c61f2ebe",
         "name": "Debug ID",
         "active": false,
         "tosidebar": true,
@@ -2049,10 +1842,10 @@
         "wires": []
     },
     {
-        "id": "970975f1d6b4dc57",
+        "id": "d3645c9ffc7b2ae3",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Set filename",
         "func": "msg.filename = msg.payload.trim();\nreturn msg;",
         "outputs": 1,
@@ -2061,15 +1854,15 @@
         "y": 1293.0000610351562,
         "wires": [
             [
-                "f46d8c3b70453d2e"
+                "55d0659e989b1cbb"
             ]
         ]
     },
     {
-        "id": "25726bde6564cc6b",
+        "id": "637858ccdecedace",
         "type": "exec",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "command": "find /data/images -type f | shuf -n 1",
         "addpay": false,
         "append": "",
@@ -2082,17 +1875,17 @@
         "y": 1306.0000610351562,
         "wires": [
             [
-                "970975f1d6b4dc57"
+                "d3645c9ffc7b2ae3"
             ],
             [],
             []
         ]
     },
     {
-        "id": "f46d8c3b70453d2e",
+        "id": "55d0659e989b1cbb",
         "type": "file in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "Leer imagen",
         "filename": "",
         "format": "",
@@ -2103,30 +1896,30 @@
         "y": 1293.0000610351562,
         "wires": [
             [
-                "ff53fc7050335810"
+                "fcf3c314f470b7cf"
             ]
         ]
     },
     {
-        "id": "6d2a55aa4804dee6",
+        "id": "3e5ca6621f765aca",
         "type": "link in",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link in 5",
         "links": [],
         "x": 74,
         "y": 1306.0000610351562,
         "wires": [
             [
-                "25726bde6564cc6b"
+                "637858ccdecedace"
             ]
         ]
     },
     {
-        "id": "ff53fc7050335810",
+        "id": "fcf3c314f470b7cf",
         "type": "function",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "A base64",
         "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
         "outputs": 1,
@@ -2139,15 +1932,15 @@
         "y": 1293.0000610351562,
         "wires": [
             [
-                "b3865035ccdf9685"
+                "e73ed9386313dce7"
             ]
         ]
     },
     {
-        "id": "b3865035ccdf9685",
+        "id": "e73ed9386313dce7",
         "type": "link out",
-        "z": "a250f203621a2e27",
-        "g": "274833f5177e2ed0",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
         "name": "link out 6",
         "mode": "return",
         "links": [],
@@ -2156,9 +1949,9 @@
         "wires": []
     },
     {
-        "id": "cac532addd0cc61b",
+        "id": "8932c90f84a88520",
         "type": "function",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Code",
         "func": "global.set(\"generateUUIDv4\", function () {\n    return 'xxxx-xxxx-xxxx-xxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n});\n\nglobal.set(\"generate_id\", function (prefix) {\n    const uuid = global.get(\"generateUUIDv4\")();\n    const timestamp = Date.now();\n    return `${prefix}_${uuid}_${timestamp}`;\n});\nflow.set('timerActive', null)\nflow.set('timerStart', null)\nreturn msg;\n",
         "outputs": 1,
@@ -2174,9 +1967,9 @@
         ]
     },
     {
-        "id": "b00a06f39db1ac8a",
+        "id": "ab48e83c8818f67a",
         "type": "inject",
-        "z": "a250f203621a2e27",
+        "z": "128aa5cf7f19b872",
         "name": "Global Code",
         "props": [
             {
@@ -2198,9 +1991,251 @@
         "y": 180,
         "wires": [
             [
-                "cac532addd0cc61b"
+                "8932c90f84a88520"
             ]
         ]
+    },
+    {
+        "id": "61e2f0cceeb1f6a2",
+        "type": "link in",
+        "z": "128aa5cf7f19b872",
+        "g": "b17494c958703951",
+        "name": "lin-printer_data-kafka",
+        "links": [
+            "b951daf915408c23"
+        ],
+        "x": 75,
+        "y": 1680,
+        "wires": [
+            [
+                "bcb45a0ec81cf66e",
+                "6f7de024a90c0f5a"
+            ]
+        ]
+    },
+    {
+        "id": "bcb45a0ec81cf66e",
+        "type": "function",
+        "z": "128aa5cf7f19b872",
+        "g": "b17494c958703951",
+        "name": "Procesar datos",
+        "func": "let data = msg.payload;\n\n// Convertir tiempo a formato H:M:S\nlet totalSeconds = parseInt(data.printTime.elapsed.value);\nlet hours = Math.floor(totalSeconds / 3600);\nlet minutes = Math.floor((totalSeconds % 3600) / 60);\nlet seconds = totalSeconds % 60;\n\nlet formattedTime = \n    (hours > 0 ? hours + \" h \" : \"\") +\n    (minutes > 0 ? minutes + \" min \" : \"\") +\n    seconds + \" s\";\n\n// Convertir status a mayúsculas\nlet status = data.status.value.toUpperCase();\n\n// Colores según estado\nlet statusColor = \"#9e9e9e\"; // Gris por defecto\nif (status === \"PRINTING\") statusColor = \"#2196f3\";\nelse if (status === \"PAUSED\") statusColor = \"#ff9800\";\nelse if (status === \"DONE\") statusColor = \"#4caf50\";\n\nmsg.payload = {\n    file: data.file.value,\n    status: status,\n    statusColor: statusColor,\n    elapsed: formattedTime,\n    progress: data.progress.value\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 2020,
+        "wires": [
+            [
+                "332e546f9f9ecccd"
+            ]
+        ]
+    },
+    {
+        "id": "6f7de024a90c0f5a",
+        "type": "function",
+        "z": "128aa5cf7f19b872",
+        "g": "b17494c958703951",
+        "name": "Extraer Temperaturas Multisalida",
+        "func": "let data = msg.payload;\n\nreturn [\n    { payload: data.environment.roomTemperature.value },  // Habitación\n    { payload: data.temperatures.bed.actual.value },       // Bed actual\n    { payload: data.temperatures.nozzle.actual.value },    // Nozzle actual\n    { payload: data.temperatures.nozzle.target.value },    // Nozzle target\n    {                                                      // Texto para template\n        payload: {\n            roomTempStr: data.environment.roomTemperature.value.toFixed(1) + \" °C\",\n            bedActualStr: data.temperatures.bed.actual.value.toFixed(1) + \" °C\",\n            nozzleActualStr: data.temperatures.nozzle.actual.value.toFixed(1) + \" °C\",\n            nozzleTargetStr: data.temperatures.nozzle.target.value.toFixed(1) + \" °C\"\n        }\n    }\n];",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 1700,
+        "wires": [
+            [
+                "63831c0178db03a4"
+            ],
+            [
+                "b83673a468f59ce0"
+            ],
+            [
+                "48c0ef824c2e5648"
+            ],
+            [
+                "4f11218d5ca6faa1"
+            ],
+            [
+                "ee2772192c10c802"
+            ]
+        ]
+    },
+    {
+        "id": "63831c0178db03a4",
+        "type": "ui_gauge",
+        "z": "128aa5cf7f19b872",
+        "g": "09425fa9e51cf20c",
+        "name": "Temperatura Habitación",
+        "group": "fd718569531f6881",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "HABITACIÓN",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 50,
+        "colors": [
+            "#b39ddb",
+            "#4f83cc",
+            "#3f51b5"
+        ],
+        "seg1": 15,
+        "seg2": 30,
+        "diff": false,
+        "className": "",
+        "x": 910,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "b83673a468f59ce0",
+        "type": "ui_gauge",
+        "z": "128aa5cf7f19b872",
+        "g": "09425fa9e51cf20c",
+        "name": "Temperatura Bed Actual",
+        "group": "fd718569531f6881",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "BED ACTUAL",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 120,
+        "colors": [
+            "#b39ddb",
+            "#4f83cc",
+            "#3f51b5"
+        ],
+        "seg1": 30,
+        "seg2": 90,
+        "x": 910,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "48c0ef824c2e5648",
+        "type": "ui_gauge",
+        "z": "128aa5cf7f19b872",
+        "g": "09425fa9e51cf20c",
+        "name": "Temperatura Nozzle Actual",
+        "group": "fd718569531f6881",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "NOZZLE ACTUAL",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 250,
+        "colors": [
+            "#b39ddb",
+            "#4f83cc",
+            "#3f51b5"
+        ],
+        "seg1": 50,
+        "seg2": 150,
+        "x": 900,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "4f11218d5ca6faa1",
+        "type": "ui_gauge",
+        "z": "128aa5cf7f19b872",
+        "g": "09425fa9e51cf20c",
+        "name": "Temperatura Nozzle Target",
+        "group": "fd718569531f6881",
+        "order": 4,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "NOZZLE TARGET",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 250,
+        "colors": [
+            "#b39ddb",
+            "#4f83cc",
+            "#3f51b5"
+        ],
+        "seg1": 50,
+        "seg2": 150,
+        "x": 900,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "332e546f9f9ecccd",
+        "type": "ui_template",
+        "z": "128aa5cf7f19b872",
+        "g": "af4e2f65b8c2c15f",
+        "group": "1d9fd7301c7f9d4c",
+        "name": "Dashboard STATUS",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"background-color: #f0f0f0; font-family: 'Segoe UI', sans-serif; padding: 40px; border-radius: 10px;\">\n  <h3 style=\"color: #333; border-bottom: 2px solid #ccc; padding-bottom: 5px; margin-bottom: 15px;\">STATUS</h3>\n\n  <div style=\"margin-bottom: 12px;\"><strong>Archivo:</strong><br>{{msg.payload.file}}</div>\n  \n  <div style=\"margin-bottom: 12px;\">\n    <strong>Estado:</strong><br>\n    <span style=\"color: {{msg.payload.statusColor}}; font-weight: bold;\">\n      {{msg.payload.status}}\n    </span>\n  </div>\n  \n  <div style=\"margin-bottom: 12px;\"><strong>Tiempo transcurrido:</strong><br>{{msg.payload.elapsed}}</div>\n\n  <div style=\"margin-bottom: 6px;\"><strong>Progreso:</strong></div>\n  <div style=\"width: 100%; background: #d0d0d0; border-radius: 8px; position: relative; height: 25px;\">\n    <div style=\"width: {{msg.payload.progress}}%; background: linear-gradient(90deg, #4f83cc, #b39ddb); height: 100%; border-radius: 8px; transition: width 0.5s;\"></div>\n    <div style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; line-height: 25px; font-weight: bold; color: #000;\">\n      {{msg.payload.progress}}%\n    </div>\n  </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee2772192c10c802",
+        "type": "ui_template",
+        "z": "128aa5cf7f19b872",
+        "g": "af4e2f65b8c2c15f",
+        "group": "1d9fd7301c7f9d4c",
+        "name": "Texto Temperaturas",
+        "order": 5,
+        "width": 6,
+        "height": 4,
+        "format": "<style>\n  .temp-container {\n    background-color: #f0f0f0;\n    font-family: 'Segoe UI', sans-serif;\n    padding: 15px;\n    border-radius: 10px;\n    max-width: 320px;\n    color: #4f83cc;\n  }\n  .temp-container h3 {\n    color: #7e57c2;\n    border-bottom: 2px solid #b39ddb;\n    padding-bottom: 5px;\n    margin-bottom: 15px;\n  }\n  .temp-text div {\n    margin-bottom: 12px;\n    font-weight: 600;\n  }\n</style>\n\n<div class=\"temp-container\">\n  <h3>TEMPERATURAS</h3>\n  <div class=\"temp-text\"><strong>Habitación:</strong><br>{{msg.payload.roomTempStr}}</div>\n  <div class=\"temp-text\"><strong>Bed Actual:</strong><br>{{msg.payload.bedActualStr}}</div>\n  <div class=\"temp-text\"><strong>Nozzle Actual:</strong><br>{{msg.payload.nozzleActualStr}}</div>\n  <div class=\"temp-text\"><strong>Nozzle Target:</strong><br>{{msg.payload.nozzleTargetStr}}</div>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93084432de6c3132",
+        "type": "debug",
+        "z": "128aa5cf7f19b872",
+        "g": "6554eaf24f3301c5",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 1360,
+        "wires": []
     },
     {
         "id": "4b50b82dd1e6f2fa",
@@ -2230,62 +2265,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "2a_estado_group",
-        "type": "ui_group",
-        "name": "Estado",
-        "tab": "1d_dashboard_tab",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "3a_tiempos_group",
-        "type": "ui_group",
-        "name": "Tiempo de Impresión",
-        "tab": "1d_dashboard_tab",
-        "order": 2,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "4a_temperaturas_group",
-        "type": "ui_group",
-        "name": "Temperaturas",
-        "tab": "1d_dashboard_tab",
-        "order": 3,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "5a_capa_group",
-        "type": "ui_group",
-        "name": "Capa",
-        "tab": "1d_dashboard_tab",
-        "order": 4,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "6a_filamento_group",
-        "type": "ui_group",
-        "name": "Filamento",
-        "tab": "1d_dashboard_tab",
-        "order": 5,
-        "disp": true,
-        "width": "6"
-    },
-    {
-        "id": "7a_imagen_group",
-        "type": "ui_group",
-        "name": "Imagen",
-        "tab": "1d_dashboard_tab",
-        "order": 6,
-        "disp": true,
-        "width": "6"
-    },
-    {
         "id": "89e380a1c824ddad",
         "type": "kafkajs-client",
         "name": "octo-kafka",
@@ -2310,10 +2289,43 @@
         "loglevel": "error"
     },
     {
-        "id": "1d_dashboard_tab",
+        "id": "fd718569531f6881",
+        "type": "ui_group",
+        "name": "Visual",
+        "tab": "42e453982dc44df4",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d9fd7301c7f9d4c",
+        "type": "ui_group",
+        "name": "Datos",
+        "tab": "ea2d7e905fbc6f88",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "42e453982dc44df4",
         "type": "ui_tab",
-        "name": "Impresora 3D",
-        "icon": "print",
-        "order": 1
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ea2d7e905fbc6f88",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     }
 ]
