@@ -1,0 +1,585 @@
+ 
+{
+  "took" : 743,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 28,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "octo-print",
+        "_type" : "_doc",
+        "_id" : "XGa12JYBJrluHfBpiyIb",
+        "_score" : 1.0,
+        "_ignored" : [
+          "image.value.keyword"
+        ],
+        "_source" : {
+          "temperatures" : {
+            "bed" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              }
+            },
+            "nozzle" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              }
+            }
+          },
+          "image" : {
+            "type" : "Property",
+            "value" : "/9j/4AAQ...SkRQB/9k="
+          },
+          "filament" : {
+            "type" : "Property",
+            "value" : {
+              "brand" : "\"eSUN PLA Basico @Creality Ender-3 V3 SE 0.4 nozzle\"",
+              "type" : "PLA",
+              "used" : "114.32"
+            }
+          },
+          "printTime" : {
+            "estimated" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 1637
+            },
+            "elapsed" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 49
+            }
+          },
+          "layer" : {
+            "totalLayers" : {
+              "type" : "Property",
+              "value" : "614"
+            },
+            "currentLayer" : {
+              "type" : "Property",
+              "value" : "4"
+            }
+          },
+          "fanSpeed" : {
+            "unitCode" : "P1",
+            "type" : "Property",
+            "value" : "100%"
+          },
+          "environment" : {
+            "roomTemperature" : {
+              "unitCode" : "CEL",
+              "value" : 30.2
+            }
+          },
+          "slicer" : {
+            "type" : "Property",
+            "value" : "Creality Print"
+          },
+          "progress" : {
+            "type" : "Property",
+            "value" : 2
+          },
+          "@version" : "1",
+          "file" : {
+            "type" : "Property",
+            "value" : "Estanteria_Modular_ESUN_PLA_5h9m.gcode"
+          },
+          "printer" : {
+            "type" : "Property",
+            "value" : "Creality Ender-3 V3 SE"
+          },
+          "printSuccessful" : {
+            "type" : "Property",
+            "value" : true
+          },
+          "print_id" : "print_id_8fad-1c1e-2d8d-42ed_1747392448915",
+          "status" : {
+            "type" : "Property",
+            "value" : "Printing"
+          },
+          "id" : "opr_5bc6-be4e-5c88-7274_1747392498145",
+          "user_id" : "uid_b60a-2cc3-c462-e0e6_1747389116031",
+          "timestamp" : "2025-05-16T10:48:18.257Z",
+          "type" : "3DPrinter",
+          "@timestamp" : "2025-05-16T10:48:18.265Z"
+        }
+      },
+      {
+        "_index" : "octo-print",
+        "_type" : "_doc",
+        "_id" : "XWa12JYBJrluHfBpniI_",
+        "_score" : 1.0,
+        "_ignored" : [
+          "image.value.keyword"
+        ],
+        "_source" : {
+          "temperatures" : {
+            "bed" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              }
+            },
+            "nozzle" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              }
+            }
+          },
+          "image" : {
+            "type" : "Property",
+            "value" : "/9j/4AAQ...SkRQB/9k="
+          },
+          "filament" : {
+            "type" : "Property",
+            "value" : {
+              "brand" : "\"eSUN PLA Basico @Creality Ender-3 V3 SE 0.4 nozzle\"",
+              "type" : "PLA",
+              "used" : "114.32"
+            }
+          },
+          "printTime" : {
+            "estimated" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 1406
+            },
+            "elapsed" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 54
+            }
+          },
+          "layer" : {
+            "totalLayers" : {
+              "type" : "Property",
+              "value" : "614"
+            },
+            "currentLayer" : {
+              "type" : "Property",
+              "value" : "5"
+            }
+          },
+          "fanSpeed" : {
+            "unitCode" : "P1",
+            "type" : "Property",
+            "value" : "100%"
+          },
+          "environment" : {
+            "roomTemperature" : {
+              "unitCode" : "CEL",
+              "value" : 31
+            }
+          },
+          "slicer" : {
+            "type" : "Property",
+            "value" : "Creality Print"
+          },
+          "progress" : {
+            "type" : "Property",
+            "value" : 2
+          },
+          "@version" : "1",
+          "file" : {
+            "type" : "Property",
+            "value" : "Estanteria_Modular_ESUN_PLA_5h9m.gcode"
+          },
+          "printer" : {
+            "type" : "Property",
+            "value" : "Creality Ender-3 V3 SE"
+          },
+          "printSuccessful" : {
+            "type" : "Property",
+            "value" : true
+          },
+          "print_id" : "print_id_8fad-1c1e-2d8d-42ed_1747392448915",
+          "status" : {
+            "type" : "Property",
+            "value" : "Printing"
+          },
+          "id" : "opr_ce84-7e08-f28d-09bc_1747392503143",
+          "user_id" : "uid_b60a-2cc3-c462-e0e6_1747389116031",
+          "timestamp" : "2025-05-16T10:48:23.234Z",
+          "type" : "3DPrinter",
+          "@timestamp" : "2025-05-16T10:48:23.243Z"
+        }
+      },
+      {
+        "_index" : "octo-print",
+        "_type" : "_doc",
+        "_id" : "Xma12JYBJrluHfBpsSLP",
+        "_score" : 1.0,
+        "_ignored" : [
+          "image.value.keyword"
+        ],
+        "_source" : {
+          "temperatures" : {
+            "bed" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              }
+            },
+            "nozzle" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              }
+            }
+          },
+          "image" : {
+            "type" : "Property",
+            "value" : "/9j/4AAQ...SkRQB/9k="
+          },
+          "filament" : {
+            "type" : "Property",
+            "value" : {
+              "brand" : "\"eSUN PLA Basico @Creality Ender-3 V3 SE 0.4 nozzle\"",
+              "type" : "PLA",
+              "used" : "114.32"
+            }
+          },
+          "printTime" : {
+            "estimated" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 1268
+            },
+            "elapsed" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 59
+            }
+          },
+          "layer" : {
+            "totalLayers" : {
+              "type" : "Property",
+              "value" : "614"
+            },
+            "currentLayer" : {
+              "type" : "Property",
+              "value" : "6"
+            }
+          },
+          "fanSpeed" : {
+            "unitCode" : "P1",
+            "type" : "Property",
+            "value" : "100%"
+          },
+          "environment" : {
+            "roomTemperature" : {
+              "unitCode" : "CEL",
+              "value" : 30.2
+            }
+          },
+          "slicer" : {
+            "type" : "Property",
+            "value" : "Creality Print"
+          },
+          "progress" : {
+            "type" : "Property",
+            "value" : 3
+          },
+          "@version" : "1",
+          "file" : {
+            "type" : "Property",
+            "value" : "Estanteria_Modular_ESUN_PLA_5h9m.gcode"
+          },
+          "printer" : {
+            "type" : "Property",
+            "value" : "Creality Ender-3 V3 SE"
+          },
+          "printSuccessful" : {
+            "type" : "Property",
+            "value" : true
+          },
+          "print_id" : "print_id_8fad-1c1e-2d8d-42ed_1747392448915",
+          "status" : {
+            "type" : "Property",
+            "value" : "Printing"
+          },
+          "id" : "opr_3d41-9d0e-1a99-55e2_1747392508144",
+          "user_id" : "uid_b60a-2cc3-c462-e0e6_1747389116031",
+          "timestamp" : "2025-05-16T10:48:28.236Z",
+          "type" : "3DPrinter",
+          "@timestamp" : "2025-05-16T10:48:28.241Z"
+        }
+      },
+      {
+        "_index" : "octo-print",
+        "_type" : "_doc",
+        "_id" : "X2a12JYBJrluHfBpxSJz",
+        "_score" : 1.0,
+        "_ignored" : [
+          "image.value.keyword"
+        ],
+        "_source" : {
+          "temperatures" : {
+            "bed" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              }
+            },
+            "nozzle" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              }
+            }
+          },
+          "image" : {
+            "type" : "Property",
+            "value" : "/9j/4AAQ...SkRQB/9k="
+          },
+          "filament" : {
+            "type" : "Property",
+            "value" : {
+              "brand" : "\"eSUN PLA Basico @Creality Ender-3 V3 SE 0.4 nozzle\"",
+              "type" : "PLA",
+              "used" : "114.32"
+            }
+          },
+          "printTime" : {
+            "estimated" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 1217
+            },
+            "elapsed" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 64
+            }
+          },
+          "layer" : {
+            "totalLayers" : {
+              "type" : "Property",
+              "value" : "614"
+            },
+            "currentLayer" : {
+              "type" : "Property",
+              "value" : "7"
+            }
+          },
+          "fanSpeed" : {
+            "unitCode" : "P1",
+            "type" : "Property",
+            "value" : "100%"
+          },
+          "environment" : {
+            "roomTemperature" : {
+              "unitCode" : "CEL",
+              "value" : 30.3
+            }
+          },
+          "slicer" : {
+            "type" : "Property",
+            "value" : "Creality Print"
+          },
+          "progress" : {
+            "type" : "Property",
+            "value" : 3
+          },
+          "@version" : "1",
+          "file" : {
+            "type" : "Property",
+            "value" : "Estanteria_Modular_ESUN_PLA_5h9m.gcode"
+          },
+          "printer" : {
+            "type" : "Property",
+            "value" : "Creality Ender-3 V3 SE"
+          },
+          "printSuccessful" : {
+            "type" : "Property",
+            "value" : true
+          },
+          "print_id" : "print_id_8fad-1c1e-2d8d-42ed_1747392448915",
+          "status" : {
+            "type" : "Property",
+            "value" : "Printing"
+          },
+          "id" : "opr_8f88-caaf-d7ed-36f4_1747392513145",
+          "user_id" : "uid_b60a-2cc3-c462-e0e6_1747389116031",
+          "timestamp" : "2025-05-16T10:48:33.266Z",
+          "type" : "3DPrinter",
+          "@timestamp" : "2025-05-16T10:48:33.272Z"
+        }
+      },
+      {
+        "_index" : "octo-print",
+        "_type" : "_doc",
+        "_id" : "YWa12JYBJrluHfBp2CLx",
+        "_score" : 1.0,
+        "_ignored" : [
+          "image.value.keyword"
+        ],
+        "_source" : {
+          "temperatures" : {
+            "bed" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 60
+              }
+            },
+            "nozzle" : {
+              "target" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              },
+              "actual" : {
+                "unitCode" : "CEL",
+                "type" : "Property",
+                "value" : 205
+              }
+            }
+          },
+          "image" : {
+            "type" : "Property",
+            "value" : "/9j/4AAQ...SkRQB/9k="
+          },
+          "filament" : {
+            "type" : "Property",
+            "value" : {
+              "brand" : "\"eSUN PLA Basico @Creality Ender-3 V3 SE 0.4 nozzle\"",
+              "type" : "PLA",
+              "used" : "114.32"
+            }
+          },
+          "printTime" : {
+            "estimated" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 1165
+            },
+            "elapsed" : {
+              "unitCode" : "SEC",
+              "type" : "Property",
+              "value" : 69
+            }
+          },
+          "layer" : {
+            "totalLayers" : {
+              "type" : "Property",
+              "value" : "614"
+            },
+            "currentLayer" : {
+              "type" : "Property",
+              "value" : "7"
+            }
+          },
+          "fanSpeed" : {
+            "unitCode" : "P1",
+            "type" : "Property",
+            "value" : "100%"
+          },
+          "environment" : {
+            "roomTemperature" : {
+              "unitCode" : "CEL",
+              "value" : 30.6
+            }
+          },
+          "slicer" : {
+            "type" : "Property",
+            "value" : "Creality Print"
+          },
+          "progress" : {
+            "type" : "Property",
+            "value" : 4
+          },
+          "@version" : "1",
+          "file" : {
+            "type" : "Property",
+            "value" : "Estanteria_Modular_ESUN_PLA_5h9m.gcode"
+          },
+          "printer" : {
+            "type" : "Property",
+            "value" : "Creality Ender-3 V3 SE"
+          },
+          "printSuccessful" : {
+            "type" : "Property",
+            "value" : true
+          },
+          "print_id" : "print_id_8fad-1c1e-2d8d-42ed_1747392448915",
+          "status" : {
+            "type" : "Property",
+            "value" : "Printing"
+          },
+          "id" : "opr_aae5-387e-09ec-0ed3_1747392518143",
+          "user_id" : "uid_b60a-2cc3-c462-e0e6_1747389116031",
+          "timestamp" : "2025-05-16T10:48:38.263Z",
+          "type" : "3DPrinter",
+          "@timestamp" : "2025-05-16T10:48:38.270Z"
+        }
+      }
+    ]
+  }
+}
