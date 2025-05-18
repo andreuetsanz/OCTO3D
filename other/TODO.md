@@ -1,18 +1,7 @@
 # TODO
 ## Node-Red
 - Generar alertas con orion de nodered
-- Crear un dashboard simple para nodered (tener el cuenta lo de las alertas con orion)
 
-## kibana
-- Quiero mejorar la estetica de el dashboard con:
-  - Top impresoras por usuario: contar cuantos usuarios tienen el mismo modelo de impresora
-  - Top marcas de filamento mas usadas: que marcas de filamento son mas usadas (segun el print_id)
-  - Top materiales mas usados
-  - Top slicers
-  - Contar que impresoras tienen mas tendencia a fallar (conteo del print succesful por impresora)
-
-- Obtener un volumen de datos validos
- 
 - Mirar de hacer un docker file para por ejemplo en nodered instalar los nodos necesarios automaticamente i para octoprint
 - Mirar como hacer para que antes de enviar valida con el data shema
 * Mirar como crear una base de datos de kibana en aws (Mirar si es necesario tener saldo, ya que jo no tengo i ns si gerard tiene)
@@ -20,6 +9,14 @@
 ## Andreu
 
 # Done
+- Quiero mejorar la estetica de el dashboard con:
+  - Top impresoras por usuario: contar cuantos usuarios tienen el mismo modelo de impresora
+  - Top marcas de filamento mas usadas: que marcas de filamento son mas usadas (segun el print_id)
+  - Top materiales mas usados
+  - Top slicers
+  - Contar que impresoras tienen mas tendencia a fallar (conteo del print succesful por impresora)
+- Obtener un volumen de datos validos
+- Crear un dashboard simple para nodered (tener el cuenta lo de las alertas con orion)
 - Mostrar los graficos en powerbi i kibana
 - Mirar los datos que podemos mostrar (Que griaficas podemos hacer, que datos son importantes de estudiar)
 - Mirar el error de Verificar tiempo en el flujo de nodered (enviarle correo a jose o algo)

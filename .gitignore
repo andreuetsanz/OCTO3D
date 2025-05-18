@@ -16,5 +16,11 @@ desktop.ini
 
 # Directorios especificos
 other/keys
-docker_containers/
+other/octo-data.octo-print.json
+
+other/BULK
+docker_containers/*
+!docker_containers/*.yml
+!docker_containers/Dockerfile*
+
 
