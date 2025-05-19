@@ -1,11 +1,19 @@
- #!/bin/bash
+#!/bin/bash
+
+# Ejecutar el script Python
+echo "📦 Ejecutando jsontondjson.py..."
+python3 jsontondjson.py
+if [ $? -ne 0 ]; then
+  echo "❌ Error al ejecutar jsontondjson.py"
+  exit 1
+fi
 
 # Directorio de chunks
 CHUNKS_DIR="chunks"
 
 # Verificar que el directorio existe
 if [ ! -d "$CHUNKS_DIR" ]; then
-  echo "❌ El directorio '$CHUNKS_DIR' no existe. Asegúrate de haber generado los archivos .ndjson primero."
+  echo "❌ El directorio '$CHUNKS_DIR' no existe. Asegúrate de que jsontondjson.py generó los archivos .ndjson."
   exit 1
 fi
 

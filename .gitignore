@@ -1,6 +1,5 @@
 # Extensiones
 *.csv
-
 *.xml
 *.vscode
 
@@ -11,14 +10,10 @@ venv_*/
 desktop.ini
 .directory
 
-# Archivos especificos
-
-
-# Directorios especificos
-other/keys
+#Fichero y directorios
 data_test/octo-data.octo-print.json
+data_test/chunks
 
-other/BULK
 docker_containers/*
 !docker_containers/*.yml
 !docker_containers/Dockerfile*

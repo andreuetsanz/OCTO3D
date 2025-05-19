@@ -1,4 +1,9 @@
 # TODO
+- Comprabar si nodered desde windows funciona
+- dasboard de node-red
+- octoprintapi = [tuapikey]
+- borrar todo i volvver a hacer
+- Documentacio
 
 
 ## Tareas futuras para la memoria
@@ -7,6 +12,7 @@
 ## Andreu
 
 # Done
+- Comprobar si en elastica va el pull
 - Quiero mejorar la estetica de el dashboard con:
   - Top impresoras por usuario: contar cuantos usuarios tienen el mismo modelo de impresora
   - Top marcas de filamento mas usadas: que marcas de filamento son mas usadas (segun el print_id)
