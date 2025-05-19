@@ -15,10 +15,11 @@ data_test/octo-data.octo-print.json
 data_test/chunks
 
 docker_containers/*
-docker_containers/node-red/octoprintapi
+docker_containers_back/*
 !docker_containers/*.yml
 !docker_containers/Dockerfile*
 !docker_containers/node-red/images
-
+!docker_containers/logstash/logstash.conf
+!docker_containers/octoprint_data/octoprint/uploads/gcode_*
 
 
