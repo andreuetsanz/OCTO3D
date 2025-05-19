@@ -1,28 +1,35 @@
-# Extensiones
+# --- Extensiones ---
 *.csv
 *.xml
 *.vscode
 
-# Mis entornos de python
+# --- Entornos de Python ---
 venv_*/
 
-# Configuraciones
+# --- Configuraciones del sistema ---
 desktop.ini
 .directory
 
-#Fichero y directorios
+# --- Archivos y directorios específicos ---
 data_test/octo-data.octo-print.json
-data_test/chunks
+data_test/chunks/
 
-# Ignorar todo excepto los archivos explícitamente incluidos
+# --- docker_containers: Ignorar todo, pero incluir lo necesario ---
+# Primero ignorás todo el contenido del directorio
 docker_containers/*
 docker_containers_back/*
 
-# Excepciones específicas que quieres incluir
-!docker_containers/mongo_data/.gitkeep
+# Luego incluís las excepciones necesarias
 !docker_containers/*.yml
 !docker_containers/Dockerfile*
+!docker_containers/mongodb_data/
+!docker_containers/mongodb_data/.gitkeep
+!docker_containers/node-red/
+!docker_containers/node-red/images/
 !docker_containers/node-red/images/**
+!docker_containers/logstash/
 !docker_containers/logstash/logstash.conf
+!docker_containers/octoprint_data/
+!docker_containers/octoprint_data/octoprint/
+!docker_containers/octoprint_data/octoprint/uploads/
 !docker_containers/octoprint_data/octoprint/uploads/gcode_*
-

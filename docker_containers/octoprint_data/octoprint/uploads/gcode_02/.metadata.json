@@ -1,0 +1,97 @@
+{
+  "Archivo_02.gcode": {
+    "hash": "2a14a6720b55481356ab590486f7aae087cae774",
+    "user": "admin",
+    "analysis": {
+      "printingArea": {
+        "maxX": 157.821,
+        "maxY": 217.871,
+        "maxZ": 219.907,
+        "minX": -2.4,
+        "minY": 2.129,
+        "minZ": 0.0
+      },
+      "dimensions": {
+        "depth": 215.74200000000002,
+        "height": 219.907,
+        "width": 160.221
+      },
+      "travelArea": {
+        "maxX": 157.821,
+        "maxY": 220.0,
+        "maxZ": 230.107,
+        "minX": -2.4,
+        "minY": 0.0,
+        "minZ": 0.0
+      },
+      "travelDimensions": {
+        "depth": 220.0,
+        "height": 230.107,
+        "width": 160.221
+      },
+      "estimatedPrintTime": 11901.169774628112,
+      "filament": {
+        "tool0": {
+          "length": 36741.834249999374,
+          "volume": 88.3744679906466
+        }
+      }
+    },
+    "DisplayLayerProgress": {
+      "totalLayerCountWithoutOffset": "12"
+    }
+  },
+  "Archivo_01.gcode": {
+    "hash": "3c79b7c53fbd8cc76df1f082af00f5b4d1e6f2a5",
+    "user": "admin",
+    "DisplayLayerProgress": {
+      "totalLayerCountWithoutOffset": "12"
+    },
+    "history": [
+      {
+        "timestamp": 1747693937.7252603,
+        "success": false,
+        "printerProfile": "_default"
+      }
+    ],
+    "statistics": {
+      "averagePrintTime": {},
+      "lastPrintTime": {}
+    },
+    "analysis": {
+      "printingArea": {
+        "maxX": 216.1,
+        "maxY": 219.79,
+        "maxZ": 3.923,
+        "minX": -2.4,
+        "minY": 0.21,
+        "minZ": 0.0
+      },
+      "dimensions": {
+        "depth": 219.57999999999998,
+        "height": 3.923,
+        "width": 218.5
+      },
+      "travelArea": {
+        "maxX": 216.1,
+        "maxY": 220.0,
+        "maxZ": 14.123000000000001,
+        "minX": -2.4,
+        "minY": 0.0,
+        "minZ": 0.0
+      },
+      "travelDimensions": {
+        "depth": 220.0,
+        "height": 14.123000000000001,
+        "width": 218.5
+      },
+      "estimatedPrintTime": 8254.364284971009,
+      "filament": {
+        "tool0": {
+          "length": 28119.230119998298,
+          "volume": 67.63467455796541
+        }
+      }
+    }
+  }
+}
