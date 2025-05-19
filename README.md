@@ -11,3 +11,5 @@ Despues de hacer el docker compose up
 - instalar los plugins displaylayerprogres i mqtt
 
 Para ver los datos en kibana debemos de importar el dasboard de la carpeta
+
+# Acordarnos que debemos de enviar [./data_test/octo-data.octo-print.json](./data_test/octo-data.octo-print.json) en el correo porque es muy grande i git no lo coje

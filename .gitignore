@@ -16,7 +16,7 @@ desktop.ini
 
 # Directorios especificos
 other/keys
-other/octo-data.octo-print.json
+data_test/octo-data.octo-print.json
 
 other/BULK
 docker_containers/*
