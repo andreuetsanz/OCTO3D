@@ -1,8 +1,0 @@
-FROM nodered/node-red:latest
-
-# Instala el dashboard de Node-RED
-RUN npm install node-red-dashboard
-
-# Instala node-red-contrib-kafkajs para Kafka
-RUN npm install node-red-contrib-kafkajs
-
