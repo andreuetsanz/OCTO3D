@@ -22,5 +22,8 @@ other/BULK
 docker_containers/*
 !docker_containers/*.yml
 !docker_containers/Dockerfile*
+!docker_containers/node-red/images
+!docker_containers/node-red/octoprintapi
+
 
 

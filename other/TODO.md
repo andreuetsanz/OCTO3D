@@ -1,15 +1,8 @@
 # TODO
-## Node-Red
-- Generar alertas con orion de nodered
 
-- aws
-- eliminar nulos con filtro (powerbi i kibana)
-- 
-- 
 
-- Mirar de hacer un docker file para por ejemplo en nodered instalar los nodos necesarios automaticamente i para octoprint
+## Tareas futuras para la memoria
 - Mirar como hacer para que antes de enviar valida con el data shema
-* Mirar como crear una base de datos de kibana en aws (Mirar si es necesario tener saldo, ya que jo no tengo i ns si gerard tiene)
 
 ## Andreu
 
