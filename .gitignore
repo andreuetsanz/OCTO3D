@@ -16,7 +16,7 @@ data_test/chunks
 
 # Ignorar todo excepto los archivos explícitamente incluidos
 docker_containers/*
-
+docker_containers_back/*
 
 # Excepciones específicas que quieres incluir
 !docker_containers/mongo_data/.gitkeep
