@@ -13,7 +13,7 @@ desktop.ini
 # --- Archivos y directorios específicos ---
 data_test/octo-data.octo-print.json
 data_test/chunks/
-
+other/Video_Replica.mkv
 # --- docker_containers: Ignorar todo, pero incluir lo necesario ---
 # Primero ignorás todo el contenido del directorio
 docker_containers/*
@@ -22,14 +22,8 @@ docker_containers_back/*
 # Luego incluís las excepciones necesarias
 !docker_containers/*.yml
 !docker_containers/Dockerfile*
-!docker_containers/mongodb_data/
 !docker_containers/mongodb_data/.gitkeep
-!docker_containers/node-red/
 !docker_containers/node-red/images/
 !docker_containers/node-red/images/**
-!docker_containers/logstash/
 !docker_containers/logstash/logstash.conf
-!docker_containers/octoprint_data/
-!docker_containers/octoprint_data/octoprint/
-!docker_containers/octoprint_data/octoprint/uploads/
-!docker_containers/octoprint_data/octoprint/uploads/gcode_*
+!docker_containers/octoprint_data/octoprint/uploads/gcode_*/*.gcode

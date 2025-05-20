@@ -15,7 +15,8 @@ with open(input_file, "r", encoding="utf-8") as f:
 # Eliminar el campo "_id" de cada documento
 for doc in data:
     doc.pop("_id", None)
-
+    doc.pop("@timestamp", None)
+    doc.pop("@version", None)
 # Crear carpetas si no existen
 os.makedirs(os.path.join(dir_name, "chunks"), exist_ok=True)
 
