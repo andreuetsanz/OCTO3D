@@ -1,8 +1,6 @@
 # TODO
 - Comprabar si nodered desde windows funciona
 - borrar todo i volvver a hacer
-
-
 - Documentacio
 
 

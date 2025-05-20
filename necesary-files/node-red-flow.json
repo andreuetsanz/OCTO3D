@@ -127,16 +127,16 @@
             "label": true
         },
         "nodes": [
-            "6e0e6ceea2f2b8de",
-            "0b12c575a8f788b6",
             "c6871569fb8c002e",
             "f04a804c1f95a5cd",
             "235b5a345bf1b63e",
-            "a35ae2a915971c6c"
+            "a35ae2a915971c6c",
+            "6e0e6ceea2f2b8de",
+            "9014952ff373d65e"
         ],
         "x": 34,
         "y": 1619,
-        "w": 612,
+        "w": 632,
         "h": 122
     },
     {
@@ -808,7 +808,7 @@
         "z": "128aa5cf7f19b872",
         "g": "6554eaf24f3301c5",
         "name": "IA",
-        "func": "let ran = Math.random();\nif (ran < 0.80) {\n    msg.payload = true\n}else{\n    msg.payload = false\n}\nreturn msg;",
+        "func": "let ran = Math.random();\nif (ran < 0.40) {\n    msg.payload = true\n}else{\n    msg.payload = false\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1421,49 +1421,6 @@
         "wires": []
     },
     {
-        "id": "6e0e6ceea2f2b8de",
-        "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
-        "name": "Unificar datos printer + imagen",
-        "func": "let data = msg.payload;\n\n// Tiempo transcurrido\nlet secs = 0;\ntry {\n  secs = parseInt(data.printTime.elapsed.value || 0);\n} catch (e) {\n  secs = 0;\n}\nlet h = Math.floor(secs / 3600);\nlet m = Math.floor((secs % 3600) / 60);\nlet s = secs % 60;\nlet elapsed = `${h}h ${m}m ${s}s`;\n\n// Estado\nlet status = \"UNKNOWN\";\ntry {\n  status = data.status.value.toUpperCase();\n} catch (e) {\n  status = \"UNKNOWN\";\n}\n\nlet color = \"#999\";\nif (status === \"PRINTING\") color = \"#42a5f5\";\nelse if (status === \"PAUSED\") color = \"#ffb74d\";\nelse if (status === \"DONE\") color = \"#81c784\";\n\n// Archivo\nlet file = \"\";\ntry {\n  file = data.file.value;\n} catch (e) {\n  file = \"\";\n}\n\n// Progreso\nlet progress = 0;\ntry {\n  progress = data.progress.value;\n} catch (e) {\n  progress = 0;\n}\n\n// Temperaturas\nlet roomTemp = \"0.0 °C\";\ntry {\n  roomTemp = data.environment.roomTemperature.value.toFixed(1) + \" °C\";\n} catch (e) {\n  roomTemp = \"0.0 °C\";\n}\n\nlet bedTemp = \"0.0 °C\";\ntry {\n  bedTemp = data.temperatures.bed.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  bedTemp = \"0.0 °C\";\n}\n\nlet nozzleTemp = \"0.0 °C\";\ntry {\n  nozzleTemp = data.temperatures.nozzle.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTemp = \"0.0 °C\";\n}\n\nlet nozzleTargetTemp = \"0.0 °C\";\ntry {\n  nozzleTargetTemp = data.temperatures.nozzle.target.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTargetTemp = \"0.0 °C\";\n}\n\n// Imagen\nlet image = \"\";\ntry {\n  image = data.image?.value || \"\";\n} catch (e) {\n  image = \"\";\n}\n\n// Salida\nmsg.payload = {\n  file: file,\n  status: status,\n  statusColor: color,\n  elapsed: elapsed,\n  progress: progress,\n  temps: {\n    room: roomTemp,\n    bed: bedTemp,\n    nozzle: nozzleTemp,\n    nozzleTarget: nozzleTargetTemp\n  },\n  image: image\n};\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 250,
-        "y": 1660,
-        "wires": [
-            [
-                "0b12c575a8f788b6"
-            ]
-        ]
-    },
-    {
-        "id": "0b12c575a8f788b6",
-        "type": "ui_template",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
-        "group": "fd718569531f6881",
-        "name": "Panel Dashboard Printer",
-        "order": 1,
-        "width": "12",
-        "height": "10",
-        "format": "<style> \n\n  .status-info p.archivo {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  max-width: 100%;\n  }\n  \n  body,\n  md-content,\n  .nr-dashboard-theme,\n  .nr-dashboard-cardpanel,\n  .nr-dashboard-template,\n  md-card {\n  background-color: transparent !important;\n  box-shadow: none !important;\n  }\n\n  .card-container {\n    font-family: 'Segoe UI', sans-serif;\n    background-color: #f0f0f0;\n    padding: 20px;\n    border-radius: 12px;\n    color: #90caf9;\n\n    display: flex;\n    gap: 30px;\n  }\n  .headline {\n    color: #1e88e5;\n    border-bottom: 2px solid #555;\n    padding-bottom: 5px;\n    margin-bottom: 15px;\n    font-size: 22px;\n    text-transform: uppercase;\n    font-weight: bold;\n    text-align: center; /* ✅ Añade esta línea */\n    background-color: transparent;\n    /* Asegura fondo transparente */\n  }\n\n  /* Barra más larga SOLO para Temperaturas */\n  .temps .headline {\n    width: 140%;                     /* barra más larga (puedes ajustar %) */\n  }\n\n  /* Párrafos dentro de .status-info y .temps */\n  .status-info p,\n  .temps p {\n    font-size: 20px;\n    margin: 10px 0;\n    color: #1e88e5;\n    font-weight: normal;\n    background-color: transparent !important;\n  }\n\n  /* Para que strong no tenga fondo */\n  .status-info strong,\n  .temps strong {\n    font-weight: normal;\n    color: #1e88e5;\n    text-transform: uppercase;\n    background-color: transparent !important;\n  }\n\n  .progress-container {\n    width: 100%;\n    background: #ccc;\n    border-radius: 8px;\n    position: relative;\n    height: 30px;\n    margin-top: 5px;\n  }\n\n  .progress-bar {\n    height: 100%;\n    border-radius: 8px;\n    transition: width 0.5s;\n    background: linear-gradient(90deg, #4f83cc, #b39ddb);\n  }\n\n  .progress-text {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    text-align: center;\n    line-height: 30px;\n    font-weight: bold;\n    color: #ffffff;\n    background-color: transparent !important;\n  }\n\n  .temps p.bed {\n    display: block !important;\n  }\n  .status-info p.tiempo {\n    display: block !important;\n  }\n\n  .camera {\n    /* Foto 1/3 del contenedor */\n    flex: 0 0 33.33%; /* fijo un tercio del ancho */\n  }\n\n  .camera img {\n    width: 100%;\n    height: auto;\n    max-height: 400px; /* más alto para que se note grande */\n    border-radius: 10px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);\n    object-fit: cover;\n    background-color: transparent !important;\n  }\n\n  .camera .no-image {\n    color: #bbb;\n    font-style: italic;\n    background-color: transparent !important;\n  }\n</style>\n\n<div class=\"card-container\" layout=\"row\" layout-align=\"space-between start\">\n  <!-- Estado -->\n  <div flex=\"40\" class=\"status-info\">\n    <div class=\"headline\">Estado</div>\n    <p class=\"archivo\" title=\"{{msg.payload.file}}\">\n      <strong>Archivo:</strong> {{msg.payload.file}}\n    </p>\n    <p><strong>Estado:</strong>\n      <span style=\"color: {{msg.payload.statusColor}};\">\n        {{msg.payload.status}}\n      </span>\n    </p>\n    <p class=\"tiempo\"><strong>Tiempo:</strong><br>{{msg.payload.elapsed}}</p>\n    <p><strong>Progreso:</strong></p>\n    <div class=\"progress-container\">\n      <div class=\"progress-bar\" style=\"width: {{msg.payload.progress}}%;\"></div>\n      <div class=\"progress-text\">{{msg.payload.progress}}%</div>\n    </div>\n  </div>\n\n  <!-- Temperaturas -->\n  <div flex=\"20\" class=\"temps\">\n    <div class=\"headline\">Temperaturas</div>\n    <p><strong>Habitación:</strong> {{msg.payload.temps.room}}</p>\n    <p class=\"bed\"><strong>Bed:</strong><br>{{msg.payload.temps.bed}}</p>\n    <p><strong>Nozzle:</strong> {{msg.payload.temps.nozzle}}</p>\n    <p><strong>Target:</strong> {{msg.payload.temps.nozzleTarget}}</p>\n  </div>\n\n  <div flex=\"100\"></div>\n  <!-- Cámara -->\n  <div class=\"camera\">\n    <div class=\"headline\">Cámara</div>\n    <img ng-if=\"msg.payload.image\" ng-src=\"data:image/jpeg;base64,{{msg.payload.image}}\">\n    <div ng-if=\"!msg.payload.image\" class=\"no-image\">Sin imagen disponible</div>\n  </div>\n</div>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 510,
-        "y": 1660,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c6871569fb8c002e",
         "type": "link in",
         "z": "128aa5cf7f19b872",
@@ -1983,7 +1940,7 @@
         "className": "",
         "topic": "",
         "name": "Error en la impresión",
-        "x": 500,
+        "x": 520,
         "y": 1700,
         "wires": []
     },
@@ -2506,6 +2463,49 @@
         "wires": []
     },
     {
+        "id": "6e0e6ceea2f2b8de",
+        "type": "function",
+        "z": "128aa5cf7f19b872",
+        "g": "8d08067f2ec91c15",
+        "name": "Unificar datos printer + imagen",
+        "func": "let data = msg.payload;\n\n// Tiempo transcurrido\nlet secs = 0;\ntry {\n  secs = parseInt(data.printTime.elapsed.value || 0);\n} catch (e) {\n  secs = 0;\n}\nlet h = Math.floor(secs / 3600);\nlet m = Math.floor((secs % 3600) / 60);\nlet s = secs % 60;\nlet elapsed = `${h}h ${m}m ${s}s`;\n\n// Estado\nlet status = \"UNKNOWN\";\ntry {\n  status = data.status.value.toUpperCase();\n} catch (e) {\n  status = \"UNKNOWN\";\n}\n\nlet color = \"#999\";\nif (status === \"PRINTING\") color = \"#42a5f5\";\nelse if (status === \"PAUSED\") color = \"#ffb74d\";\nelse if (status === \"DONE\") color = \"#81c784\";\n\n// Archivo\nlet file = \"\";\ntry {\n  file = data.file.value;\n} catch (e) {\n  file = \"\";\n}\n\n// Progreso\nlet progress = 0;\ntry {\n  progress = data.progress.value;\n} catch (e) {\n  progress = 0;\n}\n\n// Temperaturas\nlet roomTemp = \"0.0 °C\";\ntry {\n  roomTemp = data.environment.roomTemperature.value.toFixed(1) + \" °C\";\n} catch (e) {\n  roomTemp = \"0.0 °C\";\n}\n\nlet bedTemp = \"0.0 °C\";\ntry {\n  bedTemp = data.temperatures.bed.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  bedTemp = \"0.0 °C\";\n}\n\nlet nozzleTemp = \"0.0 °C\";\ntry {\n  nozzleTemp = data.temperatures.nozzle.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTemp = \"0.0 °C\";\n}\n\nlet nozzleTargetTemp = \"0.0 °C\";\ntry {\n  nozzleTargetTemp = data.temperatures.nozzle.target.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTargetTemp = \"0.0 °C\";\n}\n\nlet bedTargetTemp = \"0.0 °C\";\ntry {\n  bedTargetTemp = data.temperatures.bed.target.value.toFixed(1) + \" °C\";\n} catch (e) {\n  bedTargetTemp = \"0.0 °C\";\n}\n\n// Imagen\nlet image = \"\";\ntry {\n  image = data.image?.value || \"\";\n} catch (e) {\n  image = \"\";\n}\n\n// Salida\nmsg.payload = {\n  file: file,\n  status: status,\n  statusColor: color,\n  elapsed: elapsed,\n  progress: progress,\n  temps: {\n    room: roomTemp,\n    bed: bedTemp,\n    bedTarget: bedTargetTemp,\n    nozzle: nozzleTemp,\n    nozzleTarget: nozzleTargetTemp\n  },\n  image: image\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 1660,
+        "wires": [
+            [
+                "9014952ff373d65e"
+            ]
+        ]
+    },
+    {
+        "id": "9014952ff373d65e",
+        "type": "ui_template",
+        "z": "128aa5cf7f19b872",
+        "g": "8d08067f2ec91c15",
+        "group": "b8e740f97a0fd06f",
+        "name": "Panel Completo Moderno",
+        "order": 1,
+        "width": "24",
+        "height": "10",
+        "format": "<style>\n\n  html, body {\n    margin: 0;\n    padding: 0;\n    background: transparent !important;\n  }\n\n  .dashboard-modern {\n    display: flex;\n    gap: 2%;\n    height: calc(100vh - 60px);\n    box-sizing: border-box;\n    padding: 2%;\n    font-family: 'Segoe UI', sans-serif;\n    background-color: transparent !important;\n    color: #333;\n  }\n\n  .card {\n    background: white;\n    border-radius: 16px;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n    padding: 2%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    gap: 1.5em;\n    font-size: 1.2vw;\n  }\n\n  .card h2 {\n    margin: 0;\n    font-size: 1.2em;\n    border-bottom: 1px solid #ddd;\n    padding-bottom: 0.3em;\n    color: #1976d2;\n  }\n\n  .status-value {\n    font-weight: bold;\n  }\n\n  .progress-bar {\n    background: #e0e0e0;\n    border-radius: 12px;\n    overflow: hidden;\n    height: 1.8em;\n    width: 80%;\n    margin: auto;\n    position: relative;\n  }\n\n  .progress-bar-inner {\n    background: linear-gradient(90deg, #64b5f6, #4db6ac);\n    height: 100%;\n    transition: width 0.3s ease;\n  }\n\n  .progress-bar-text {\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  height: 1.8em;\n  line-height: 1.8em;\n  font-weight: normal;\n  color: black;\n  font-size: 0.9em;\n  pointer-events: none;\n  user-select: none;\n  }\n\n  .image-container {\n    flex: 1;\n    background: white;\n    border-radius: 12px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    overflow: hidden;\n    padding: 1%;\n    gap: 0.5em;\n  }\n\n  .image-container h2 {\n    width: 100%;\n    text-align: center;\n    margin: 0;\n    color: #1976d2;\n    border-bottom: 1px solid #ddd;\n    padding-bottom: 0.3em;\n    font-size: 1.2em;\n  }\n\n  .image-container img {\n    max-width: 100%;\n    max-height: 100%;\n    object-fit: contain;\n    display: block;\n  }\n\n  .image-container span {\n    color: #999;\n    font-size: 1em;\n  }\n</style>\n\n<div class=\"dashboard-modern\">\n  <div class=\"card\">\n    <h2>Estado de Impresión</h2>\n    <p><strong>Archivo:</strong> {{msg.payload.file}}</p>\n    <p><strong>Estado:</strong>\n      <span class=\"status-value\" style=\"color: {{msg.payload.statusColor}};\">{{msg.payload.status}}</span>\n    </p>\n    <p><strong>Tiempo Transcurrido:</strong> {{msg.payload.elapsed}}</p>\n    <div class=\"progress-bar\">\n      <div class=\"progress-bar-inner\" style=\"width: {{msg.payload.progress}}%;\"></div>\n      <div class=\"progress-bar-text\">{{msg.payload.progress}}%</div>\n    </div>\n  </div>\n\n  <div class=\"card\">\n    <h2>Temperaturas</h2>\n    <p><strong>Habitación:</strong> {{msg.payload.temps.room}}</p>\n    <p><strong>Base (Bed):</strong> {{msg.payload.temps.bed}}</p>\n    <p><strong>Target Base (Bed):</strong> {{msg.payload.temps.bedTarget}}</p>\n    <p><strong>Nozzle:</strong> {{msg.payload.temps.nozzle}}</p>\n    <p><strong>Target Nozzle:</strong> {{msg.payload.temps.nozzleTarget}}</p>\n  </div>\n\n  <div class=\"card image-container\">\n    <h2>Imagen</h2>\n    <img ng-if=\"msg.payload.image\" ng-src=\"data:image/jpeg;base64,{{msg.payload.image}}\">\n    <span ng-if=\"!msg.payload.image\">Sin imagen disponible</span>\n  </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 530,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "89e380a1c824ddad",
         "type": "kafkajs-client",
         "name": "octo-kafka",
@@ -2528,17 +2528,6 @@
         "saslssl": true,
         "saslmechanism": "plain",
         "loglevel": "error"
-    },
-    {
-        "id": "fd718569531f6881",
-        "type": "ui_group",
-        "name": "Mi impresora:",
-        "tab": "42e453982dc44df4",
-        "order": 2,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "4b50b82dd1e6f2fa",
@@ -2568,7 +2557,18 @@
         "sessionExpiry": ""
     },
     {
-        "id": "42e453982dc44df4",
+        "id": "b8e740f97a0fd06f",
+        "type": "ui_group",
+        "name": "Pantalla Completa",
+        "tab": "186a0a69b9b5c06d",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "186a0a69b9b5c06d",
         "type": "ui_tab",
         "name": "Octo-Data Dashboard",
         "icon": "dashboard",
