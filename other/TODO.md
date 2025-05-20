@@ -1,9 +1,5 @@
 # TODO
 - Comprabar si nodered desde windows funciona
-- dasboard de node-red
-  - nombre de el archivo @donde
-  - imaguen
-  - color del estado
 - borrar todo i volvver a hacer
 
 
@@ -16,6 +12,10 @@
 ## Andreu
 
 # Done
+- dasboard de node-red
+  - nombre de el archivo @donde
+  - imaguen @donde
+  - color del estado @donde
 - Comprobar els errors
 - Codi chat gpt
 - octoprintapi = [tuapikey]
