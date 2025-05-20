@@ -107,12 +107,14 @@
             "f5a0c706b44eb215",
             "0e6982e00cfbd542",
             "53910cda7198a11c",
-            "9e08ad373197cb06"
+            "9e08ad373197cb06",
+            "0a32a340e5a399d1",
+            "88537d7e0887f9ab"
         ],
         "x": 34,
-        "y": 159,
+        "y": 139,
         "w": 1292,
-        "h": 102
+        "h": 122
     },
     {
         "id": "8d08067f2ec91c15",
@@ -354,7 +356,7 @@
         "z": "128aa5cf7f19b872",
         "g": "6554eaf24f3301c5",
         "name": "Resultado Final",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1157,7 +1159,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 140,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "a5a56a49b4881d13"
@@ -1178,7 +1180,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "7ba7ab8886472d6d"
@@ -1199,7 +1201,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 450,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "0e6982e00cfbd542"
@@ -1219,7 +1221,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 870,
-        "y": 220,
+        "y": 200,
         "wires": [
             [
                 "53910cda7198a11c"
@@ -1240,7 +1242,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "53910cda7198a11c"
@@ -1264,7 +1266,7 @@
         "finalize": "",
         "libs": [],
         "x": 1060,
-        "y": 200,
+        "y": 180,
         "wires": [
             [
                 "9e08ad373197cb06"
@@ -1286,7 +1288,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1220,
-        "y": 200,
+        "y": 180,
         "wires": []
     },
     {
@@ -1424,7 +1426,7 @@
         "z": "128aa5cf7f19b872",
         "g": "8d08067f2ec91c15",
         "name": "Unificar datos printer + imagen",
-        "func": "let data = msg.payload;\n\n// Formatear tiempo\nlet secs = parseInt(data.printTime.elapsed.value || 0);\nlet h = Math.floor(secs / 3600);\nlet m = Math.floor((secs % 3600) / 60);\nlet s = secs % 60;\nlet elapsed = `${h}h ${m}m ${s}s`;\n\n// Formatear estado\nlet status = data.status.value.toUpperCase();\nlet color = \"#999\";\nif (status === \"PRINTING\") color = \"#42a5f5\";\nelse if (status === \"PAUSED\") color = \"#ffb74d\";\nelse if (status === \"DONE\") color = \"#81c784\";\n\n// Salida\nmsg.payload = {\n  file: data.file.value,\n  status: status,\n  statusColor: color,\n  elapsed: elapsed,\n  progress: data.progress.value,\n  temps: {\n    room: data.environment.roomTemperature.value.toFixed(1) + \" °C\",\n    bed: data.temperatures.bed.actual.value.toFixed(1) + \" °C\",\n    nozzle: data.temperatures.nozzle.actual.value.toFixed(1) + \" °C\",\n    nozzleTarget: data.temperatures.nozzle.target.value.toFixed(1) + \" °C\"\n  },\n  image: data.image?.value || \"\"\n};\n\nreturn msg;",
+        "func": "let data = msg.payload;\n\n// Tiempo transcurrido\nlet secs = 0;\ntry {\n  secs = parseInt(data.printTime.elapsed.value || 0);\n} catch (e) {\n  secs = 0;\n}\nlet h = Math.floor(secs / 3600);\nlet m = Math.floor((secs % 3600) / 60);\nlet s = secs % 60;\nlet elapsed = `${h}h ${m}m ${s}s`;\n\n// Estado\nlet status = \"UNKNOWN\";\ntry {\n  status = data.status.value.toUpperCase();\n} catch (e) {\n  status = \"UNKNOWN\";\n}\n\nlet color = \"#999\";\nif (status === \"PRINTING\") color = \"#42a5f5\";\nelse if (status === \"PAUSED\") color = \"#ffb74d\";\nelse if (status === \"DONE\") color = \"#81c784\";\n\n// Archivo\nlet file = \"\";\ntry {\n  file = data.file.value;\n} catch (e) {\n  file = \"\";\n}\n\n// Progreso\nlet progress = 0;\ntry {\n  progress = data.progress.value;\n} catch (e) {\n  progress = 0;\n}\n\n// Temperaturas\nlet roomTemp = \"0.0 °C\";\ntry {\n  roomTemp = data.environment.roomTemperature.value.toFixed(1) + \" °C\";\n} catch (e) {\n  roomTemp = \"0.0 °C\";\n}\n\nlet bedTemp = \"0.0 °C\";\ntry {\n  bedTemp = data.temperatures.bed.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  bedTemp = \"0.0 °C\";\n}\n\nlet nozzleTemp = \"0.0 °C\";\ntry {\n  nozzleTemp = data.temperatures.nozzle.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTemp = \"0.0 °C\";\n}\n\nlet nozzleTargetTemp = \"0.0 °C\";\ntry {\n  nozzleTargetTemp = data.temperatures.nozzle.target.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTargetTemp = \"0.0 °C\";\n}\n\n// Imagen\nlet image = \"\";\ntry {\n  image = data.image?.value || \"\";\n} catch (e) {\n  image = \"\";\n}\n\n// Salida\nmsg.payload = {\n  file: file,\n  status: status,\n  statusColor: color,\n  elapsed: elapsed,\n  progress: progress,\n  temps: {\n    room: roomTemp,\n    bed: bedTemp,\n    nozzle: nozzleTemp,\n    nozzleTarget: nozzleTargetTemp\n  },\n  image: image\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1760,7 +1762,7 @@
         "z": "128aa5cf7f19b872",
         "g": "cf557127a689e17d",
         "name": "Debug ID",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "x": 720,
         "y": 320,
@@ -2354,7 +2356,7 @@
         "oldrc": false,
         "name": "",
         "x": 340,
-        "y": 80,
+        "y": 60,
         "wires": [
             [
                 "a22c2c400e5dca98"
@@ -2378,7 +2380,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 40,
+        "y": 20,
         "wires": [
             [
                 "5fc664521d30b833"
@@ -2407,7 +2409,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 90,
-        "y": 80,
+        "y": 60,
         "wires": [
             [
                 "0eebcfa92f87f92d",
@@ -2428,7 +2430,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 120,
+        "y": 100,
         "wires": [
             []
         ]
@@ -2447,7 +2449,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 550,
-        "y": 80,
+        "y": 60,
         "wires": []
     },
     {
@@ -2464,7 +2466,43 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
-        "y": 40,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "0a32a340e5a399d1",
+        "type": "catch",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
+        "name": "Catch file read errors",
+        "scope": [
+            "7ba7ab8886472d6d"
+        ],
+        "uncaught": false,
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "88537d7e0887f9ab"
+            ]
+        ]
+    },
+    {
+        "id": "88537d7e0887f9ab",
+        "type": "debug",
+        "z": "128aa5cf7f19b872",
+        "g": "a0d0030ba181d9c6",
+        "name": "id.txt error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "\"El fichero de id.txt no existe, se le asignara un nuevo ID de usuario\"",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 220,
         "wires": []
     },
     {

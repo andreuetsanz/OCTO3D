@@ -1,7 +1,5 @@
 # TODO
 - Comprabar si nodered desde windows funciona
-- Codi chat gpt
-- Comprobar els errore
 - dasboard de node-red
   - nombre de el archivo @donde
   - imaguen
@@ -18,6 +16,8 @@
 ## Andreu
 
 # Done
+- Comprobar els errors
+- Codi chat gpt
 - octoprintapi = [tuapikey]
 - Comprobar si en elastica va el pull
 - Quiero mejorar la estetica de el dashboard con:
