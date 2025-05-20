@@ -12,7 +12,7 @@ output_prefix = "chunk_"
 with open(input_file, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-# Eliminar el campo "_id" de cada documento
+# Eliminar el campos
 for doc in data:
     doc.pop("_id", None)
     doc.pop("@timestamp", None)

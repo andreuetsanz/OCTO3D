@@ -1,10 +1,14 @@
 # TODO
 - Comprabar si nodered desde windows funciona
+- Codi chat gpt
+- Comprobar els errore
 - dasboard de node-red
   - nombre de el archivo @donde
   - imaguen
   - color del estado
 - borrar todo i volvver a hacer
+
+
 - Documentacio
 
 
