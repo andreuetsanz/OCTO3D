@@ -1,6 +1,5 @@
 # TODO
-- Comprabar si nodered desde windows funciona
-- borrar todo i volvver a hacer
+- Comprabar si nodered desde windows funciona (deuria, a mi me va tot menos que en mongo compass no es mostra pero en el contenedor si que es guarden els datos)
 - Documentacio
 
 
@@ -10,12 +9,13 @@
 ## Andreu
 
 # Done
+- borrar todo i volvver a hacer
 - dasboard de node-red
   - nombre de el archivo @donde
   - imaguen @donde
   - color del estado @donde
 - Comprobar els errors
-- Codi chat gpt
+- Codi clear
 - octoprintapi = [tuapikey]
 - Comprobar si en elastica va el pull
 - Quiero mejorar la estetica de el dashboard con:
