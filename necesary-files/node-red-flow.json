@@ -1,6 +1,6 @@
 [
     {
-        "id": "128aa5cf7f19b872",
+        "id": "a2a9e5be90c88c9b",
         "type": "tab",
         "label": "Get_Data_From_Octoprint",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "6554eaf24f3301c5",
+        "id": "bb019bfa44e6901f",
         "type": "group",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "GET OCTOPRINT DATA",
         "style": {
             "stroke": "#92d04f",
@@ -18,51 +18,51 @@
             "label": true
         },
         "nodes": [
-            "15149959834d55d4",
-            "5ed068ddf703b120",
-            "9ce3e248714ecc7c",
-            "2f1fb89ca713424a",
-            "beca61d4059fbb6c",
-            "bf3decc96e99af4a",
-            "8ea1f925d1110caf",
-            "a976bfeb5c0ec0de",
-            "f7943ebf33dd8366",
-            "79ecda98e90af27c",
-            "9f684c6e363ccd13",
-            "1f37cd4514231950",
-            "109e563c15388241",
-            "0742771261fba357",
-            "128e9488f1257725",
-            "9a5867a62475db51",
-            "6458d3505d52204e",
-            "ad5ce31ea07e9d35",
-            "1ce1d23cb1b995f8",
-            "49556c9a63bab5dd",
-            "6a157fe845a720fc",
-            "5e7cd0fc9bb4b0bc",
-            "8baaa7a44bda0738",
-            "b28ca6427025442a",
-            "73e6eeb28b5094d2",
-            "1973f07ec12899cc",
-            "257bee5770153a14",
-            "520f0530e3b3aa62",
-            "ef89cada522d26af",
-            "ee5f0423d88336bf",
-            "9a23b6a7fc2c454d",
-            "b00339a3a774a085",
-            "11b28f3d3fc7c4a3",
-            "fb55fff99835f2ac",
-            "5de610cd6b6e4270",
-            "e8be6c2d807e63d0",
-            "b7acc809da4d53bf",
-            "b951daf915408c23",
-            "d3645c9ffc7b2ae3",
-            "637858ccdecedace",
-            "55d0659e989b1cbb",
-            "3e5ca6621f765aca",
-            "fcf3c314f470b7cf",
-            "e73ed9386313dce7",
-            "93084432de6c3132"
+            "7fad767123a6310a",
+            "435ce7582960f86c",
+            "ea1ad8475495e91a",
+            "600848a8cdc041cf",
+            "3edee83105fa0583",
+            "61032e730c54cd27",
+            "0523c486a8999748",
+            "023d1077f9246d1c",
+            "298b211fb0cff012",
+            "048d8c6e4388404e",
+            "bc9dcbfa9b5b16a1",
+            "cda601e3b6347d33",
+            "b3edce48a31ebcd7",
+            "d12e148c62fd73a6",
+            "e4bbc43e70d37f52",
+            "be8624ea08f56d84",
+            "18869d8e74c2efb2",
+            "a18ff98957f5f8cb",
+            "8d209dce022e6a8f",
+            "99d98726189d55ea",
+            "cd1738652d91ca19",
+            "e901e0e508ebd2b5",
+            "f2a844442914b379",
+            "4d6da19156908550",
+            "d349d044f269d444",
+            "017b42138de74173",
+            "a4b0c39a0b34da2b",
+            "b8c8c2081b79cb32",
+            "e9722718764c1529",
+            "61ef404e32693d7e",
+            "e1e5fada5a178ba7",
+            "74246b3d77586a30",
+            "3760a31eb18b29d6",
+            "48a274ad23d53b99",
+            "3651b259673299c1",
+            "50a6f9f4c79b58db",
+            "e68648e2816767db",
+            "26f6348e04fac4ce",
+            "38caa094dcf95a9d",
+            "380b2a890e90e856",
+            "9a9b6ef01e3e9ff2",
+            "817e27ec55360541",
+            "bd6fe537b8f51845",
+            "5c34b2f1e50c3421",
+            "05ad82d678d43788"
         ],
         "x": 33,
         "y": 679,
@@ -70,9 +70,9 @@
         "h": 782
     },
     {
-        "id": "266f6d3eca23ba9f",
+        "id": "bafa87dcca950c39",
         "type": "group",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "Kafka",
         "style": {
             "stroke": "#6f2fa0",
@@ -80,10 +80,10 @@
             "label": true
         },
         "nodes": [
-            "459d586a76964385",
-            "828ab81728f97ea1",
-            "9872f623f72c382d",
-            "e82fa3f4a931dc82"
+            "870ebd7330d35e55",
+            "de0e6e22046ace97",
+            "df14d52508aea061",
+            "bbb7c4d9870e96c8"
         ],
         "x": 34,
         "y": 1479,
@@ -91,9 +91,9 @@
         "h": 122
     },
     {
-        "id": "a0d0030ba181d9c6",
+        "id": "f0022ec11f6d06c9",
         "type": "group",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "USER ID",
         "style": {
             "stroke": "#777777",
@@ -101,15 +101,15 @@
             "label": true
         },
         "nodes": [
-            "345d71275dbccd53",
-            "a5a56a49b4881d13",
-            "7ba7ab8886472d6d",
-            "f5a0c706b44eb215",
-            "0e6982e00cfbd542",
-            "53910cda7198a11c",
-            "9e08ad373197cb06",
-            "0a32a340e5a399d1",
-            "88537d7e0887f9ab"
+            "4a983eed42dbb941",
+            "4cb8bd07c1cf5a25",
+            "da70627a2bd39c82",
+            "9202e8563b98d90a",
+            "7334d7ea031d1f84",
+            "26f18663d43ead00",
+            "6727ab8576f4ab8e",
+            "9d2ee16cd339a92d",
+            "d72c070cb182e9b0"
         ],
         "x": 34,
         "y": 139,
@@ -117,9 +117,9 @@
         "h": 122
     },
     {
-        "id": "8d08067f2ec91c15",
+        "id": "4422e37b61e3151f",
         "type": "group",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "Panel 3D Printer",
         "style": {
             "stroke": "#00bcd4",
@@ -127,12 +127,12 @@
             "label": true
         },
         "nodes": [
-            "c6871569fb8c002e",
-            "f04a804c1f95a5cd",
-            "235b5a345bf1b63e",
-            "a35ae2a915971c6c",
-            "6e0e6ceea2f2b8de",
-            "9014952ff373d65e"
+            "7fa2acbb842d3f20",
+            "c86e205f6efb5a4f",
+            "b14e89452c265e29",
+            "81d0ebae3a39c876",
+            "458d64306dc7a946",
+            "21d0a4547ac18d10"
         ],
         "x": 34,
         "y": 1619,
@@ -140,9 +140,9 @@
         "h": 122
     },
     {
-        "id": "cf557127a689e17d",
+        "id": "28d2722965910b68",
         "type": "group",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "IS PRINTING?",
         "style": {
             "stroke": "#0070c0",
@@ -150,24 +150,24 @@
             "label": true
         },
         "nodes": [
-            "be45507378d0c67a",
-            "5575cc990afae85d",
-            "7a15e65e1588064d",
-            "c250c05be67c669b",
-            "53b4eab8fa19e5eb",
-            "c7dc32fcc6ecffda",
-            "1bbdc14472d2bf17",
-            "f24fa294eb8453f0",
-            "6ff6fddc6c13593b",
-            "596c3915c537f8be",
-            "a96e8b7fe5bbc838",
-            "4c6b4984539f8f77",
-            "26793a763eb07761",
-            "e4603c18750ac468",
-            "437481b663498afe",
-            "d3fac3306dbfbd2f",
-            "51c9bd60c2177d88",
-            "99cfacb242f8903c"
+            "115e2776495b61df",
+            "c0d20859624fec7c",
+            "003b5c9417b86052",
+            "87404189561b8b63",
+            "b79d824ddf761ac3",
+            "2f80d0c78e3b5948",
+            "063d8c1085577384",
+            "fd664f984a9cb409",
+            "c52823c2648ac6b9",
+            "e28bc44079c294e3",
+            "e3fc1d2b3c4cf980",
+            "b21761e1d4ef89d6",
+            "aed6b54bee536e90",
+            "05a30f8e2bbc56f7",
+            "5e4b2f807833f688",
+            "fcc79aa85847db8e",
+            "0452b54d74a040ef",
+            "f00d064bd27cf6f5"
         ],
         "x": 34,
         "y": 279,
@@ -175,9 +175,9 @@
         "h": 382
     },
     {
-        "id": "32dd2a56326e82fb",
+        "id": "66873d681da67a9e",
         "type": "group",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "ORION",
         "style": {
             "stroke": "#ffC000",
@@ -185,11 +185,11 @@
             "label": true
         },
         "nodes": [
-            "21fdc1a59df75649",
-            "38f8516fe1e134ea",
-            "7ad93da51dfd2132",
-            "3a84a8cc3a806c7e",
-            "7ff017f7c04d1f3e"
+            "d87a84c928c9da8b",
+            "b2e5b7039d684c81",
+            "63649160388b7d52",
+            "7904c491ee17a22f",
+            "edb5b5bf9e74af16"
         ],
         "x": 24,
         "y": 1753,
@@ -197,10 +197,10 @@
         "h": 514
     },
     {
-        "id": "21fdc1a59df75649",
+        "id": "d87a84c928c9da8b",
         "type": "group",
-        "z": "128aa5cf7f19b872",
-        "g": "32dd2a56326e82fb",
+        "z": "a2a9e5be90c88c9b",
+        "g": "66873d681da67a9e",
         "name": "Endpoint",
         "style": {
             "stroke": "#6f2fa0",
@@ -210,10 +210,10 @@
             "color": "#ffffff"
         },
         "nodes": [
-            "0e2b1c9bbf3d7352",
-            "5a36652e24139665",
-            "7138754d46d2ce99",
-            "4208386dfd5dfad1"
+            "33456c2b63b234f6",
+            "d89ca2751ac56b24",
+            "df62a9932f8acd75",
+            "3fd8a46a266d1ee8"
         ],
         "x": 54,
         "y": 2079,
@@ -221,26 +221,26 @@
         "h": 162
     },
     {
-        "id": "7ff017f7c04d1f3e",
+        "id": "edb5b5bf9e74af16",
         "type": "group",
-        "z": "128aa5cf7f19b872",
-        "g": "32dd2a56326e82fb",
+        "z": "a2a9e5be90c88c9b",
+        "g": "66873d681da67a9e",
         "name": "Preparar entorno Orion",
         "style": {
             "label": true
         },
         "nodes": [
-            "fbfd687d777249af",
-            "b8de993ca808fb44",
-            "5e9e974e9a160502",
-            "eac7a94413e031e7",
-            "cd25718b2b2868e5",
-            "46a78b7197f2ecf0",
-            "ab28c3cc7c795ca5",
-            "ef2bcd43fdefec41",
-            "8e59531b66222787",
-            "e3e09458bc369b14",
-            "68c9ed361d01f204"
+            "f1d40dcef0aaefd6",
+            "4edb16a71e5d7628",
+            "ad5801c72a25da7a",
+            "deaa5a6d1045185f",
+            "21cc8df8d244183d",
+            "9bec7c28040fe559",
+            "4c105848ce8fe9e0",
+            "e994810b1f604ae3",
+            "a542d63cb2758eaa",
+            "faa48cef8ae65465",
+            "d8afaa31a78681da"
         ],
         "x": 54,
         "y": 1779,
@@ -248,10 +248,10 @@
         "h": 222
     },
     {
-        "id": "8ea1f925d1110caf",
+        "id": "0523c486a8999748",
         "type": "inject",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "GET",
         "props": [],
         "repeat": "",
@@ -263,21 +263,21 @@
         "y": 800,
         "wires": [
             [
-                "1f37cd4514231950",
-                "73e6eeb28b5094d2",
-                "520f0530e3b3aa62",
-                "ef89cada522d26af",
-                "ee5f0423d88336bf",
-                "9a23b6a7fc2c454d",
-                "b00339a3a774a085"
+                "cda601e3b6347d33",
+                "d349d044f269d444",
+                "b8c8c2081b79cb32",
+                "e9722718764c1529",
+                "61ef404e32693d7e",
+                "e1e5fada5a178ba7",
+                "74246b3d77586a30"
             ]
         ]
     },
     {
-        "id": "a976bfeb5c0ec0de",
+        "id": "023d1077f9246d1c",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=printer",
         "rules": [
             {
@@ -292,15 +292,15 @@
         "y": 780,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "f7943ebf33dd8366",
+        "id": "298b211fb0cff012",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=job",
         "rules": [
             {
@@ -315,16 +315,16 @@
         "y": 840,
         "wires": [
             [
-                "79ecda98e90af27c",
-                "6458d3505d52204e"
+                "048d8c6e4388404e",
+                "18869d8e74c2efb2"
             ]
         ]
     },
     {
-        "id": "79ecda98e90af27c",
+        "id": "048d8c6e4388404e",
         "type": "join",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Unir",
         "mode": "custom",
         "build": "object",
@@ -346,15 +346,15 @@
         "y": 900,
         "wires": [
             [
-                "128e9488f1257725"
+                "e4bbc43e70d37f52"
             ]
         ]
     },
     {
-        "id": "9f684c6e363ccd13",
+        "id": "bc9dcbfa9b5b16a1",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Resultado Final",
         "active": true,
         "tosidebar": true,
@@ -369,10 +369,10 @@
         "wires": []
     },
     {
-        "id": "1f37cd4514231950",
+        "id": "cda601e3b6347d33",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "ID",
         "func": "// Generar timestamp\nlet timestamp = Date.now();\nlet maxletas = 5;\n\n// Función para generar 3 letras aleatorias\nfunction generateUUIDv4() {\n    return 'xxxx-xxxx-xxxx-xxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n\n// Crear el ID\nconst id = global.get(\"generate_id\")(\"opr\");\nmsg.payload = id\n\nreturn msg;\n",
         "outputs": 1,
@@ -385,15 +385,15 @@
         "y": 720,
         "wires": [
             [
-                "109e563c15388241"
+                "b3edce48a31ebcd7"
             ]
         ]
     },
     {
-        "id": "109e563c15388241",
+        "id": "b3edce48a31ebcd7",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=id",
         "rules": [
             {
@@ -408,15 +408,15 @@
         "y": 720,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "0742771261fba357",
+        "id": "d12e148c62fd73a6",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=files",
         "rules": [
             {
@@ -431,15 +431,15 @@
         "y": 898.9999389648438,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "128e9488f1257725",
+        "id": "e4bbc43e70d37f52",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Formato JSON Schema",
         "func": "const data = msg.payload || {};\nconst printer = data.printer || {};\nconst job = data.job || {};\nconst id = data.id || {};\nconst displayLayerProgress = data.displayLayerProgress || {};\nconst gcode = data.gcode || {};\nconst img = data.img || {};\nconst printSuccessful = data.printSuccessful;\nconst roomTemperature = data.roomTemperature || {};\n\nconst files = data.files?.files || [];\nconst currentFilePath = job.job?.file?.path;\n\nlet matchedFile = files.find(f => f.path === currentFilePath);\nlet estimatedTime = matchedFile?.gcodeAnalysis?.estimatedPrintTime ?? (job.progress?.printTime ?? 0) + (job.progress?.printTimeLeft ?? 0);\n\nmsg.payload = {\n    id: id,\n    user_id: global.get('user_id'),\n    print_id: flow.get('print_id'),\n    type: \"3DPrinter\",\n    timestamp: new Date().toISOString(),\n\n    temperatures: {\n        nozzle: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.tool0?.target ?? null,\n                unitCode: \"CEL\"\n            }\n\n        },\n        bed: {\n            actual: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.actual ?? null,\n                unitCode: \"CEL\"\n            },\n            target: {\n                type: \"Property\",\n                value: printer.temperature?.bed?.target ?? null,\n                unitCode: \"CEL\"\n            }\n        }\n    },\n\n    environment: {\n        roomTemperature: {\n        value: roomTemperature ?? null,\n        unitCode: \"CEL\"\n        }\n    },\n\n    fanSpeed:{\n        type: \"Property\",\n        value: displayLayerProgress.fanSpeed ?? null,\n        unitCode: \"P1\"\n    },\n\n    printTime: {\n        elapsed: {\n            type: \"Property\",\n            value: job.progress?.printTime ?? null,\n            unitCode: \"SEC\"\n        },\n        estimated: {\n            type: \"Property\",\n            value: estimatedTime,\n            unitCode: \"SEC\"\n        }\n    },\n\n    printer: {\n        type: \"Property\",\n        value: gcode.printer ?? null\n    },\n\n    filament: {\n        type: \"Property\",\n        value: {\n            type: gcode.filament ?? null,\n            brand: gcode.filament_brand ?? null,\n            used: gcode.filament_used ?? null,\n        }\n    },\n\n    slicer: {\n        type: \"Property\",\n        value: gcode.slicer ?? null\n    },\n\n    printSuccessful: {\n        type: \"Property\",\n        value: printSuccessful ?? null\n    },\n\n    status: {\n        type: \"Property\",\n        value: job.state ?? null\n    },\n\n    image: {\n        type: \"Property\",\n        value: img ?? null\n    },\n\n    file: {\n        type: \"Property\",\n        value: currentFilePath\n    },\n    progress:{\n        type: \"Property\",\n        value: isNaN(parseInt(displayLayerProgress.print.progress)) ? null : parseInt(displayLayerProgress.print.progress)\n    },\n    layer: {\n        currentLayer: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.current ?? null\n        },\n        totalLayers: {\n            type: \"Property\",\n            value: displayLayerProgress.layer.total ?? null,\n        }\n    }\n};\n\nreturn msg;",
         "outputs": 1,
@@ -452,16 +452,16 @@
         "y": 900,
         "wires": [
             [
-                "b951daf915408c23",
-                "9f684c6e363ccd13"
+                "26f6348e04fac4ce",
+                "bc9dcbfa9b5b16a1"
             ]
         ]
     },
     {
-        "id": "9a5867a62475db51",
+        "id": "be8624ea08f56d84",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=DisplayLayerProgress",
         "rules": [
             {
@@ -476,15 +476,15 @@
         "y": 960,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "6458d3505d52204e",
+        "id": "18869d8e74c2efb2",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Descargar G-code",
         "func": "const nombreArchivo = msg.payload.job.file.path;\nmsg.filename = nombreArchivo;\nmsg.url = `${flow.get('OCTOPRINT_URL')}/downloads/files/local/${nombreArchivo}`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -497,15 +497,15 @@
         "y": 840,
         "wires": [
             [
-                "ad5ce31ea07e9d35"
+                "a18ff98957f5f8cb"
             ]
         ]
     },
     {
-        "id": "ad5ce31ea07e9d35",
+        "id": "a18ff98957f5f8cb",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "http",
         "method": "GET",
         "ret": "txt",
@@ -522,46 +522,46 @@
         "y": 840,
         "wires": [
             [
-                "1ce1d23cb1b995f8"
+                "8d209dce022e6a8f"
             ]
         ]
     },
     {
-        "id": "1ce1d23cb1b995f8",
+        "id": "8d209dce022e6a8f",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link out 1",
         "mode": "link",
         "links": [
-            "49556c9a63bab5dd"
+            "99d98726189d55ea"
         ],
         "x": 1495,
         "y": 840,
         "wires": []
     },
     {
-        "id": "49556c9a63bab5dd",
+        "id": "99d98726189d55ea",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link in 1",
         "links": [
-            "1ce1d23cb1b995f8"
+            "8d209dce022e6a8f"
         ],
         "x": 335,
         "y": 1020,
         "wires": [
             [
-                "5e7cd0fc9bb4b0bc"
+                "e901e0e508ebd2b5"
             ]
         ]
     },
     {
-        "id": "6a157fe845a720fc",
+        "id": "cd1738652d91ca19",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=gcode",
         "rules": [
             {
@@ -581,15 +581,15 @@
         "y": 1020,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "5e7cd0fc9bb4b0bc",
+        "id": "e901e0e508ebd2b5",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Parse G-code Info",
         "func": "let gcode = msg.payload;\n\nlet slicer = 'Desconocido';\nlet printer = '';\nlet filament = '';        // Tipo: PLA, PETG, etc.\nlet filamentBrand = '';   // Marca: eSun, Prusament, etc.\nlet filamentUsed = '';    // Usado: 5.23m, 15g, etc.\n\n// Lista de laminadores conocidos con variaciones de nombres\nconst slicers = {\n    'Ultimaker Cura': ['cura', 'ultimaker cura', 'cura_steamengine', 'cura-steamengine'],\n    'PrusaSlicer': ['prusaslicer', 'prusa slicer', 'prusaslicer'],\n    'Bambu Studio': ['bambu studio', 'bambu_studio', 'bambu-studio'],\n    'Creality Print': ['creality print', 'creality_print'],\n    'Slic3r': ['slic3r', 'slic3r pe', 'slic3r_pe'],\n    'IdeaMaker': ['ideamaker', 'idea_maker'],\n    'Simplify3D': ['simplify3d', 'simplify 3d'],\n    'MatterControl': ['mattercontrol', 'matter control'],\n    'ReplicatorG': ['replicatorg', 'replicator g'],\n    'FlashPrint': ['flashprint', 'flash print'],\n    'ZeroSlicer': ['zeroslicer', 'zero slicer'],\n    'Kiri Moto': ['kirimotors', 'kiri motors']\n};\n\n// Función para verificar si alguna palabra del laminador aparece en el G-code\nfunction detectSlicer(gcode, slicerNames) {\n    for (let slicerName of slicerNames) {\n        let regex = new RegExp(slicerName, 'i');\n        if (regex.test(gcode)) {\n            return true;\n        }\n    }\n    return false;\n}\n\n// Verificar slicer\nfor (let [name, variations] of Object.entries(slicers)) {\n    if (detectSlicer(gcode, variations)) {\n        slicer = name;\n        break;\n    }\n}\n\n// Detectar impresora con múltiples patrones comunes\nlet printerRegexes = [\n    /; ?(MACHINE_NAME|printer_model) *= *(.+)/i,\n    /; ?print_compatible_printers *= *(.+)/i,\n    /; ?printer_name *= *(.+)/i,\n    /; ?model *= *(.+)/i\n];\n\nfor (let regex of printerRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        printer = match?.[2]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar tipo de filamento (PLA, PETG, etc.)\nlet filamentTypeRegexes = [\n    /; ?filament_type *= *(.+)/i,\n    /; ?filament_material *= *(.+)/i\n];\n\nfor (let regex of filamentTypeRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filament = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar marca del filamento\nlet filamentBrandRegexes = [\n    /; ?filament_brand *= *(.+)/i,\n    /; ?filament_settings_id *= *(.+)/i\n];\n\n\nfor (let regex of filamentBrandRegexes) {\n    let match = gcode.match(regex);\n    if (match) {\n        filamentBrand = match?.[1]?.trim() || '';\n        break;\n    }\n}\n\n// Detectar cantidad de filamento usado\n\n// 1. Buscar exactamente: \"; filament used [g] = ...\"\nlet usedGramsExact = gcode.match(/; ?filament used \\[g\\] *= *([^\\n]+)/i);\nif (usedGramsExact) {\n    filamentUsed = usedGramsExact[1].trim();\n} else {\n    // 2. Buscar una línea que contenga \"filament_user\" y también una \"g\"\n    let userLineMatch = gcode.match(/^.*filament_user.*g.*$/gim);\n    if (userLineMatch && userLineMatch.length > 0) {\n        // Extraer solo el valor después del signo \"=\" si lo hay\n        let valueMatch = userLineMatch[0].match(/= *([^\\n]+)/);\n        if (valueMatch) {\n            filamentUsed = valueMatch[1].trim();\n        } else {\n            filamentUsed = userLineMatch[0].trim(); // Línea completa como fallback\n        }\n    } else {\n        // 3. Buscar con los patrones comunes\n        let filamentUsedRegexes = [\n            /; ?filament used(?: *\\[.*\\])? *= *(.+)/i,\n            /; ?filament_used *= *(.+)/i,\n            /; ?filament_consumed *= *(.+)/i\n        ];\n\n        for (let regex of filamentUsedRegexes) {\n            let match = gcode.match(regex);\n            if (match) {\n                filamentUsed = match[1].trim();\n                break;\n            }\n        }\n    }\n}\n\n\n// Resultado\nmsg.payload = {\n    slicer: slicer,\n    printer: printer,\n    filament: filament,\n    filament_brand: filamentBrand,\n    filament_used: filamentUsed\n};\n\nreturn msg;\n",
         "outputs": 1,
@@ -602,15 +602,15 @@
         "y": 1020,
         "wires": [
             [
-                "6a157fe845a720fc"
+                "cd1738652d91ca19"
             ]
         ]
     },
     {
-        "id": "8baaa7a44bda0738",
+        "id": "f2a844442914b379",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=img",
         "rules": [
             {
@@ -630,15 +630,15 @@
         "y": 1080,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "b28ca6427025442a",
+        "id": "4d6da19156908550",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=printSuccessful",
         "rules": [
             {
@@ -658,18 +658,18 @@
         "y": 1140,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "73e6eeb28b5094d2",
+        "id": "d349d044f269d444",
         "type": "link call",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Obtener imaguen",
         "links": [
-            "3e5ca6621f765aca"
+            "817e27ec55360541"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -677,16 +677,16 @@
         "y": 1080,
         "wires": [
             [
-                "8baaa7a44bda0738",
-                "257bee5770153a14"
+                "f2a844442914b379",
+                "a4b0c39a0b34da2b"
             ]
         ]
     },
     {
-        "id": "1973f07ec12899cc",
+        "id": "017b42138de74173",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set topic=roomTemperature",
         "rules": [
             {
@@ -706,18 +706,18 @@
         "y": 1200,
         "wires": [
             [
-                "79ecda98e90af27c"
+                "048d8c6e4388404e"
             ]
         ]
     },
     {
-        "id": "257bee5770153a14",
+        "id": "a4b0c39a0b34da2b",
         "type": "link call",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "IA",
         "links": [
-            "15149959834d55d4"
+            "7fad767123a6310a"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -725,18 +725,18 @@
         "y": 1140,
         "wires": [
             [
-                "b28ca6427025442a"
+                "4d6da19156908550"
             ]
         ]
     },
     {
-        "id": "520f0530e3b3aa62",
+        "id": "b8c8c2081b79cb32",
         "type": "link call",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "roomTemperature",
         "links": [
-            "9ce3e248714ecc7c"
+            "ea1ad8475495e91a"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -744,30 +744,30 @@
         "y": 1200,
         "wires": [
             [
-                "1973f07ec12899cc"
+                "017b42138de74173"
             ]
         ]
     },
     {
-        "id": "15149959834d55d4",
+        "id": "7fad767123a6310a",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link in 2",
         "links": [],
         "x": 75,
         "y": 1360,
         "wires": [
             [
-                "beca61d4059fbb6c"
+                "3edee83105fa0583"
             ]
         ]
     },
     {
-        "id": "5ed068ddf703b120",
+        "id": "435ce7582960f86c",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link out 2",
         "mode": "return",
         "links": [],
@@ -776,25 +776,25 @@
         "wires": []
     },
     {
-        "id": "9ce3e248714ecc7c",
+        "id": "ea1ad8475495e91a",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link in 3",
         "links": [],
         "x": 75,
         "y": 1420,
         "wires": [
             [
-                "bf3decc96e99af4a"
+                "61032e730c54cd27"
             ]
         ]
     },
     {
-        "id": "2f1fb89ca713424a",
+        "id": "600848a8cdc041cf",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link out 3",
         "mode": "return",
         "links": [],
@@ -803,12 +803,12 @@
         "wires": []
     },
     {
-        "id": "beca61d4059fbb6c",
+        "id": "3edee83105fa0583",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "IA",
-        "func": "let ran = Math.random();\nif (ran < 0.40) {\n    msg.payload = true\n}else{\n    msg.payload = false\n}\nreturn msg;",
+        "func": "let ran = Math.random();\nif (ran < 0.80) {\n    msg.payload = true\n}else{\n    msg.payload = false\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -819,16 +819,16 @@
         "y": 1360,
         "wires": [
             [
-                "5ed068ddf703b120",
-                "93084432de6c3132"
+                "435ce7582960f86c",
+                "05ad82d678d43788"
             ]
         ]
     },
     {
-        "id": "bf3decc96e99af4a",
+        "id": "61032e730c54cd27",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "roomTemperature",
         "func": "msg.payload = +(Math.random() + 30).toFixed(1);\nreturn msg;",
         "outputs": 1,
@@ -841,15 +841,15 @@
         "y": 1420,
         "wires": [
             [
-                "2f1fb89ca713424a"
+                "600848a8cdc041cf"
             ]
         ]
     },
     {
-        "id": "ef89cada522d26af",
+        "id": "e9722718764c1529",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Estado OctoPrint",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/printer`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -862,15 +862,15 @@
         "y": 780,
         "wires": [
             [
-                "11b28f3d3fc7c4a3"
+                "3760a31eb18b29d6"
             ]
         ]
     },
     {
-        "id": "ee5f0423d88336bf",
+        "id": "61ef404e32693d7e",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Job Info",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/job`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -883,15 +883,15 @@
         "y": 840,
         "wires": [
             [
-                "fb55fff99835f2ac"
+                "48a274ad23d53b99"
             ]
         ]
     },
     {
-        "id": "9a23b6a7fc2c454d",
+        "id": "e1e5fada5a178ba7",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Files",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/api/files`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -904,15 +904,15 @@
         "y": 900,
         "wires": [
             [
-                "5de610cd6b6e4270"
+                "3651b259673299c1"
             ]
         ]
     },
     {
-        "id": "b00339a3a774a085",
+        "id": "74246b3d77586a30",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "DisplayLayerProgress",
         "func": "msg.url = `${flow.get('OCTOPRINT_URL')}/plugin/DisplayLayerProgress/values`;\nmsg.headers = {\n    \"X-Api-Key\": flow.get('OCTOPRINT_API_KEY')\n};\nreturn msg;",
         "outputs": 1,
@@ -925,15 +925,15 @@
         "y": 960,
         "wires": [
             [
-                "e8be6c2d807e63d0"
+                "50a6f9f4c79b58db"
             ]
         ]
     },
     {
-        "id": "11b28f3d3fc7c4a3",
+        "id": "3760a31eb18b29d6",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": " http",
         "method": "GET",
         "ret": "obj",
@@ -950,15 +950,15 @@
         "y": 780,
         "wires": [
             [
-                "a976bfeb5c0ec0de"
+                "023d1077f9246d1c"
             ]
         ]
     },
     {
-        "id": "fb55fff99835f2ac",
+        "id": "48a274ad23d53b99",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "http ",
         "method": "GET",
         "ret": "obj",
@@ -975,15 +975,15 @@
         "y": 840,
         "wires": [
             [
-                "f7943ebf33dd8366"
+                "298b211fb0cff012"
             ]
         ]
     },
     {
-        "id": "5de610cd6b6e4270",
+        "id": "3651b259673299c1",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": " http",
         "method": "GET",
         "ret": "obj",
@@ -1000,15 +1000,15 @@
         "y": 900,
         "wires": [
             [
-                "0742771261fba357"
+                "d12e148c62fd73a6"
             ]
         ]
     },
     {
-        "id": "e8be6c2d807e63d0",
+        "id": "50a6f9f4c79b58db",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "http ",
         "method": "GET",
         "ret": "obj",
@@ -1025,71 +1025,71 @@
         "y": 960,
         "wires": [
             [
-                "9a5867a62475db51"
+                "be8624ea08f56d84"
             ]
         ]
     },
     {
-        "id": "b7acc809da4d53bf",
+        "id": "e68648e2816767db",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Pedir los datos",
         "links": [
-            "99cfacb242f8903c"
+            "f00d064bd27cf6f5"
         ],
         "x": 125,
         "y": 1140,
         "wires": [
             [
-                "1f37cd4514231950",
-                "ef89cada522d26af",
-                "ee5f0423d88336bf",
-                "9a23b6a7fc2c454d",
-                "b00339a3a774a085",
-                "73e6eeb28b5094d2",
-                "520f0530e3b3aa62"
+                "cda601e3b6347d33",
+                "e9722718764c1529",
+                "61ef404e32693d7e",
+                "e1e5fada5a178ba7",
+                "74246b3d77586a30",
+                "d349d044f269d444",
+                "b8c8c2081b79cb32"
             ]
         ]
     },
     {
-        "id": "b951daf915408c23",
+        "id": "26f6348e04fac4ce",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "out-printer_data",
         "mode": "link",
         "links": [
-            "828ab81728f97ea1",
-            "c6871569fb8c002e",
-            "3a84a8cc3a806c7e"
+            "de0e6e22046ace97",
+            "7fa2acbb842d3f20",
+            "7904c491ee17a22f"
         ],
         "x": 1495,
         "y": 900,
         "wires": []
     },
     {
-        "id": "828ab81728f97ea1",
+        "id": "de0e6e22046ace97",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "266f6d3eca23ba9f",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bafa87dcca950c39",
         "name": "lin-printer_data-kafka",
         "links": [
-            "b951daf915408c23"
+            "26f6348e04fac4ce"
         ],
         "x": 75,
         "y": 1540,
         "wires": [
             [
-                "9872f623f72c382d"
+                "df14d52508aea061"
             ]
         ]
     },
     {
-        "id": "9872f623f72c382d",
+        "id": "df14d52508aea061",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "266f6d3eca23ba9f",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bafa87dcca950c39",
         "name": "kafka Data",
         "func": "msg.payload = JSON.stringify(msg.payload);\nmsg.topic = \"octo-data\"\nreturn msg;\n",
         "outputs": 1,
@@ -1102,16 +1102,16 @@
         "y": 1540,
         "wires": [
             [
-                "459d586a76964385",
-                "e82fa3f4a931dc82"
+                "870ebd7330d35e55",
+                "bbb7c4d9870e96c8"
             ]
         ]
     },
     {
-        "id": "459d586a76964385",
+        "id": "870ebd7330d35e55",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "266f6d3eca23ba9f",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bafa87dcca950c39",
         "name": "Kafka Producer Debug",
         "active": false,
         "tosidebar": true,
@@ -1126,10 +1126,10 @@
         "wires": []
     },
     {
-        "id": "e82fa3f4a931dc82",
+        "id": "bbb7c4d9870e96c8",
         "type": "kafkajs-producer",
-        "z": "128aa5cf7f19b872",
-        "g": "266f6d3eca23ba9f",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bafa87dcca950c39",
         "name": "",
         "client": "89e380a1c824ddad",
         "topic": "",
@@ -1147,10 +1147,10 @@
         "wires": []
     },
     {
-        "id": "345d71275dbccd53",
+        "id": "4a983eed42dbb941",
         "type": "inject",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "User ID",
         "props": [],
         "repeat": "",
@@ -1162,15 +1162,15 @@
         "y": 180,
         "wires": [
             [
-                "a5a56a49b4881d13"
+                "4cb8bd07c1cf5a25"
             ]
         ]
     },
     {
-        "id": "a5a56a49b4881d13",
+        "id": "4cb8bd07c1cf5a25",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "Set file path",
         "func": "msg.filename = \"id.txt\";\nreturn msg;",
         "outputs": 1,
@@ -1183,15 +1183,15 @@
         "y": 180,
         "wires": [
             [
-                "7ba7ab8886472d6d"
+                "da70627a2bd39c82"
             ]
         ]
     },
     {
-        "id": "7ba7ab8886472d6d",
+        "id": "da70627a2bd39c82",
         "type": "file in",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "Read ID file",
         "filename": "filename",
         "filenameType": "msg",
@@ -1204,15 +1204,15 @@
         "y": 180,
         "wires": [
             [
-                "0e6982e00cfbd542"
+                "7334d7ea031d1f84"
             ]
         ]
     },
     {
-        "id": "f5a0c706b44eb215",
+        "id": "9202e8563b98d90a",
         "type": "file",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "Write new ID",
         "filename": "id.txt",
         "filenameType": "str",
@@ -1224,15 +1224,15 @@
         "y": 200,
         "wires": [
             [
-                "53910cda7198a11c"
+                "26f18663d43ead00"
             ]
         ]
     },
     {
-        "id": "0e6982e00cfbd542",
+        "id": "7334d7ea031d1f84",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "Check ID or generate",
         "func": "// Si hay ID válido en el archivo\nif (msg.payload && msg.payload.trim() !== \"\") {\n    msg.id = msg.payload.trim();\n    return [msg, null]; // Salida 1: ID leído\n} else {\n    const id = global.get(\"generate_id\")(\"uid\");\n    msg.id = id\n    msg.payload = id;\n    return [null, msg]; // Salida 2: nuevo ID\n}\n",
         "outputs": 2,
@@ -1245,18 +1245,18 @@
         "y": 180,
         "wires": [
             [
-                "53910cda7198a11c"
+                "26f18663d43ead00"
             ],
             [
-                "f5a0c706b44eb215"
+                "9202e8563b98d90a"
             ]
         ]
     },
     {
-        "id": "53910cda7198a11c",
+        "id": "26f18663d43ead00",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "Global ID",
         "func": "global.set('user_id', msg.payload)\nmsg.payload = global.get('user_id')\nreturn msg;",
         "outputs": 1,
@@ -1269,15 +1269,15 @@
         "y": 180,
         "wires": [
             [
-                "9e08ad373197cb06"
+                "6727ab8576f4ab8e"
             ]
         ]
     },
     {
-        "id": "9e08ad373197cb06",
+        "id": "6727ab8576f4ab8e",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "USER ID",
         "active": false,
         "tosidebar": true,
@@ -1292,10 +1292,10 @@
         "wires": []
     },
     {
-        "id": "d3645c9ffc7b2ae3",
+        "id": "38caa094dcf95a9d",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Set filename",
         "func": "msg.filename = msg.payload.trim();\nreturn msg;",
         "outputs": 1,
@@ -1308,15 +1308,15 @@
         "y": 1293.0000610351562,
         "wires": [
             [
-                "55d0659e989b1cbb"
+                "9a9b6ef01e3e9ff2"
             ]
         ]
     },
     {
-        "id": "637858ccdecedace",
+        "id": "380b2a890e90e856",
         "type": "exec",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "command": "find /data/images -type f | shuf -n 1",
         "addpay": false,
         "append": "",
@@ -1329,17 +1329,17 @@
         "y": 1306.0000610351562,
         "wires": [
             [
-                "d3645c9ffc7b2ae3"
+                "38caa094dcf95a9d"
             ],
             [],
             []
         ]
     },
     {
-        "id": "55d0659e989b1cbb",
+        "id": "9a9b6ef01e3e9ff2",
         "type": "file in",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Leer imagen",
         "filename": "",
         "format": "",
@@ -1350,30 +1350,30 @@
         "y": 1293.0000610351562,
         "wires": [
             [
-                "fcf3c314f470b7cf"
+                "bd6fe537b8f51845"
             ]
         ]
     },
     {
-        "id": "3e5ca6621f765aca",
+        "id": "817e27ec55360541",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link in 5",
         "links": [],
         "x": 74,
         "y": 1306.0000610351562,
         "wires": [
             [
-                "637858ccdecedace"
+                "380b2a890e90e856"
             ]
         ]
     },
     {
-        "id": "fcf3c314f470b7cf",
+        "id": "bd6fe537b8f51845",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "A base64",
         "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
         "outputs": 1,
@@ -1386,15 +1386,15 @@
         "y": 1293.0000610351562,
         "wires": [
             [
-                "e73ed9386313dce7"
+                "5c34b2f1e50c3421"
             ]
         ]
     },
     {
-        "id": "e73ed9386313dce7",
+        "id": "5c34b2f1e50c3421",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "link out 6",
         "mode": "return",
         "links": [],
@@ -1403,10 +1403,10 @@
         "wires": []
     },
     {
-        "id": "93084432de6c3132",
+        "id": "05ad82d678d43788",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "6554eaf24f3301c5",
+        "z": "a2a9e5be90c88c9b",
+        "g": "bb019bfa44e6901f",
         "name": "Resultado IA",
         "active": false,
         "tosidebar": true,
@@ -1421,27 +1421,27 @@
         "wires": []
     },
     {
-        "id": "c6871569fb8c002e",
+        "id": "7fa2acbb842d3f20",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
+        "z": "a2a9e5be90c88c9b",
+        "g": "4422e37b61e3151f",
         "name": "link-in-dashboard",
         "links": [
-            "b951daf915408c23"
+            "26f6348e04fac4ce"
         ],
         "x": 75,
         "y": 1660,
         "wires": [
             [
-                "6e0e6ceea2f2b8de"
+                "458d64306dc7a946"
             ]
         ]
     },
     {
-        "id": "be45507378d0c67a",
+        "id": "115e2776495b61df",
         "type": "mqtt in",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "PRINTING MQTT",
         "topic": "octoPrint/event/PrinterStateChanged",
         "qos": "0",
@@ -1455,15 +1455,15 @@
         "y": 420,
         "wires": [
             [
-                "5575cc990afae85d"
+                "c0d20859624fec7c"
             ]
         ]
     },
     {
-        "id": "5575cc990afae85d",
+        "id": "c0d20859624fec7c",
         "type": "json",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Convertir a JSON",
         "property": "payload",
         "action": "obj",
@@ -1472,17 +1472,17 @@
         "y": 420,
         "wires": [
             [
-                "7a15e65e1588064d",
-                "6ff6fddc6c13593b",
-                "596c3915c537f8be"
+                "003b5c9417b86052",
+                "c52823c2648ac6b9",
+                "e28bc44079c294e3"
             ]
         ]
     },
     {
-        "id": "7a15e65e1588064d",
+        "id": "003b5c9417b86052",
         "type": "switch",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "¿Es PRINTING?",
         "property": "payload.state_id",
         "propertyType": "msg",
@@ -1503,20 +1503,20 @@
         "y": 420,
         "wires": [
             [
-                "c250c05be67c669b",
-                "4c6b4984539f8f77"
+                "87404189561b8b63",
+                "b21761e1d4ef89d6"
             ],
             [
-                "53b4eab8fa19e5eb",
-                "26793a763eb07761"
+                "b79d824ddf761ac3",
+                "aed6b54bee536e90"
             ]
         ]
     },
     {
-        "id": "c250c05be67c669b",
+        "id": "87404189561b8b63",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Reiniciar temporizador",
         "rules": [
             {
@@ -1553,10 +1553,10 @@
         ]
     },
     {
-        "id": "53b4eab8fa19e5eb",
+        "id": "b79d824ddf761ac3",
         "type": "change",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Activar temporizador",
         "rules": [
             {
@@ -1593,10 +1593,10 @@
         ]
     },
     {
-        "id": "c7dc32fcc6ecffda",
+        "id": "2f80d0c78e3b5948",
         "type": "inject",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Cada 5 segundos",
         "props": [
             {
@@ -1618,15 +1618,15 @@
         "y": 580,
         "wires": [
             [
-                "1bbdc14472d2bf17"
+                "063d8c1085577384"
             ]
         ]
     },
     {
-        "id": "1bbdc14472d2bf17",
+        "id": "063d8c1085577384",
         "type": "switch",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "¿Timer activo?",
         "property": "timerActive",
         "propertyType": "flow",
@@ -1645,18 +1645,18 @@
         "y": 580,
         "wires": [
             [
-                "437481b663498afe"
+                "5e4b2f807833f688"
             ],
             [
-                "f24fa294eb8453f0"
+                "fd664f984a9cb409"
             ]
         ]
     },
     {
-        "id": "f24fa294eb8453f0",
+        "id": "fd664f984a9cb409",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Verificar tiempo",
         "func": "var timerStart = flow.get('timerStart');\n\nif (!timerStart) {\n    flow.set('timerActive', false);\n    return null;\n}\n\nvar startTime = new Date(timerStart);\nif (isNaN(startTime.getTime())) {\n    flow.set('timerActive', false);\n    return null;\n}\n\nvar currentTime = new Date();\nvar diff = currentTime.getTime() - startTime.getTime();\nvar thirtyMinutes = 30 * 60 * 1000;\n\nif (diff < thirtyMinutes) {\n    return msg;\n} else {\n    flow.set('timerActive', false);\n    return null;\n}\n",
         "outputs": 1,
@@ -1669,16 +1669,16 @@
         "y": 620,
         "wires": [
             [
-                "d3fac3306dbfbd2f",
-                "99cfacb242f8903c"
+                "fcc79aa85847db8e",
+                "f00d064bd27cf6f5"
             ]
         ]
     },
     {
-        "id": "6ff6fddc6c13593b",
+        "id": "c52823c2648ac6b9",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "state_id",
         "active": false,
         "tosidebar": true,
@@ -1693,10 +1693,10 @@
         "wires": []
     },
     {
-        "id": "596c3915c537f8be",
+        "id": "e28bc44079c294e3",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Print_ID",
         "func": "let estadoNuevo = msg.payload.state_string;\nlet datos = flow.get(\"print_id\") || {};\nvar startTime = new Date();\nvar id = flow.get(\"print_id\");\n\nif (estadoNuevo === \"Starting\") {\n    const id = global.get(\"generate_id\")(\"print_id\");\n    flow.set('print_id', id)\n}\n\n\nmsg.payload = { id: id };\nreturn msg;",
         "outputs": 1,
@@ -1709,15 +1709,15 @@
         "y": 320,
         "wires": [
             [
-                "a96e8b7fe5bbc838"
+                "e3fc1d2b3c4cf980"
             ]
         ]
     },
     {
-        "id": "a96e8b7fe5bbc838",
+        "id": "e3fc1d2b3c4cf980",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Debug ID",
         "active": false,
         "tosidebar": true,
@@ -1726,10 +1726,10 @@
         "wires": []
     },
     {
-        "id": "4c6b4984539f8f77",
+        "id": "b21761e1d4ef89d6",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Reiniciar",
         "active": false,
         "tosidebar": true,
@@ -1744,10 +1744,10 @@
         "wires": []
     },
     {
-        "id": "26793a763eb07761",
+        "id": "aed6b54bee536e90",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Activar",
         "active": false,
         "tosidebar": true,
@@ -1762,10 +1762,10 @@
         "wires": []
     },
     {
-        "id": "e4603c18750ac468",
+        "id": "05a30f8e2bbc56f7",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Imprimiendo",
         "active": false,
         "tosidebar": true,
@@ -1780,10 +1780,10 @@
         "wires": []
     },
     {
-        "id": "437481b663498afe",
+        "id": "5e4b2f807833f688",
         "type": "switch",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Esta imprimiendo?",
         "property": "printing",
         "propertyType": "flow",
@@ -1802,19 +1802,19 @@
         "y": 560,
         "wires": [
             [
-                "e4603c18750ac468",
-                "99cfacb242f8903c"
+                "05a30f8e2bbc56f7",
+                "f00d064bd27cf6f5"
             ],
             [
-                "51c9bd60c2177d88"
+                "0452b54d74a040ef"
             ]
         ]
     },
     {
-        "id": "d3fac3306dbfbd2f",
+        "id": "fcc79aa85847db8e",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Temporizador activo",
         "active": false,
         "tosidebar": true,
@@ -1829,10 +1829,10 @@
         "wires": []
     },
     {
-        "id": "51c9bd60c2177d88",
+        "id": "0452b54d74a040ef",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Fin de los datos",
         "active": false,
         "tosidebar": true,
@@ -1847,24 +1847,24 @@
         "wires": []
     },
     {
-        "id": "99cfacb242f8903c",
+        "id": "f00d064bd27cf6f5",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "cf557127a689e17d",
+        "z": "a2a9e5be90c88c9b",
+        "g": "28d2722965910b68",
         "name": "Llamar a los datos",
         "mode": "link",
         "links": [
-            "b7acc809da4d53bf"
+            "e68648e2816767db"
         ],
         "x": 755,
         "y": 600,
         "wires": []
     },
     {
-        "id": "0e2b1c9bbf3d7352",
+        "id": "33456c2b63b234f6",
         "type": "http in",
-        "z": "128aa5cf7f19b872",
-        "g": "21fdc1a59df75649",
+        "z": "a2a9e5be90c88c9b",
+        "g": "d87a84c928c9da8b",
         "name": "Endpoint alerta /octo-alarm",
         "url": "/octo-alarm",
         "method": "post",
@@ -1874,17 +1874,17 @@
         "y": 2120,
         "wires": [
             [
-                "5a36652e24139665",
-                "7138754d46d2ce99",
-                "4208386dfd5dfad1"
+                "d89ca2751ac56b24",
+                "df62a9932f8acd75",
+                "3fd8a46a266d1ee8"
             ]
         ]
     },
     {
-        "id": "5a36652e24139665",
+        "id": "d89ca2751ac56b24",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "21fdc1a59df75649",
+        "z": "a2a9e5be90c88c9b",
+        "g": "d87a84c928c9da8b",
         "name": "Alerta recibida",
         "active": false,
         "tosidebar": true,
@@ -1899,10 +1899,10 @@
         "wires": []
     },
     {
-        "id": "7138754d46d2ce99",
+        "id": "df62a9932f8acd75",
         "type": "http response",
-        "z": "128aa5cf7f19b872",
-        "g": "21fdc1a59df75649",
+        "z": "a2a9e5be90c88c9b",
+        "g": "d87a84c928c9da8b",
         "name": "Respuesta OK",
         "statusCode": "200",
         "headers": {},
@@ -1911,24 +1911,24 @@
         "wires": []
     },
     {
-        "id": "4208386dfd5dfad1",
+        "id": "3fd8a46a266d1ee8",
         "type": "link out",
-        "z": "128aa5cf7f19b872",
-        "g": "21fdc1a59df75649",
+        "z": "a2a9e5be90c88c9b",
+        "g": "d87a84c928c9da8b",
         "name": "out-octo-alert",
         "mode": "link",
         "links": [
-            "235b5a345bf1b63e"
+            "b14e89452c265e29"
         ],
         "x": 375,
         "y": 2200,
         "wires": []
     },
     {
-        "id": "f04a804c1f95a5cd",
+        "id": "c86e205f6efb5a4f",
         "type": "ui_toast",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
+        "z": "a2a9e5be90c88c9b",
+        "g": "4422e37b61e3151f",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -1945,27 +1945,27 @@
         "wires": []
     },
     {
-        "id": "235b5a345bf1b63e",
+        "id": "b14e89452c265e29",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
+        "z": "a2a9e5be90c88c9b",
+        "g": "4422e37b61e3151f",
         "name": "link in 4",
         "links": [
-            "4208386dfd5dfad1"
+            "3fd8a46a266d1ee8"
         ],
         "x": 75,
         "y": 1700,
         "wires": [
             [
-                "a35ae2a915971c6c"
+                "81d0ebae3a39c876"
             ]
         ]
     },
     {
-        "id": "38f8516fe1e134ea",
+        "id": "b2e5b7039d684c81",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "32dd2a56326e82fb",
+        "z": "a2a9e5be90c88c9b",
+        "g": "66873d681da67a9e",
         "name": "PUT actualizar octoia",
         "method": "PUT",
         "ret": "txt",
@@ -1985,11 +1985,11 @@
         ]
     },
     {
-        "id": "7ad93da51dfd2132",
+        "id": "63649160388b7d52",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "32dd2a56326e82fb",
-        "name": "Preparar JSON octo-alarm true",
+        "z": "a2a9e5be90c88c9b",
+        "g": "66873d681da67a9e",
+        "name": "Preparar JSON octo-alarm false",
         "func": "delete msg.url;\nlet result = msg.payload.printSuccessful.value\nmsg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  octoia: { value: result, type: \"Boolean\" }\n};\nreturn msg;",
         "outputs": 1,
         "timeout": "",
@@ -2001,32 +2001,32 @@
         "y": 2040,
         "wires": [
             [
-                "38f8516fe1e134ea"
+                "b2e5b7039d684c81"
             ]
         ]
     },
     {
-        "id": "3a84a8cc3a806c7e",
+        "id": "7904c491ee17a22f",
         "type": "link in",
-        "z": "128aa5cf7f19b872",
-        "g": "32dd2a56326e82fb",
+        "z": "a2a9e5be90c88c9b",
+        "g": "66873d681da67a9e",
         "name": "out-orion",
         "links": [
-            "b951daf915408c23"
+            "26f6348e04fac4ce"
         ],
         "x": 65,
         "y": 2040,
         "wires": [
             [
-                "7ad93da51dfd2132"
+                "63649160388b7d52"
             ]
         ]
     },
     {
-        "id": "fbfd687d777249af",
+        "id": "f1d40dcef0aaefd6",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Listar suscripciones",
         "method": "GET",
         "ret": "obj",
@@ -2043,15 +2043,15 @@
         "y": 1900,
         "wires": [
             [
-                "b8de993ca808fb44"
+                "4edb16a71e5d7628"
             ]
         ]
     },
     {
-        "id": "b8de993ca808fb44",
+        "id": "4edb16a71e5d7628",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "¿Ya existe subscripción?",
         "func": "let yaExiste = false;\n\nfor (let sub of msg.payload) {\n    if (sub.subject && sub.subject.entities) {\n        for (let entidad of sub.subject.entities) {\n            if (entidad.id === \"octo-alarm\") {\n                yaExiste = true;\n                break;\n            }\n        }\n    }\n    if (yaExiste) break;\n}\nmsg.payload = yaExiste;\nreturn msg",
         "outputs": 1,
@@ -2064,15 +2064,15 @@
         "y": 1900,
         "wires": [
             [
-                "46a78b7197f2ecf0"
+                "9bec7c28040fe559"
             ]
         ]
     },
     {
-        "id": "5e9e974e9a160502",
+        "id": "ad5801c72a25da7a",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Ya existe una subscripción",
         "active": false,
         "tosidebar": true,
@@ -2087,12 +2087,12 @@
         "wires": []
     },
     {
-        "id": "eac7a94413e031e7",
+        "id": "deaa5a6d1045185f",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Preparar JSON suscripción",
-        "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  description: \"Alerta para la impresión\",\n  subject: {\n    entities: [{ id: \"octo-alarm\", type: \"Sensor\" }],\n    condition: { \n      attrs: [\"octoia\"],\n      expression: { q: \"octoia==true\" } \n        }\n  },\n  notification: {\n    http: { url: \"http://node-red:1880/octo-alarm\" },\n    attrs: [\"octoia\"]\n  },\n  throttling: 0\n};\nreturn msg;",
+        "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  description: \"Alerta para la impresión\",\n  subject: {\n    entities: [{ id: \"octo-alarm\", type: \"Sensor\" }],\n    condition: { \n      attrs: [\"octoia\"],\n      expression: { q: \"octoia==false\" } \n        }\n  },\n  notification: {\n    http: { url: \"http://node-red:1880/octo-alarm\" },\n    attrs: [\"octoia\"]\n  },\n  throttling: 0\n};\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2103,15 +2103,15 @@
         "y": 1920,
         "wires": [
             [
-                "cd25718b2b2868e5"
+                "21cc8df8d244183d"
             ]
         ]
     },
     {
-        "id": "cd25718b2b2868e5",
+        "id": "21cc8df8d244183d",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "POST crear suscripción",
         "method": "POST",
         "ret": "txt",
@@ -2131,10 +2131,10 @@
         ]
     },
     {
-        "id": "46a78b7197f2ecf0",
+        "id": "9bec7c28040fe559",
         "type": "switch",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Ya esiste?",
         "property": "payload",
         "propertyType": "msg",
@@ -2153,19 +2153,19 @@
         "y": 1900,
         "wires": [
             [
-                "5e9e974e9a160502"
+                "ad5801c72a25da7a"
             ],
             [
-                "eac7a94413e031e7",
-                "ab28c3cc7c795ca5"
+                "deaa5a6d1045185f",
+                "4c105848ce8fe9e0"
             ]
         ]
     },
     {
-        "id": "ab28c3cc7c795ca5",
+        "id": "4c105848ce8fe9e0",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Crear suscripción",
         "active": false,
         "tosidebar": true,
@@ -2180,10 +2180,10 @@
         "wires": []
     },
     {
-        "id": "ef2bcd43fdefec41",
+        "id": "e994810b1f604ae3",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Preparar entidad JSON",
         "func": "msg.headers = { 'Content-Type': 'application/json' };\nmsg.payload = {\n  id: \"octo-alarm\",\n  type: \"Sensor\",\n  octoia: { value: false, type: \"Boolean\" }\n};\nreturn msg;",
         "outputs": 1,
@@ -2196,15 +2196,15 @@
         "y": 1860,
         "wires": [
             [
-                "8e59531b66222787"
+                "a542d63cb2758eaa"
             ]
         ]
     },
     {
-        "id": "8e59531b66222787",
+        "id": "a542d63cb2758eaa",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "POST crear entidad",
         "method": "POST",
         "ret": "txt",
@@ -2224,10 +2224,10 @@
         ]
     },
     {
-        "id": "e3e09458bc369b14",
+        "id": "faa48cef8ae65465",
         "type": "inject",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "Eliminar/Crear Entidad y Subscribirse",
         "props": [
             {
@@ -2249,16 +2249,16 @@
         "y": 1900,
         "wires": [
             [
-                "fbfd687d777249af",
-                "68c9ed361d01f204"
+                "f1d40dcef0aaefd6",
+                "d8afaa31a78681da"
             ]
         ]
     },
     {
-        "id": "68c9ed361d01f204",
+        "id": "d8afaa31a78681da",
         "type": "http request",
-        "z": "128aa5cf7f19b872",
-        "g": "7ff017f7c04d1f3e",
+        "z": "a2a9e5be90c88c9b",
+        "g": "edb5b5bf9e74af16",
         "name": "DELETE entidad SensorAlarma001",
         "method": "DELETE",
         "ret": "obj",
@@ -2275,15 +2275,15 @@
         "y": 1820,
         "wires": [
             [
-                "ef2bcd43fdefec41"
+                "e994810b1f604ae3"
             ]
         ]
     },
     {
-        "id": "a35ae2a915971c6c",
+        "id": "81d0ebae3a39c876",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
+        "z": "a2a9e5be90c88c9b",
+        "g": "4422e37b61e3151f",
         "name": "Mensaje",
         "func": "msg.payload=\"La IA ha detectado un error\"\nreturn msg;",
         "outputs": 1,
@@ -2296,14 +2296,14 @@
         "y": 1700,
         "wires": [
             [
-                "f04a804c1f95a5cd"
+                "c86e205f6efb5a4f"
             ]
         ]
     },
     {
-        "id": "0eebcfa92f87f92d",
+        "id": "20ad96f19df72948",
         "type": "exec",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "command": "cat /data/octoprintapi",
         "addpay": "",
         "append": "",
@@ -2316,18 +2316,18 @@
         "y": 60,
         "wires": [
             [
-                "a22c2c400e5dca98"
+                "d6d36cfab3c119cb"
             ],
             [
-                "175ebf717ae0b8c8"
+                "28b763affa839963"
             ],
             []
         ]
     },
     {
-        "id": "a22c2c400e5dca98",
+        "id": "d6d36cfab3c119cb",
         "type": "function",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "OCTOPRINT_API_KEY",
         "func": "msg.payload = msg.payload.toString().trim(); // <-- elimina \\n y espacios\nlet octoprintapi = msg.payload;\n\nif(octoprintapi===\"\"){\n    msg.payload = \"El fichero 'octoprintapi' esta vacio\"    \n}else{\n    flow.set(\"OCTOPRINT_API_KEY\", octoprintapi);\n    msg.payload = octoprintapi;\n}\nreturn msg;",
         "outputs": 1,
@@ -2340,14 +2340,14 @@
         "y": 20,
         "wires": [
             [
-                "5fc664521d30b833"
+                "e738c5296a082d74"
             ]
         ]
     },
     {
-        "id": "3a9bb47e74b471b7",
+        "id": "64bc7883048d6729",
         "type": "inject",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "Inicio",
         "props": [
             {
@@ -2369,15 +2369,15 @@
         "y": 60,
         "wires": [
             [
-                "0eebcfa92f87f92d",
-                "5a04c1a555e04855"
+                "20ad96f19df72948",
+                "b87506e442f55d23"
             ]
         ]
     },
     {
-        "id": "5a04c1a555e04855",
+        "id": "b87506e442f55d23",
         "type": "function",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "Code",
         "func": "global.set(\"generateUUIDv4\", function () {\n    return 'xxxx-xxxx-xxxx-xxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c === 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n});\n\nglobal.set(\"generate_id\", function (prefix) {\n    const uuid = global.get(\"generateUUIDv4\")();\n    const timestamp = Date.now();\n    return `${prefix}_${uuid}_${timestamp}`;\n});\n\nflow.set(\"OCTOPRINT_URL\", \"http://octoprint:5000\")\nflow.set('timerActive', null)\nflow.set('timerStart', null)\nreturn msg;\n",
         "outputs": 1,
@@ -2393,9 +2393,9 @@
         ]
     },
     {
-        "id": "175ebf717ae0b8c8",
+        "id": "28b763affa839963",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "Error fichero",
         "active": true,
         "tosidebar": true,
@@ -2410,9 +2410,9 @@
         "wires": []
     },
     {
-        "id": "5fc664521d30b833",
+        "id": "e738c5296a082d74",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
+        "z": "a2a9e5be90c88c9b",
         "name": "API KEY",
         "active": true,
         "tosidebar": true,
@@ -2427,28 +2427,28 @@
         "wires": []
     },
     {
-        "id": "0a32a340e5a399d1",
+        "id": "9d2ee16cd339a92d",
         "type": "catch",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "Catch file read errors",
         "scope": [
-            "7ba7ab8886472d6d"
+            "da70627a2bd39c82"
         ],
         "uncaught": false,
         "x": 480,
         "y": 220,
         "wires": [
             [
-                "88537d7e0887f9ab"
+                "d72c070cb182e9b0"
             ]
         ]
     },
     {
-        "id": "88537d7e0887f9ab",
+        "id": "d72c070cb182e9b0",
         "type": "debug",
-        "z": "128aa5cf7f19b872",
-        "g": "a0d0030ba181d9c6",
+        "z": "a2a9e5be90c88c9b",
+        "g": "f0022ec11f6d06c9",
         "name": "id.txt error",
         "active": true,
         "tosidebar": true,
@@ -2463,10 +2463,10 @@
         "wires": []
     },
     {
-        "id": "6e0e6ceea2f2b8de",
+        "id": "458d64306dc7a946",
         "type": "function",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
+        "z": "a2a9e5be90c88c9b",
+        "g": "4422e37b61e3151f",
         "name": "Unificar datos printer + imagen",
         "func": "let data = msg.payload;\n\n// Tiempo transcurrido\nlet secs = 0;\ntry {\n  secs = parseInt(data.printTime.elapsed.value || 0);\n} catch (e) {\n  secs = 0;\n}\nlet h = Math.floor(secs / 3600);\nlet m = Math.floor((secs % 3600) / 60);\nlet s = secs % 60;\nlet elapsed = `${h}h ${m}m ${s}s`;\n\n// Estado\nlet status = \"UNKNOWN\";\ntry {\n  status = data.status.value.toUpperCase();\n} catch (e) {\n  status = \"UNKNOWN\";\n}\n\nlet color = \"#999\";\nif (status === \"PRINTING\") color = \"#42a5f5\";\nelse if (status === \"PAUSED\") color = \"#ffb74d\";\nelse if (status === \"DONE\") color = \"#81c784\";\n\n// Archivo\nlet file = \"\";\ntry {\n  file = data.file.value;\n} catch (e) {\n  file = \"\";\n}\n\n// Progreso\nlet progress = 0;\ntry {\n  progress = data.progress.value;\n} catch (e) {\n  progress = 0;\n}\n\n// Temperaturas\nlet roomTemp = \"0.0 °C\";\ntry {\n  roomTemp = data.environment.roomTemperature.value.toFixed(1) + \" °C\";\n} catch (e) {\n  roomTemp = \"0.0 °C\";\n}\n\nlet bedTemp = \"0.0 °C\";\ntry {\n  bedTemp = data.temperatures.bed.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  bedTemp = \"0.0 °C\";\n}\n\nlet nozzleTemp = \"0.0 °C\";\ntry {\n  nozzleTemp = data.temperatures.nozzle.actual.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTemp = \"0.0 °C\";\n}\n\nlet nozzleTargetTemp = \"0.0 °C\";\ntry {\n  nozzleTargetTemp = data.temperatures.nozzle.target.value.toFixed(1) + \" °C\";\n} catch (e) {\n  nozzleTargetTemp = \"0.0 °C\";\n}\n\nlet bedTargetTemp = \"0.0 °C\";\ntry {\n  bedTargetTemp = data.temperatures.bed.target.value.toFixed(1) + \" °C\";\n} catch (e) {\n  bedTargetTemp = \"0.0 °C\";\n}\n\n// Imagen\nlet image = \"\";\ntry {\n  image = data.image?.value || \"\";\n} catch (e) {\n  image = \"\";\n}\n\n// Salida\nmsg.payload = {\n  file: file,\n  status: status,\n  statusColor: color,\n  elapsed: elapsed,\n  progress: progress,\n  temps: {\n    room: roomTemp,\n    bed: bedTemp,\n    bedTarget: bedTargetTemp,\n    nozzle: nozzleTemp,\n    nozzleTarget: nozzleTargetTemp\n  },\n  image: image\n};\n\nreturn msg;\n",
         "outputs": 1,
@@ -2479,15 +2479,15 @@
         "y": 1660,
         "wires": [
             [
-                "9014952ff373d65e"
+                "21d0a4547ac18d10"
             ]
         ]
     },
     {
-        "id": "9014952ff373d65e",
+        "id": "21d0a4547ac18d10",
         "type": "ui_template",
-        "z": "128aa5cf7f19b872",
-        "g": "8d08067f2ec91c15",
+        "z": "a2a9e5be90c88c9b",
+        "g": "4422e37b61e3151f",
         "group": "b8e740f97a0fd06f",
         "name": "Panel Completo Moderno",
         "order": 1,
