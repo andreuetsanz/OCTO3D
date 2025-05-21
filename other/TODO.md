@@ -1,5 +1,4 @@
 # TODO
-- Comprabar si nodered desde windows funciona (deuria, a mi me va tot menos que en mongo compass no es mostra pero en el contenedor si que es guarden els datos)
 - Documentacio
 
 
@@ -9,6 +8,7 @@
 ## Andreu
 
 # Done
+- Comprabar si nodered desde windows funciona
 - borrar todo i volvver a hacer
 - dasboard de node-red
   - nombre de el archivo @donde
