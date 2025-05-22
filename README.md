@@ -1,7 +1,3 @@
-Aquí tienes una versión mejorada y más pulida del README. He corregido errores ortográficos, mejorado la redacción y simplificado las instrucciones sin perder claridad:
-
----
-
 # 🧠 OCTO3D - Guía de Instalación
 
 Bienvenido a **OCTO3D**, una solución todo-en-uno para monitoreo y visualización de impresoras 3D, basada en **OctoPrint**, **Node-RED**, **Kibana** y **Power BI**.
