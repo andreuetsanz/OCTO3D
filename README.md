@@ -58,7 +58,7 @@ docker-compose up -d
 3. Haz clic en **Import** y selecciona [`necessary-files/Dashboard-kibana.ndjson`](necessary-files/Dashboard-kibana.ndjson)
 4. Visualiza los dashboards en la sección **Dashboard**
 
-> 📝 *Ya puedes imprimir. Elige un archivo G-code y empieza a simular.*
+> 📝 *Ya puedes imprimir. Elige un archivo G-code y empieza a imprimir.*
 
 ---
 
@@ -68,6 +68,11 @@ docker-compose up -d
 2. Ve a **Archivo > Abrir**
 3. Carga el archivo [`power_bi/OCTODATA_DASHBOARD.pbix`](power_bi/OCTODATA_DASHBOARD.pbix) proporcionado
 4. Configura las credenciales de conexión si es necesario
+
+📥 **Datos de prueba**
+Si necesitas cargar algunos datos de prueba, puedes acceder a este enlace y descargar el fichero JSON:
+👉 [JSON_de_prueba](https://gvaedu-my.sharepoint.com/:u:/g/personal/andsansan5_alu_edu_gva_es/EQ8_HBwBxZZEpaBDnA8CjPgBXwnnUoDORUja0iLLWxwAkg?e=TB6eLt)
+Mueve este fichero a la [`data_test`](data_test) y ejecuta el [subir_elastic.sh](data_test/subir_elastic.sh)
 
 ---
 
