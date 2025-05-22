@@ -69,6 +69,8 @@ docker-compose up -d
 3. Carga el archivo [`power_bi/OCTODATA_DASHBOARD.pbix`](power_bi/OCTODATA_DASHBOARD.pbix) proporcionado
 4. Configura las credenciales de conexión si es necesario
 
+---
+
 📥 **Datos de prueba**
 Si necesitas cargar algunos datos de prueba, puedes acceder a este enlace y descargar el fichero JSON:
 👉 [JSON_de_prueba](https://gvaedu-my.sharepoint.com/:u:/g/personal/andsansan5_alu_edu_gva_es/EQ8_HBwBxZZEpaBDnA8CjPgBXwnnUoDORUja0iLLWxwAkg?e=TB6eLt)
