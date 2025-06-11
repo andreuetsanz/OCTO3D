@@ -26,4 +26,4 @@ docker_containers_back/*
 !docker_containers/node-red/images/
 !docker_containers/node-red/images/**
 !docker_containers/logstash/logstash.conf
-docker_containers/octoprint_data/octoprint/uploads/gcode_*/*.gcode
+!docker_containers/octoprint_data/octoprint/uploads/gcode_*/*.gcode
